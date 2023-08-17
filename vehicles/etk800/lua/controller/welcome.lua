@@ -16,7 +16,7 @@ local highbeam
 local yellowlights
 local yellow
 
-
+-- This function resetss the lights and either leave them at 0 or at 0.5 depending on if they are on or not.
 local function reset()
     if electrics.values.ignitionLevel > 0 then
         for i = 1,8,1 do
@@ -41,7 +41,7 @@ end
 -- Terribly optimized welcomelights.
 local function welcomeLightsStep(dt, currentValue)
     -- use dt as counter to count up through lights
-    local step = (20 - currentValue) * dt * 0.85 --5.2
+    local step = (20 - currentValue) * dt * 0.85 
     local newValue = currentValue+step
     local light = math.ceil(newValue)
 
@@ -50,6 +50,9 @@ local function welcomeLightsStep(dt, currentValue)
         return newValue
     
     -- Used for the edgecase that a user turns on lights while the car is off. 
+    -- The reason this is needed and that the lights cant be handled in this function is
+    -- that the lights will turn on before this function has the chance to turn them off, leaving them flashing.
+    -- That looks particularly stupid.
     elseif lowhighbeam+highbeam ~= 0 or yellowlights ~= 0 then
         wiggle = false
         reset()
@@ -60,6 +63,7 @@ local function welcomeLightsStep(dt, currentValue)
         electrics.values["DRL"..light] = 1
         electrics.values["DRL"..light-1] = 0
     else
+        -- Otherwise go the other way
         electrics.values["DRL".. 8-light] = 1
         electrics.values["DRL".. 8-light+1] = 0.5
     end
@@ -76,17 +80,16 @@ local function welcomeLightsStep(dt, currentValue)
 end
 
 
-
+-- Runs every GFX tick.
 local function updateGFX(dt)
+    -- Assign variables
     lowhighbeam = electrics.values.lowhighbeam
     highbeam = electrics.values.highbeam
     yellowlights = electrics.values.yellowlights
 
-    -- Wiggle, lol
-    if wiggle then
-        old = welcomeLightsStep(dt, old)
-    end
-
+    -- Do the welcome wiggle
+    if wiggle then old = welcomeLightsStep(dt, old) end
+    
     ignition = electrics.values.ignitionLevel
 
     if (pastignition%2) > ignition then

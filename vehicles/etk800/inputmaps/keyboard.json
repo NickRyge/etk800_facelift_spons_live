@@ -1,0 +1,15 @@
+{
+"bindings" :   [
+  {
+    "control"           : "P"          , 
+    "action"            : "yellow_headlights"         
+  },
+  {
+    "control"           : "o"          , 
+    "action"            : "intelligence"         
+  }
+], 
+"name"              : "Keyboard"          , 
+"version"           : 1                   , 
+"devicetype"        : "keyboard"           
+}

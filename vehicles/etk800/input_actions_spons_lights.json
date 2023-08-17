@@ -1,0 +1,3 @@
+{
+"yellow_headlights":{"order":  1,  "onUp":"if electrics.values.ignitionLevel > 0 then electrics.values.yellowlights = ((electrics.values.yellowlights or 0) + 1)%2\ngui.message(\"Yellow = \".. electrics.values.yellowlights, 2, \"nil\", \"flag\") end", "title": "Yellow lights", "desc": "Enables and disables the yellow lights feature" }
+}

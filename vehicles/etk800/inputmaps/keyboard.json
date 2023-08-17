@@ -6,7 +6,7 @@
   },
   {
     "control"           : "o"          , 
-    "action"            : "intelligence"         
+    "action"            : "headlights_intelligence"         
   }
 ], 
 "name"              : "Keyboard"          , 

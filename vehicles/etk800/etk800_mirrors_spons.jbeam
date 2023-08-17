@@ -7,15 +7,13 @@
     },
     "slotType" : "etk800_mirror_R",
     "flexbodies": [
-         ["mesh", "[group]:", "nonFlexMaterials"],
-         ["etk800_mirror_R_spons", ["etk800_mirror_R"]],
-         ["etk800_mirror_R_spons_blinker", ["etk800_mirror_R"]],
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["etk800_mirror_R_spons", ["etk800_mirror_R"]],
+        ["etk800_mirror_R_spons_blinker", ["etk800_mirror_R"]],
     ],
 	
 	"glowMap":{
-			"blinker_mirror_L":{"simpleFunction":{"signal_L5":0.49}, "off":"etk800_mirror_facelift_spons", "on":"etk800_mirror_facelift_spons_on", "on_intense":"etk800_mirror_facelift_spons_on"},
-			
-			"blinker_mirror_R":{"simpleFunction":{"signal_R5":0.49}, "off":"etk800_mirror_facelift_spons", "on":"etk800_mirror_facelift_spons_on", "on_intense":"etk800_mirror_facelift_spons_on"},
+        "blinker_mirror_R":{"simpleFunction":{"signalR1":0.49}, "off":"etk800_mirror_facelift_spons", "on":"etk800_mirror_facelift_spons_on", "on_intense":"etk800_mirror_facelift_spons_on"}
     },
 	
     "nodes": [
@@ -137,6 +135,9 @@
         "value":180,
     },
     "slotType" : "etk800_mirror_L",
+    "glowMap":{
+		"blinker_mirror_L":{"simpleFunction":{"signalL1":0.49}, "off":"etk800_mirror_facelift_spons", "on":"etk800_mirror_facelift_spons_on", "on_intense":"etk800_mirror_facelift_spons_on"}
+    }, 
     "flexbodies": [
          ["mesh", "[group]:", "nonFlexMaterials"],
          ["etk800_mirror_L_spons", ["etk800_mirror_L"]],

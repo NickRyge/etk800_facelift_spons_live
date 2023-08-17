@@ -1,0 +1,333 @@
+{
+  "mod_beacon_glass_fr": {
+    "name": "mod_beacon_glass_fr",
+    "mapTo": "mod_beacon_glass_fr",
+    "class": "Material",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "mod_beacon_light_fr": {
+    "name": "mod_beacon_light_fr",
+    "mapTo": "mod_beacon_light_fr",
+    "class": "Material",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "mod_beacon_glass_fl": {
+    "name": "mod_beacon_glass_fl",
+    "mapTo": "mod_beacon_glass_fl",
+    "class": "Material",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "mod_beacon_light_fl": {
+    "name": "mod_beacon_light_fl",
+    "mapTo": "mod_beacon_light_fl",
+    "class": "Material",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+    "generic_flasher_led_FL": {
+    "name": "generic_flasher_led_FL",
+    "mapTo": "generic_flasher_led_FL",
+    "class": "Material",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+    "generic_flasher_led_FR": {
+    "name": "generic_flasher_led_FR",
+    "mapTo": "generic_flasher_led_FR",
+    "class": "Material",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+	"generic_flasher_led_FLL": {
+    "name": "generic_flasher_led_FLL",
+    "mapTo": "generic_flasher_led_FLL",
+    "class": "Material",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+    "generic_flasher_led_FRR": {
+    "name": "generic_flasher_led_FRR",
+    "mapTo": "generic_flasher_led_FRR",
+    "class": "Material",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  	"generic_flasher_led_BL": {
+    "name": "generic_flasher_led_BL",
+    "mapTo": "generic_flasher_led_BL",
+    "class": "Material",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+    "generic_flasher_led_BR": {
+    "name": "generic_flasher_led_BR",
+    "mapTo": "generic_flasher_led_BR",
+    "class": "Material",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "generic_flasher_led_BR_L": {
+    "name": "generic_flasher_led_BR_L",
+    "mapTo": "generic_flasher_led_BR_L",
+    "class": "Material",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+    "generic_flasher_led_BR_R": {
+    "name": "generic_flasher_led_BR_R",
+    "mapTo": "generic_flasher_led_BR_R",
+    "class": "Material",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "generic_flasher_led_TRNK_L": {
+    "name": "generic_flasher_led_TRNK_L",
+    "mapTo": "generic_flasher_led_TRNK_L",
+    "class": "Material",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "generic_flasher_led_TRNK_R": {
+    "name": "generic_flasher_led_TRNK_R",
+    "mapTo": "generic_flasher_led_TRNK_R",
+    "class": "Material",
+    "Stages": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  
+ "policeparts_lights_blue_on_bright": {
+    "name": "policeparts_lights_blue_on_bright",
+    "mapTo": "policeparts_lights_blue_on_bright",
+    "class": "Material",
+    "persistentId": "743e620a-c635-4924-a0a0-8e34e9e77fc7",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/common/police_parts/police_parts_lights_b.color.png",
+        "emissive": true,
+        "emissiveFactor": [
+          0,
+          450,
+          8000
+        ],
+        "emissiveMap": "/vehicles/common/police_parts/police_parts_lights_G.data.png",
+        "metallicFactor": 0.5,
+        "metallicMap": "/vehicles/common/police_parts/police_parts_lights_m.data.png",
+        "normalMap": "/vehicles/common/police_parts/police_parts_lights_nm.normal.png",
+        "roughnessMap": "/vehicles/common/police_parts/police_parts_lights_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "version": 1.5
+  },
+
+
+  "policeparts_lights_blue_on_bright_full": {
+    "name": "policeparts_lights_blue_on_bright_full",
+    "mapTo": "policeparts_lights_blue_on_bright_full",
+    "class": "Material",
+    "persistentId": "743e620a-c635-4924-a0a0-8e34e9e77fc7",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/common/police_parts/police_parts_lights_b.color.png",
+        "emissive": true,
+        "emissiveFactor": [
+          0,
+          100,
+          10000
+        ],
+        "emissiveMap": "/vehicles/common/politi/police_parts_lights_G_new.data.png",
+        "metallicFactor": 0.2,
+        "metallicMap": "/vehicles/common/police_parts/police_parts_lights_m.data.png",
+        "normalMap": "/vehicles/common/police_parts/police_parts_lights_nm.normal.png",
+        "roughnessMap": "/vehicles/common/police_parts/police_parts_lights_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "version": 1.5
+  },
+
+
+  "policeparts_lights_blue_on_medium": {
+    "name": "policeparts_lights_blue_on_medium",
+    "mapTo": "policeparts_lights_blue_on_medium",
+    "class": "Material",
+    "persistentId": "743e620a-c635-4924-a0a0-8e34e9e77fc7",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/common/police_parts/police_parts_lights_b.color.png",
+        "emissive": true,
+        "emissiveFactor": [
+          0,
+          300,
+          6000
+        ],
+        "emissiveMap": "/vehicles/common/police_parts/police_parts_lights_G.data.png",
+        "metallicFactor": 0.5,
+        "metallicMap": "/vehicles/common/police_parts/police_parts_lights_m.data.png",
+        "normalMap": "/vehicles/common/police_parts/police_parts_lights_nm.normal.png",
+        "roughnessMap": "/vehicles/common/police_parts/police_parts_lights_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "version": 1.5
+  },
+  "policeparts_lights_white_on_bright": {
+    "name": "policeparts_lights_white_on_bright",
+    "mapTo": "policeparts_lights_white_on_bright",
+    "class": "Material",
+    "persistentId": "743e620a-c635-4924-a0a0-8e34e9e77fc6",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/common/police_parts/police_parts_lights_b.color.png",
+        "emissive": true,
+        "emissiveFactor": [
+          900,
+          1100,
+          1100
+        ],
+        "emissiveMap": "/vehicles/common/police_parts/police_parts_lights_G.data.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/common/police_parts/police_parts_lights_m.data.png",
+        "normalMap": "/vehicles/common/police_parts/police_parts_lights_nm.normal.png",
+        "roughnessMap": "/vehicles/common/police_parts/police_parts_lights_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "version": 1.5
+  },
+
+  "policeparts_lights_white_on_medium": {
+    "name": "policeparts_lights_white_on_medium",
+    "mapTo": "policeparts_lights_white_on_medium",
+    "class": "Material",
+    "persistentId": "743e620a-c635-4924-a0a0-8e34e9e77fc6",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/common/police_parts/police_parts_lights_b.color.png",
+        "emissive": true,
+        "emissiveFactor": [
+          550,
+          600,
+          600
+        ],
+        "emissiveMap": "/vehicles/common/police_parts/police_parts_lights_G.data.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/common/police_parts/police_parts_lights_m.data.png",
+        "normalMap": "/vehicles/common/police_parts/police_parts_lights_nm.normal.png",
+        "roughnessMap": "/vehicles/common/police_parts/police_parts_lights_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "version": 1.5
+  },
+
+  "policeparts_glass_blue_test": {
+    "name": "policeparts_glass_blue_test",
+    "mapTo": "policeparts_glass_blue_test",
+    "class": "Material",
+    "persistentId": "acfa08dc-083f-4e61-80a6-2f1e1e5862c0",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          0.358316004,
+          0.56853199,
+          1,
+          1
+        ],
+        "baseColorMap": "/vehicles/common/police_parts/police_parts_glass_b.color.png",
+        "emissiveFactor": [
+          9.99999997e-7,
+          9.99999997e-7,
+          9.99999997e-7
+        ],
+        "metallicFactor": 1,
+        "normalMap": "/vehicles/common/police_parts/police_parts_glass_nm.normal.png",
+        "opacityMap": "/vehicles/common/police_parts/police_parts_glass_op.data.png",
+        "roughnessFactor": 0.400000006,
+        "roughnessMap": "/vehicles/common/police_parts/police_parts_glass_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 42,
+    "dynamicCubemap": true,
+    "translucent": true,
+    "translucentBlendOp": "PreMulAlpha",
+    "version": 1.5
+  }
+}

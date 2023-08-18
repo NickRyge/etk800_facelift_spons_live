@@ -905,6 +905,99 @@
     ],
 },
 
+"etk800_spons_bumper_ttsport_AMERICADABRA": {
+    "information":{
+        "authors":"NickRyge",
+        "name":"ttsport freedom edition",
+        "value":50,
+    },
+    "slotType" : "spons_bumper_light_front",
+    "glowMap":{
+        
+        "generic_flasher_led_L":                    {"simpleFunction":"white_l", "off":"policeparts_lights_white", "on":"policeparts_lights_white_on_bright"},
+        "generic_flasher_led_R":                    {"simpleFunction":"white_r", "off":"policeparts_lights_white", "on":"policeparts_lights_white_on_bright"},
+
+		"generic_flasher_led_FL":                  {"simpleFunction":"blue_l", "off":"policeparts_lights_blue", "on":"policeparts_lights_red_on_bright"},
+        "generic_flasher_led_FR":                  {"simpleFunction":"blue_r", "off":"policeparts_lights_blue", "on":"policeparts_lights_blue_on_bright"},
+			
+		"generic_flasher_led_FLL":                 {"simpleFunction":"blue_r", "off":"policeparts_lights_blue", "on":"policeparts_lights_red_on_bright"},
+        "generic_flasher_led_FRR":                 {"simpleFunction":"blue_l", "off":"policeparts_lights_blue", "on":"policeparts_lights_blue_on_bright"},
+		
+        },
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"],      
+        //red
+        {
+            "lightInnerAngle":0,
+            "lightOuterAngle":100,
+            "lightBrightness":0.6,
+            "lightRange":15,
+            "lightColor":{"r":255, "g":25, "b":10, "a":255},
+            "flareName":"vehicleBrakeLightFlare",
+            "lightCastShadows":false,
+            "texSize":64,
+            "shadowSoftness":1,
+            "flareScale":0.1,
+            "cookieName":"/art/special/BNG_light_cookie_lightbar.dds"
+        },
+        
+        ["blue_l"    , "POINTLIGHT"        , "fb1ll", "fb0ll", "fb1l", {"x":-63.987, "y":126.111, "z":0.969} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.338, "y":1.563, "z":0.119},"deformGroup":"frontflashers_break"}],
+        ["blue_r"    , "POINTLIGHT"        , "fb1ll", "fb0ll", "fb1l", {"x":-77.616, "y":131.174, "z":-2.922} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-1.056, "y":0.325, "z":0.053},"deformGroup":"frontflashers_break"}],
+        //Blue
+        {
+            "lightInnerAngle":0,
+            "lightOuterAngle":100,
+            "lightBrightness":0.6,
+            "lightRange":15,
+            "lightColor":{"r":0, "g":25, "b":255, "a":255},
+            "flareName":"vehicleBrakeLightFlare",
+            "lightCastShadows":false,
+            "texSize":64,
+            "shadowSoftness":1,
+            "flareScale":0.1,
+            "cookieName":"/art/special/BNG_light_cookie_lightbar.dds"
+        },
+        
+        ["blue_r"    , "POINTLIGHT"        , "fb1rr", "fb0rr", "fb1r", {"x":78.787, "y":-156.919, "z":24.874} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.338, "y":1.563, "z":-0.119},"deformGroup":"frontflashers_break"}],
+        ["blue_l"    , "POINTLIGHT"        , "fb1rr", "fb0rr", "fb1r", {"x":96.491, "y":-141.647, "z":7.804} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-1.056, "y":0.325, "z":-0.053},"deformGroup":"frontflashers_break"}],
+        
+        //White
+        {
+            "lightInnerAngle":0,
+            "lightOuterAngle":20,
+            "lightBrightness":0.2,
+            "lightRange":15,
+            "lightColor":{"r":230, "g":255, "b":255, "a":255},
+            "flareName":"vehicleBrakeLightFlare",
+            "lightCastShadows":false,
+            "texSize":64,
+            "shadowSoftness":1,
+            "flareScale":0.1,
+            "cookieName":"/art/special/BNG_light_cookie_lightbar.dds"
+        },
+
+        ["white_l"    , "POINTLIGHT"        , "fb1ll", "fb0ll", "fb1l", {"x":-56.251, "y":110.161, "z":2.572} , {"x":90, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1,   {"baseTranslation":{"x":-1.478, "y":1.648, "z":0.239},"deformGroup":"frontflashers_break"}],
+        ["white_r"    , "POINTLIGHT"        , "fb1rr", "fb0rr", "fb1r", {"x":115.622, "y":-106.153, "z":18.809} , {"x":90, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-1.478, "y":1.648, "z":-0.239},"deformGroup":"frontflashers_break"}],   
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"frontflashers_break", "deformMaterialBase":"policeparts_lights_blue", "deformMaterialDamaged":"policeparts_lights_blue"},
+		["generic_flasher_led_R", ["etk800_bumper_F"], [], {"pos":{"x": -0.18, "y":-2.13, "z":0.35}, "rot":{"x":-5, "y":1, "z":-6}, "scale":{"x":2, "y":1, "z":0.7}}],
+        {"deformGroup":"frontflashers_break", "deformMaterialBase":"policeparts_lights_blue", "deformMaterialDamaged":"policeparts_lights_blue"},
+        ["generic_flasher_led_L", ["etk800_bumper_F"], [], {"pos":{"x": 0.18, "y":-2.13, "z":0.35}, "rot":{"x":-5, "y":-1, "z":6}, "scale":{"x":2, "y":1, "z":0.7}}],
+        {"deformGroup":"", "deformMaterialBase":"", "deformMaterialDamaged":""},
+
+        {"deformGroup":"frontflashers_break", "deformMaterialBase":"policeparts_lights_blue", "deformMaterialDamaged":"policeparts_lights_blue"},
+        ["generic_flasher_led_FR", ["etk800_bumper_F"], [], {"pos":{"x": -0.15, "y":-2.185, "z":0.6525}, "rot":{"x":-20, "y":1, "z":1}, "scale":{"x":2, "y":0.9, "z":0.6}}],
+        ["generic_flasher_led_FRR", ["etk800_bumper_F"], [], {"pos":{"x": -0.665, "y":-1.9, "z":0.45}, "rot":{"x":-1, "y":8, "z":-10}, "scale":{"x":1.8, "y":0.9, "z":0.6}}],
+		
+        {"deformGroup":"frontflashers_break", "deformMaterialBase":"policeparts_lights_blue", "deformMaterialDamaged":"policeparts_lights_blue"},
+        ["generic_flasher_led_FL", ["etk800_bumper_F"], [], {"pos":{"x": 0.15, "y":-2.185, "z":0.6525}, "rot":{"x":-20, "y":1, "z":1}, "scale":{"x":2, "y":0.9, "z":0.6}}],
+        ["generic_flasher_led_FLL", ["etk800_bumper_F"], [], {"pos":{"x": 0.665, "y":-1.9, "z":0.45}, "rot":{"x":-1, "y":-8, "z":10}, "scale":{"x":1.8, "y":0.9, "z":0.6}}],
+		{"deformGroup":"", "deformMaterialBase":"", "deformMaterialDamaged":""},
+    ],
+},
+
 
 "etk800_spons_bumper_xcsport": {
     "information":{

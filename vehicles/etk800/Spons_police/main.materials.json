@@ -182,6 +182,34 @@
     "version": 1.5
   },
 
+  "policeparts_lights_red_on_bright": {
+    "name": "policeparts_lights_red_on_bright",
+    "mapTo": "policeparts_lights_red_on_bright",
+    "class": "Material",
+    "persistentId": "743e620a-c635-4924-a0a0-8e34e9e77fc7",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/common/police_parts/police_parts_lights_b.color.png",
+        "emissive": true,
+        "emissiveFactor": [
+          8000,
+          250,
+          50
+        ],
+        "emissiveMap": "/vehicles/common/police_parts/police_parts_lights_G.data.png",
+        "metallicFactor": 0.5,
+        "metallicMap": "/vehicles/common/police_parts/police_parts_lights_m.data.png",
+        "normalMap": "/vehicles/common/police_parts/police_parts_lights_nm.normal.png",
+        "roughnessMap": "/vehicles/common/police_parts/police_parts_lights_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "version": 1.5
+  },
+
 
   "policeparts_lights_blue_on_bright_full": {
     "name": "policeparts_lights_blue_on_bright_full",

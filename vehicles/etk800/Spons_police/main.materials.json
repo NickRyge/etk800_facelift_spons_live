@@ -279,7 +279,7 @@
         "emissive": true,
         "emissiveFactor": [
           0,
-          300,
+          0,
           6000
         ],
         "emissiveMap": "/vehicles/common/police_parts/police_parts_lights_G.data.png",

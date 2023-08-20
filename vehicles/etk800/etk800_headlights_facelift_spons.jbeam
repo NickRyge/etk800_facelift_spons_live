@@ -2,8 +2,8 @@
 "etk800_headlight_R_facelift_spons": {
     "information":{
         "authors":"Spons",
-        "name":"Xenon Right Headlight Facelift",
-        "value":350,
+        "name":"Intelligent Bi-LED Right Headlight facelift",
+        "value":750
     },
     "slotType" : "etk800_headlight_R",
     "flexbodies": [
@@ -14,7 +14,7 @@
          {"deformGroup":"headlightglass_R_break", "deformMaterialBase":"etk800_lights", "deformMaterialDamaged":"etk800_lights_dmg"},
 		 ["etk800_headlight_R_facelift_spons", ["etk800_headlight_R"]],
 		 ["etk800_headlight_R_facelift_spons_dlr_b", ["etk800_headlight_R"]],
-         {"deformGroup":""},
+         {"deformGroup":""}
     ],
 	"controller": [
 	["fileName"],
@@ -69,6 +69,9 @@
 		"DRL_R_8":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
     },
 	
+
+    //The light props are not moved from the intelligent headlights to avoid screwing up the tolerances.
+    //Instead, I added new props to act as lensflares.
     "props": [
         ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"],
         {
@@ -80,7 +83,7 @@
             "lightAttenuation":{"x":0, "y":1, "z":1},
             "lightCastShadows":true,
             "flareName":"vehicleHeadLightFlare",
-            "flareScale":0.1,
+            "flareScale":0,
             "cookieName":"vehicles/etk800/etk800_headlight.dds",
             "texSize":128,
             "shadowSoftness":0.4
@@ -101,7 +104,7 @@
             "lightAttenuation":{"x":0, "y":1, "z":1},
             "lightCastShadows":true,
             "flareName":"vehicleHeadLightFlare",
-            "flareScale":0.3,
+            "flareScale":0,
             "cookieName":"vehicles/etk800/etk800_headlight_high_test.dds",
             "texSize":128,
             "shadowSoftness":0.3
@@ -221,14 +224,14 @@
             ["he3r","he5r","he1r"],
             ["he4r","he5r","he3r"],
             {"triangleType":"NORMALTYPE"},
-            {"group":""},
-    ],
+            {"group":""}
+    ]
 },
 "etk800_headlight_L_facelift_spons": {
     "information":{
         "authors":"BeamNG",
-        "name":"Xenon Left Headlight Facelift",
-        "value":350,
+        "name":"Intelligent Bi-LED left Headlight facelift",
+        "value":750
     },
     "slotType" : "etk800_headlight_L",
     "flexbodies": [
@@ -252,7 +255,7 @@
             "lightAttenuation":{"x":0, "y":1, "z":1},
             "lightCastShadows":true,
             "flareName":"vehicleHeadLightFlare",
-            "flareScale":0.1,
+            "flareScale":0,
             "cookieName":"vehicles/etk800/etk800_headlight.dds",
             "texSize":128,
             "shadowSoftness":0.4
@@ -273,7 +276,7 @@
             "lightAttenuation":{"x":0, "y":1, "z":1},
             "lightCastShadows":true,
             "flareName":"vehicleHeadLightFlare",
-            "flareScale":0.3,
+            "flareScale":0,
             "cookieName":"vehicles/etk800/etk800_headlight_high_test.dds",
             "texSize":128,
             "shadowSoftness":0.3
@@ -296,15 +299,11 @@
             "lightAttenuation":{"x":0, "y":1, "z":1},
             "lightCastShadows":false,
             "flareName":"vehicleHeadLightFlare",
-            "flareScale":0.3,
+            "flareScale":0,
             "cookieName":"vehicles/etk800/etk800_headlight_high_left_side.dds",
             "texSize":128,
             "shadowSoftness":0.5
         },
-        //low beams angled right slightly to avoid blinding oncoming traffic
-        //["lowhighbeam"    , "SPOTLIGHT"        , "he4l", "he3l", "he2l", {"x":-48, "y":24, "z":-37} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.75, "y":-0.1, "z":0},"lightRange":50,"lightBrightness":0.7,"flareScale":0.05,"lightOuterAngle":80,"deformGroup":"headlightglass_L_break"}],
-        //high beams
-        //["highbeam" ,         "SPOTLIGHT"        , "he4l", "he3l", "he2l", {"x":-40, "y":24, "z":-37} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0, "y":0.48, "z":-0.095},"lightRange":80,"lightBrightness":0.8,"flareScale":0.07,"lightOuterAngle":80,"deformGroup":"headlightglass_L_break"}],
         //signal
         //{
             //"lightInnerAngle":0,
@@ -333,7 +332,7 @@
          ["he4l", 0.78, -1.88, 0.68],
          //{"selfCollision":false}
          ["he5l", 0.60, -1.76, 0.72],
-         {"group":""},
+         {"group":""}
 
     ],
     "beams": [
@@ -412,6 +411,6 @@
             ["he5l","he4l","he3l"],
             {"triangleType":"NORMALTYPE"},
             {"group":""},
-    ],
-},
+    ]
+}
 }

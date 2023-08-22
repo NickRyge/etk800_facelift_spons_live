@@ -76,7 +76,7 @@
             "lightInnerAngle":70,
             "lightOuterAngle":90,
             "lightBrightness":1.5,
-            "lightRange":170,
+            "lightRange":174,
             "lightColor":{"r":200, "g":200, "b":255, "a":255},
             "lightAttenuation":{"x":0, "y":1, "z":1},
             "lightCastShadows":true,
@@ -130,7 +130,7 @@
 
 
 		{
-            "lightInnerAngle":40,
+            "lightInnerAngle":60,
             "lightOuterAngle":70,
             "lightBrightness":2.5,
             "lightRange":200,
@@ -139,12 +139,19 @@
             "lightCastShadows":true,
             "flareName":"vehicleHeadLightFlare",
             "flareScale":0.3,
-            "cookieName":"vehicles/etk800/teststuff/1.gif",
-            "texSize":128,
+
+            "texSize":256,
             "shadowSoftness":0.3
         },
         //high beams
-        ["tester" ,         "SPOTLIGHT"        , "he4r", "he3r", "he2r", {"x":159.2, "y":187, "z":-36}, {"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, -0, 0, 0, 2, {"baseTranslation":{"x":0.0, "y":0.48, "z":0.055},"deformGroup":"headlightglass_R_break"}],
+        ["testl1" ,         "SPOTLIGHT"        , "he4r", "he3r", "he2r", {"x":159.2, "y":187, "z":-36}, {"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, -0, 0, 0, 2, {"baseTranslation":{"x":0.0, "y":0.48, "z":0.055},"deformGroup":"WALLAH","cookieName":"vehicles/etk800/teststuff/f1.gif"}],
+        ["testl2" ,         "SPOTLIGHT"        , "he4r", "he3r", "he2r", {"x":159.2, "y":187, "z":-36}, {"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, -0, 0, 0, 2, {"baseTranslation":{"x":0.0, "y":0.48, "z":0.055},"deformGroup":"WALLAH","cookieName":"vehicles/etk800/teststuff/f2.gif"}],
+        ["testl3" ,         "SPOTLIGHT"        , "he4r", "he3r", "he2r", {"x":159.2, "y":187, "z":-36}, {"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, -0, 0, 0, 2, {"baseTranslation":{"x":0.0, "y":0.48, "z":0.055},"deformGroup":"WALLAH","cookieName":"vehicles/etk800/teststuff/f3.gif"}],
+        ["testl4" ,         "SPOTLIGHT"        , "he4r", "he3r", "he2r", {"x":159.2, "y":187, "z":-36}, {"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, -0, 0, 0, 2, {"baseTranslation":{"x":0.0, "y":0.48, "z":0.055},"deformGroup":"WALLAH","cookieName":"vehicles/etk800/teststuff/f4.gif"}],
+        ["testl5" ,         "SPOTLIGHT"        , "he4r", "he3r", "he2r", {"x":159.2, "y":187, "z":-36}, {"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, -0, 0, 0, 2, {"baseTranslation":{"x":0.0, "y":0.48, "z":0.055},"deformGroup":"WALLAH","cookieName":"vehicles/etk800/teststuff/f5.gif"}],
+
+
+
 
         {
             "lightInnerAngle":70,
@@ -161,7 +168,7 @@
             "shadowSoftness":0.3
         },
         //high beams
-        ["testl1" ,         "SPOTLIGHT"        , "he4r", "he3r", "he2r", {"x":159.2, "y":187, "z":-36}, {"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, -360, 360, 360, 1, {"baseTranslation":{"x":0.0, "y":0.48, "z":0.055},"deformGroup":"headlightglass_R_break"}],
+        //["testl1" ,         "SPOTLIGHT"        , "he4r", "he3r", "he2r", {"x":159.2, "y":187, "z":-36}, {"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, -360, 360, 360, 1, {"baseTranslation":{"x":0.0, "y":0.48, "z":0.055},"deformGroup":"headlightglass_R_break"}],
 
 
 

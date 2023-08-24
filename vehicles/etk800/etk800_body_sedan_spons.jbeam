@@ -3,12 +3,13 @@
     "information":{
         "authors":"Spons",
         "name":"Sedan Unibody Facelift",
-        "value":11000,
+        "value":11000
     },
     "slotType" : "etk800_body",
     "slots": [
         ["type", "default", "description"],
         ["etk800_dash","etk800_dash", "Interior", {"coreSlot":true}],
+        ["etk800_spons_interior_lighting", "etk800_spons_interior_lights", "Interior lighting"],
         ["etk800_seat_FL","etk800_seat_FL", "Driver Seat"],
         ["etk800_seat_FR","etk800_seat_FR", "Passenger Seat"],
         ["etk800_seats_R","etk800_seats_R", "Rear Seats"],
@@ -96,7 +97,7 @@
     ],
     "sounds": {
         "cabinFilterCoef": 0.12
-    }
+    },
     "torsionbars": [
         ["id1:", "id2:", "id3:", "id4:"],
         //rigidify firewall
@@ -238,7 +239,7 @@
          //rad support bottom
          {"nodeWeight":2.0},
          ["f18r",-0.46, -1.9, 0.265, {"group":["etk800_body"]}],
-         ["f18", 0.0, -1.9, 0.265, {"group":["etk800_body"]"tag":"tow_hook","couplerStrength":101000}],
+         ["f18", 0.0, -1.9, 0.265, {"group":["etk800_body"],"tag":"tow_hook","couplerStrength":101000}],
          ["f18l", 0.46, -1.9, 0.265, {"group":["etk800_body"]}],
 
          //rigidifier
@@ -254,12 +255,12 @@
          {"nodeWeight":7.1},
          {"group":"etk800_body"},
          ["r1rr", -0.61, 1.36, 0.54, {"group":["etk800_body","etk800_shock_R",]}],
-         ["r1", 0.0, 1.41, 0.54, {"group":["etk800_body",]}]
+         ["r1", 0.0, 1.41, 0.54, {"group":["etk800_body"]}],
          ["r1ll", 0.61, 1.36, 0.54, {"group":["etk800_body","etk800_shock_R",]}],
 
          {"nodeWeight":4.7},
-         ["r2rr", -0.56, 1.68, 0.3, {"group":["etk800_body",,"etk800_spring_R"]}],
-         ["r2ll", 0.56, 1.68, 0.3, {"group":["etk800_body",,"etk800_spring_R"]}],
+         ["r2rr", -0.56, 1.68, 0.3, {"group":["etk800_body","etk800_spring_R"]}],
+         ["r2ll", 0.56, 1.68, 0.3, {"group":["etk800_body","etk800_spring_R"]}],
 
          {"group":["etk800_body",]},
          {"chemEnergy":200,"burnRate":0.5,"flashPoint":400,"specHeat":0.8,"smokePoint":150,"selfIgnitionCoef":false},
@@ -390,7 +391,7 @@
           {"optional":true},
           {"beamSpring":21000,"beamDamp":300},
           {"beamDeform":10000,"beamStrength":50000},
-          {"deformGroup":"mainEngine_accessories", "deformationTriggerRatio":0.001}
+          {"deformGroup":"mainEngine_accessories", "deformationTriggerRatio":0.001},
           ["e4l", "f10ll"],
           ["e3l", "f10ll"],
           ["e3r", "f10rr"],
@@ -402,7 +403,7 @@
           ["e4l", "f13ll"],
           ["e3r", "f1r"],
           ["e3l", "f1l"],
-          {"deformGroup":""}
+          {"deformGroup":""},
           //transmission
           ["tra1", "f2ll"],
           ["tra1", "f2rr"],
@@ -710,7 +711,7 @@
           ["p5r","p6r"],
           ["p5l","p6l"],
           ["p7r","p8r"],
-          ["p7l","p8l"],,
+          ["p7l","p8l"],
           ["p3r","f3rr"],
           ["p3l","f3ll"],
           ["p4r","f3rr"],
@@ -832,12 +833,12 @@
           {"deformLimitExpansion":1.1},
           {"beamSpring":1001000,"beamDamp":150},
           {"beamDeform":36000,"beamStrength":"FLT_MAX"},
-          {"deformGroup":"quarterglass_R_break","deformationTriggerRatio":0.015}
+          {"deformGroup":"quarterglass_R_break","deformationTriggerRatio":0.015},
           ["p9r","p10r"],
           ["p9r","q1r"],
           ["p9r","rf4r"],
           ["p10r","q1r"],
-          {"deformGroup":"quarterglass_L_break","deformationTriggerRatio":0.015}
+          {"deformGroup":"quarterglass_L_break","deformationTriggerRatio":0.015},
           ["p9l","p10l"],
           ["p9l","q1l"],
           ["p9l","rf4l"],
@@ -852,12 +853,12 @@
           //corners
           {"deformLimitExpansion":""},
           {"beamDeform":20400,"beamStrength":"FLT_MAX"},
-          {"deformGroup":"quarterglass_R_break","deformationTriggerRatio":0.015}
+          {"deformGroup":"quarterglass_R_break","deformationTriggerRatio":0.015},
           ["p10r","q2r"],
           ["p9r","q2r"],
           ["p9r","rf3r"],
           ["p9r", "tb1r"],
-          {"deformGroup":"quarterglass_L_break","deformationTriggerRatio":0.015}
+          {"deformGroup":"quarterglass_L_break","deformationTriggerRatio":0.015},
           ["p10l","q2l"],
           ["p9l","q2l"],
           ["p9l","rf3l"],
@@ -865,21 +866,21 @@
           {"deformGroup":""},
 
           //rigids
-          {"deformGroup":"quarterglass_R_break","deformationTriggerRatio":0.015}
+          {"deformGroup":"quarterglass_R_break","deformationTriggerRatio":0.015},
           ["q1r","rf4r"],
           ["q2r","rf4r"],
           ["q1r","rf3r"],
-          {"deformGroup":"quarterglass_L_break","deformationTriggerRatio":0.015}
+          {"deformGroup":"quarterglass_L_break","deformationTriggerRatio":0.015},
           ["q1l","rf4l"],
           ["q2l","rf4l"],
           ["q1l","rf3l"],
           {"deformGroup":""},
 
           {"beamDeform":12000,"beamStrength":"FLT_MAX"},
-          {"deformGroup":"quarterglass_R_break","deformationTriggerRatio":0.015}
+          {"deformGroup":"quarterglass_R_break","deformationTriggerRatio":0.015},
           ["p9r","rf4"],
           ["p9r","rf3"],
-          {"deformGroup":"quarterglass_L_break","deformationTriggerRatio":0.015}
+          {"deformGroup":"quarterglass_L_break","deformationTriggerRatio":0.015},
           ["p9l","rf4"],
           ["p9l","rf3"],
           {"deformGroup":"backlight_break","deformationTriggerRatio":0.015},

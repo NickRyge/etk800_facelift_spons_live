@@ -277,17 +277,17 @@
     "props": [
         ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"],
         {
-            "lightInnerAngle":120,
+            "lightInnerAngle":80,
             "lightOuterAngle":120,
-            "lightBrightness":5.5,
-            "lightRange":10,
+            "lightBrightness":4.5,
+            "lightRange":2,
             "lightColor":{"r":200, "g":200, "b":255, "a":255},
             "lightAttenuation":{"x":0, "y":1, "z":1},
             "lightCastShadows":false,
             "flareName":"vehicleHeadLightFlare",
             "flareScale":0,
             "cookieName":"vehicles/etk800/mirror_logo.png",
-            "texSize":64,
+            "texSize":128,
             "shadowSoftness":0.4
         },
         ["doorFRCoupler_notAttached", "SPOTLIGHT", "d3r", "d2r", "d6r",{"x":98.659, "y":173.149, "z":-44.128}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.602, "y":0.569, "z":0.117},"deformGroup":"headlightglass_L_break"}]
@@ -423,17 +423,17 @@
     "props": [
         ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"],
         {
-            "lightInnerAngle":120,
+            "lightInnerAngle":80,
             "lightOuterAngle":120,
-            "lightBrightness":5.5,
-            "lightRange":10,
+            "lightBrightness":4.5,
+            "lightRange":2,
             "lightColor":{"r":200, "g":200, "b":255, "a":255},
             "lightAttenuation":{"x":0, "y":1, "z":1},
             "lightCastShadows":false,
             "flareName":"vehicleHeadLightFlare",
             "flareScale":0,
             "cookieName":"vehicles/etk800/mirror_logo.png",
-            "texSize":64,
+            "texSize":128,
             "shadowSoftness":0.4
         },
         ["doorFLCoupler_notAttached", "SPOTLIGHT", "d3l", "d6l", "d2l",{"x":101.719, "y":96.135, "z":42.306}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.602, "y":0.569, "z":0.117},"deformGroup":"headlightglass_L_break"}]

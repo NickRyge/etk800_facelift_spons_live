@@ -12,14 +12,21 @@ end
 -- Init
 local function init(jbeamData)
     reset()
-
+    
 end
 
 
 -- Runs every GFX tick.
 local function updateGFX(dt)
-    print(electrics.values.doorFRCoupler_notAttached)
-    print(electrics.values.doorFLCoupler_notAttached)
+    --print(electrics.values.gear_M)
+
+    for x, y in pairs(electrics.values) do
+    print(x .. " - " .. tostring(y))
+    end
+    electrics.values.gearModeIndex = 5
+    electrics.values["gear_A"] = 2
+    electrics.values.gear = "D"
+    --print(electrics.values.boostMax)
 end
 
 M.init = init

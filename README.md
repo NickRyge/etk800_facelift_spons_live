@@ -12,3 +12,6 @@ Both mods are required to be installed for this one to work.
 https://github.com/NickRyge/etk800_facelift_spons_live/assets/42750308/b0d09dd0-bb90-468f-b168-9b0cef96479a
 
 https://github.com/NickRyge/etk800_facelift_spons_live/assets/42750308/6c7f7895-253b-4e6f-8739-45b508638c7d
+
+https://github.com/NickRyge/etk800_facelift_spons_live/assets/42750308/040f8aa4-1909-453f-99e8-865c59b70ea0
+

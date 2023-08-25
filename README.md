@@ -1,4 +1,4 @@
-#Hybrid notice
+# Hybrid notice
 
 This branch will never be merged. Since I discovered that - despite everyone on the forums saying it was impossible - it is possible to create a true hybrid drivetrain and manipulate all attached components at once, I have decided to put this in a repo of its own.
 

@@ -7,7 +7,16 @@
   {
     "control"           : "o"          , 
     "action"            : "headlights_intelligence"         
+  },
+  {
+    "control"           : "k"          , 
+    "action"            : "tester"         
   }
+
+
+
+
+  
 ], 
 "name"              : "Keyboard"          , 
 "version"           : 1                   , 

@@ -7,8 +7,17 @@ local M = {}
 
 local motors
 local constants = {rpmToAV = 0.104719755, avToRPM = 9.549296596425384}
+
+
+local engine 
+local gearbox
+local torqueConverter
+
+
 M.maxRPM = 0
 local function reset()
+
+
 
 end
 
@@ -27,6 +36,11 @@ local function init(jbeamData)
         table.insert(motors, motor)
       end
     end
+
+    electrics.values.tester = false
+    engine = powertrain.getDevice("mainEngine")
+    gearbox = powertrain.getDevice("gearbox")
+    torqueConverter = powertrain.getDevice("torqueConverter")
     
 end
 
@@ -43,6 +57,10 @@ local function updateGFX(dt)
     --electrics.values["gear_A"] = 2
     --electrics.values.gear = "D"
 
+    if electrics.values.tester == 1 then
+      gearbox:setMode("neutral")
+      print("ok")
+    end
     for _, v in ipairs(motors) do
         --v.motorDirection = electrics.values.gear_M or 0
         --if electrics.values.gear_M > 0 then
@@ -55,8 +73,14 @@ local function updateGFX(dt)
         --v.motorDirection gets more torque and less hp the higher this value is. 
         --True value is ofc 1, torque can be increased by increasing this value to 2.
         --A drift mode could be ideal somewhere between 1 and 3
-        v.motorDirection = math.min(1, electrics.values.gear_M)
-        print(tostring(v.outputRPM) .. " and " .. tostring(electrics.values.gear_M))
+        v.motorDirection =  math.min(1, electrics.values.gear_M)
+        print(electrics.values.tester)
+        --print(tostring(v.outputRPM) .. " and " .. tostring(electrics.values.gear_M))
+
+        --gearbox:setGearIndex(0)
+        
+
+        
 
         for x, q in pairs(v) do
             --print (x .. " - " .. tostring(q))

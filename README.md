@@ -1,3 +1,9 @@
+#Hybrid notice
+
+This branch will never be merged. Since I discovered that - despite everyone on the forums saying it was impossible - it is possible to create a true hybrid drivetrain and manipulate all attached components at once, I have decided to put this in a repo of its own.
+
+For now I will work on it here, mostly for testing purposes. It will require a new gearbox drivetrain controller to properly manipulate all components of the drivetrain, but that is a very extensive process since the gearbox controllers are already extremely long, and now need even more contingency management and edgecase nonsense to deal with having an electric motor attached.
+
 # ETK800 Facelift, collaborative effort with Spons.
 
 This is the repo for the ETK800 facelift.

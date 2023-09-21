@@ -12,12 +12,12 @@
          //["etk800_taillightglass_R_spons", ["etk800_taillight_R"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>extglassbreaksound1", "deformVolume":0.3}],
          //{"deformGroup":""},
          //{"deformGroup":"taillightglass_R_break", "deformMaterialBase":"etk800_lights", "deformMaterialDamaged":"etk800_lights_dmg"},
-         ["etk800_taillight_spons_R", ["etk800_taillight_R"]],
+         ["etk800_taillight_spons_R", ["etk800_taillight_R"]]
          //{"deformGroup":""},
     ],
     "controller": [
         ["fileName"],
-        ["welcome", {"name":"rear", "nameString":"rearDLR", "sections":9, "speedMod":22}]
+        ["welcome", {"name":"rear", "nameString":"rearDLR", "sections":9, "speedMod":22, "override":true, "finalValue": 0}]
     ],
 	"glowMap":{	
 		"blinker_R_T_1":{"simpleFunction":{"signalR1":0.49}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on_intense_blinker", "on_intense":"etk800_test_spons_5_on_intense_blinker"},
@@ -32,15 +32,15 @@
 
         "etk800_taillights_reverse_spons":{"simpleFunction":{"reverse":1}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on"},
 		
-		"tail_R_1":{"simpleFunction":{"rearDLR1":1,"brakelights":0.51}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_R_2":{"simpleFunction":{"rearDLR2":1,"brakelights":0.51}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_R_3":{"simpleFunction":{"rearDLR3":1,"brakelights":0.51}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_R_4":{"simpleFunction":{"rearDLR4":1,"brakelights":0.51}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_R_5":{"simpleFunction":{"rearDLR5":1,"brakelights":0.51}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_R_6":{"simpleFunction":{"rearDLR6":1,"brakelights":0.51}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_R_7":{"simpleFunction":{"rearDLR7":1,"brakelights":0.51}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_R_8":{"simpleFunction":{"rearDLR8":1,"brakelights":0.51}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_R_9":{"simpleFunction":{"rearDLR9":1,"brakelights":0.51}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_R_1":{"simpleFunction":{"rearDLR1":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_R_2":{"simpleFunction":{"rearDLR2":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_R_3":{"simpleFunction":{"rearDLR3":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_R_4":{"simpleFunction":{"rearDLR4":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_R_5":{"simpleFunction":{"rearDLR5":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_R_6":{"simpleFunction":{"rearDLR6":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_R_7":{"simpleFunction":{"rearDLR7":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_R_8":{"simpleFunction":{"rearDLR8":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_R_9":{"simpleFunction":{"rearDLR9":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"}
     },
 	
     "props": [
@@ -62,110 +62,110 @@
         //["signal_R" ,         "SPOTLIGHT"        , "tl3r", "tl4r", "tl1r", {"x":190, "y":20, "z":-40} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"flareScale":0.035,"lightBrightness":0.035,"deformGroup":"taillightglass_R_break"}],
      ],
     "nodes": [
-         ["id", "posX", "posY", "posZ"],
-         //--taillight--
-         //right
-         {"selfCollision":true},
-         {"collision":true},
-         {"nodeMaterial":"|NM_PLASTIC"},
-         {"frictionCoef":0.5},
-         {"nodeWeight":0.4},
-         {"group":"etk800_taillight_R"},
-         ["tl1r",-0.625, 2.19, 0.93],
-         ["tl2r",-0.725, 2.07, 0.93],
-         ["tl3r",-0.615, 2.23, 0.79],
-         ["tl4r",-0.76, 2.08, 0.79],
-         ["tl5r", -0.805, 1.92, 0.81],
-         {"selfCollision":false},
-         {"nodeWeight":0.4},
-         ["tl6r", -0.655, 2.06, 0.85],
-         {"group":""},
+        ["id", "posX", "posY", "posZ"],
+        //--taillight--
+        //right
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeMaterial":"|NM_PLASTIC"},
+        {"frictionCoef":0.5},
+        {"nodeWeight":0.4},
+        {"group":"etk800_taillight_R"},
+        ["tl1r",-0.625, 2.19, 0.93],
+        ["tl2r",-0.725, 2.07, 0.93],
+        ["tl3r",-0.615, 2.23, 0.79],
+        ["tl4r",-0.76, 2.08, 0.79],
+        ["tl5r", -0.805, 1.92, 0.81],
+        {"selfCollision":false},
+        {"nodeWeight":0.4},
+        ["tl6r", -0.655, 2.06, 0.85],
+        {"group":""}
     ],
 
     "beams": [
-          ["id1:", "id2:"],
-          //--taillight--
-          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
-          {"beamSpring":701000,"beamDamp":20},
-          {"beamDeform":10000,"beamStrength":60000},
-          //taillight main shape
-          {"deformGroup":"taillightglass_R_break", "deformationTriggerRatio":0.05},
-          //r
-          {"deformLimitExpansion":1.1},
-          ["tl1r","tl2r"],
-          ["tl3r","tl4r"],
-          ["tl1r","tl3r"],
-          ["tl2r","tl4r"],
+        ["id1:", "id2:"],
+        //--taillight--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":701000,"beamDamp":20},
+        {"beamDeform":10000,"beamStrength":60000},
+        //taillight main shape
+        {"deformGroup":"taillightglass_R_break", "deformationTriggerRatio":0.05},
+        //r
+        {"deformLimitExpansion":1.1},
+        ["tl1r","tl2r"],
+        ["tl3r","tl4r"],
+        ["tl1r","tl3r"],
+        ["tl2r","tl4r"],
 
-          ["tl1r","tl4r"],
-          ["tl2r","tl3r"],
+        ["tl1r","tl4r"],
+        ["tl2r","tl3r"],
 
-          ["tl2r","tl5r"],
-          ["tl4r","tl5r"],
+        ["tl2r","tl5r"],
+        ["tl4r","tl5r"],
 
-          ["tl6r", "tl1r"],
-          ["tl6r", "tl2r"],
-          ["tl6r", "tl5r"],
-          ["tl6r", "tl4r"],
-          ["tl6r", "tl3r"],
+        ["tl6r", "tl1r"],
+        ["tl6r", "tl2r"],
+        ["tl6r", "tl5r"],
+        ["tl6r", "tl4r"],
+        ["tl6r", "tl3r"],
 
-          //attach
-          {"deformLimitExpansion":""},
-          {"beamSpring":501000,"beamDamp":20},
-          {"beamDeform":4000,"beamStrength":12000},
-          {"breakGroup":"taillight_a_R"},
-          ["tl1r", "q4r"],
-          ["tl2r", "q4r"],
-          ["tl3r", "q4r"],
-          ["tl4r", "q4r"],
-          ["tl3r", "r4rr"],
-          ["tl4r", "r4rr"],
-          ["tl3r", "r6rr"],
-          ["tl4r", "r6rr"],
-          ["tl5r", "q3r"],
-          ["tl5r", "q9r"],
-          ["tl6r", "q3r"],
-          ["tl6r", "q9r"],
-          ["tl1r", "r6"],
-          ["tl3r", "r6"],
-          {"breakGroup":""},
-          {"deformGroup":""},
+        //attach
+        {"deformLimitExpansion":""},
+        {"beamSpring":501000,"beamDamp":20},
+        {"beamDeform":4000,"beamStrength":12000},
+        {"breakGroup":"taillight_a_R"},
+        ["tl1r", "q4r"],
+        ["tl2r", "q4r"],
+        ["tl3r", "q4r"],
+        ["tl4r", "q4r"],
+        ["tl3r", "r4rr"],
+        ["tl4r", "r4rr"],
+        ["tl3r", "r6rr"],
+        ["tl4r", "r6rr"],
+        ["tl5r", "q3r"],
+        ["tl5r", "q9r"],
+        ["tl6r", "q3r"],
+        ["tl6r", "q9r"],
+        ["tl1r", "r6"],
+        ["tl3r", "r6"],
+        {"breakGroup":""},
+        {"deformGroup":""},
 
-          //taillight support beams
-          {"beamType":"|SUPPORT", "beamLongBound":4},
-          {"beamSpring":401000,"beamDamp":20},
-          {"beamDeform":5000,"beamStrength":330000},
-          ["tl2r","q9r"],
-          ["tl4r","q9r"],
-          ["tl2r","q3r"],
-          ["tl1r","q4r"],
-          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
-          {"deformLimitExpansion":1.1},
+        //taillight support beams
+        {"beamType":"|SUPPORT", "beamLongBound":4},
+        {"beamSpring":401000,"beamDamp":20},
+        {"beamDeform":5000,"beamStrength":330000},
+        ["tl2r","q9r"],
+        ["tl4r","q9r"],
+        ["tl2r","q3r"],
+        ["tl1r","q4r"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"deformLimitExpansion":1.1}
     ],
     "triangles": [
-            ["id1:","id2:","id3:"],
-            //right taillight
-            {"groundModel":"plastic"},
-            {"group":"etk800_taillight_R"},
-            {"dragCoef":5},
-            ["tl1r","tl3r","tl4r"],
-            ["tl1r","tl4r","tl2r"],
-            ["tl2r", "tl4r", "tl5r"],
-            {"triangleType":"NONCOLLIDABLE"},
-            ["tl3r", "tl1r", "tl6r"],
-            ["tl6r", "tl1r", "tl2r"],
-            ["tl5r", "tl6r", "tl2r"],
-            ["tl4r", "tl3r", "tl6r"],
-            ["tl5r", "tl4r", "tl6r"],
-            {"triangleType":"NORMALTYPE"},
-            {"group":""},
-    ],
+        ["id1:","id2:","id3:"],
+        //right taillight
+        {"groundModel":"plastic"},
+        {"group":"etk800_taillight_R"},
+        {"dragCoef":5},
+        ["tl1r","tl3r","tl4r"],
+        ["tl1r","tl4r","tl2r"],
+        ["tl2r", "tl4r", "tl5r"],
+        {"triangleType":"NONCOLLIDABLE"},
+        ["tl3r", "tl1r", "tl6r"],
+        ["tl6r", "tl1r", "tl2r"],
+        ["tl5r", "tl6r", "tl2r"],
+        ["tl4r", "tl3r", "tl6r"],
+        ["tl5r", "tl4r", "tl6r"],
+        {"triangleType":"NORMALTYPE"},
+        {"group":""}
+    ]
 },
 "etk800_taillight_spons_L": {
     "information":{
         "authors":"Spons",
         "name":"Left Taillight Facelift",
-        "value":120,
+        "value":120
     },
     "slotType" : "etk800_taillight_L",
     "flexbodies": [
@@ -174,7 +174,7 @@
          //["etk800_taillightglass_L_spons", ["etk800_taillight_L"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>extglassbreaksound1", "deformVolume":0.3}],
          //{"deformGroup":""},
          //{"deformGroup":"taillightglass_L_break", "deformMaterialBase":"etk800_lights", "deformMaterialDamaged":"etk800_lights_dmg"},
-         ["etk800_taillight_spons_L", ["etk800_taillight_L"]],
+         ["etk800_taillight_spons_L", ["etk800_taillight_L"]]
          //{"deformGroup":""},
     ],
     "glowMap":{
@@ -190,15 +190,15 @@
 		
         "etk800_taillights_reverse_spons":{"simpleFunction":{"reverse":1}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on"},
 		
-        "tail_L_1":{"simpleFunction":{"rearDLR1":1,"brakelights":0.51}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_L_2":{"simpleFunction":{"rearDLR2":1,"brakelights":0.51}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_L_3":{"simpleFunction":{"rearDLR3":1,"brakelights":0.51}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_L_4":{"simpleFunction":{"rearDLR4":1,"brakelights":0.51}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_L_5":{"simpleFunction":{"rearDLR5":1,"brakelights":0.51}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_L_6":{"simpleFunction":{"rearDLR6":1,"brakelights":0.51}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_L_7":{"simpleFunction":{"rearDLR7":1,"brakelights":0.51}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_L_8":{"simpleFunction":{"rearDLR8":1,"brakelights":0.51}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_L_9":{"simpleFunction":{"rearDLR9":1,"brakelights":0.51}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
+        "tail_L_1":{"simpleFunction":{"rearDLR1":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_L_2":{"simpleFunction":{"rearDLR2":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_L_3":{"simpleFunction":{"rearDLR3":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_L_4":{"simpleFunction":{"rearDLR4":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_L_5":{"simpleFunction":{"rearDLR5":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_L_6":{"simpleFunction":{"rearDLR6":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_L_7":{"simpleFunction":{"rearDLR7":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_L_8":{"simpleFunction":{"rearDLR8":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_L_9":{"simpleFunction":{"rearDLR9":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"}
 		
     },
     "props": [

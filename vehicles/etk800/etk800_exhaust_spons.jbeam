@@ -1,5 +1,5 @@
 {
-"EJ257_vivace_exhaust_customizable":{
+"etk800_spons_facelift_exhaust":{
     "information":{
         "authors":"Niclas Ryge",
         "name":"Facelifted exhaust",
@@ -8,16 +8,16 @@
     "slotType" : "etk_exhaust_i6_3.0_petrol",
     "slots": [
         ["type", "default", "description"],
-        ["etk800_exhausttips_i6","etk800_exhausttips_i6_tt", "Exhaust Tips"],
+        ["etk800_exhausttips_i6_spons","etk800_exhausttips_i6_tt_spons", "Exhaust Tips"],
     ],
     "variables": [
         ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-	["$mainGain", "range", "%", "EXHAUST SOUND", 0, -10, 200, "OVERALL VOLUME", "<DOWN<<________>>UP>", {"stepDis":0.5, "subCategory":"Main settings"}],
-	["$lowShelfGain", "range", "%", "EXHAUST SOUND", 25, 0, 150, "BASS", "<DOWN<<________>>UP>", {"stepDis":0.5, "subCategory":"Main settings"}],
-	["$eqHighGain", "range", "%", "EXHAUST SOUND", 15, -27, 100, "TIMBRE", "<SMOOTH<<________>>AGGRESSIVE>", {"stepDis":2.0, "subCategory":"Main settings"}],
-	["$eqLowGain", "range", "%", "EXHAUST SOUND", 19, 0, 150, "PIPE RESONANCE", "<NONE<<________>>METALLIC>", {"stepDis":0.8, "subCategory":"Main settings"}],
-	["$afterFireAudioCoef", "range", "%", "EXHAUST SOUND", 0.2, 0.2, 0.7, "BACKFIRE RATE", "<DOWN<<________>>UP>", {"stepDis":0.1,"subCategory":"Backfire settings"}],
-	["$afterFireVolumeCoef", "range", "%", "EXHAUST SOUND", 0.5, 0.0, 5, "BACKFIRE VOLUME", "<DOWN<<________>>UP>", {"stepDis":0.5,"subCategory":"Backfire settings"}],
+	    ["$mainGain", "range", "%", "EXHAUST SOUND", 0, -10, 200, "OVERALL VOLUME", "<DOWN<<________>>UP>", {"stepDis":0.5, "subCategory":"Main settings"}],
+	    ["$lowShelfGain", "range", "%", "EXHAUST SOUND", 25, 0, 150, "BASS", "<DOWN<<________>>UP>", {"stepDis":0.5, "subCategory":"Main settings"}],
+	    ["$eqHighGain", "range", "%", "EXHAUST SOUND", 15, -27, 100, "TIMBRE", "<SMOOTH<<________>>AGGRESSIVE>", {"stepDis":2.0, "subCategory":"Main settings"}],
+	    ["$eqLowGain", "range", "%", "EXHAUST SOUND", 19, 0, 150, "PIPE RESONANCE", "<NONE<<________>>METALLIC>", {"stepDis":0.8, "subCategory":"Main settings"}],
+	    ["$afterFireAudioCoef", "range", "%", "EXHAUST SOUND", 0.2, 0.2, 0.7, "BACKFIRE RATE", "<DOWN<<________>>UP>", {"stepDis":0.1,"subCategory":"Backfire settings"}],
+	    ["$afterFireVolumeCoef", "range", "%", "EXHAUST SOUND", 0.5, 0.0, 5, "BACKFIRE VOLUME", "<DOWN<<________>>UP>", {"stepDis":0.5,"subCategory":"Backfire settings"}],
     ],
     "mainEngine":{
         "torqueModExhaust":[
@@ -31,8 +31,8 @@
             [6000, -8.8],
             [7000, -9.0],
             [8000, -10.1],
-            [9000, -10.4],
-        ],
+            [9000, -10.4]
+        ]
     },
     "soundConfigExhaust": {
         "sampleName": "B6_exhaust",
@@ -316,15 +316,14 @@
          ["ex2r","f3r"],
          ["ex1r","f1l"],
          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-         {"deformLimitExpansion":1.1},
+         {"deformLimitExpansion":1.1}
    ],
    "triangles": [
          ["id1:","id2:","id3:"],
          {"triangleType":"NONCOLLIDABLE"},
          ["ex6l", "ex8l", "ex5ll"],
          ["ex5rr", "ex8r", "ex6r"],
-         {"triangleType":"NORMALTYPE"},
-   ],
-},
-},
+         {"triangleType":"NORMALTYPE"}
+   ]
+}
 }

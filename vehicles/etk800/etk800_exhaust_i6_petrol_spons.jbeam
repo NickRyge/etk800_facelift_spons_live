@@ -24,11 +24,6 @@
             [8000, -16.5],
         ],
     },
-    "soundConfigExhaust": {
-        "$+lowShelfGain":13,
-        "$+highShelfGain":-3,
-        "$+eqFundamentalGain":3,
-    },
     "flexbodies": [
          ["mesh", "[group]:", "nonFlexMaterials"],
          ["etk800_exhaust_R_spons", ["etk800_exhaust_R","etk800_exhaust_L"]],
@@ -38,6 +33,33 @@
          //["etk800_exhausttip_R_b", ["etk800_exhaust"]],
          //["etk800_exhausttip_L_b", ["etk800_exhaust"]],
     ],
+    "soundConfigExhaust": {
+        "sampleName": "B6_exhaust",
+
+        "mainGain": 0,
+        "onLoadGain":1,
+        "offLoadGain":0.30,
+
+        "maxLoadMix": 0.63,
+        "minLoadMix": 0,
+
+        "lowShelfGain":25,
+        "lowShelfFreq":120,
+
+        "highShelfGain":0,
+        "highShelfFreq":10000,
+
+        "eqLowGain": 19.2,
+        "eqLowFreq": 500,
+        "eqLowWidth": 0.94,
+
+        "eqHighGain": 15,
+        "eqHighFreq": 3700,
+        "eqHighWidth": 0.02,
+
+        "fundamentalFrequencyCylinderCount":4,
+        "eqFundamentalGain": -5
+    },
     "nodes": [
          ["id", "posX", "posY", "posZ"],
          {"selfCollision":false},

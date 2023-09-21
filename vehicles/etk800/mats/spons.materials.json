@@ -643,6 +643,41 @@
     "translucentBlendOp": "None",
     "version": 1.5
   },
+
+  "etk800_spons_rearlights_dim": {
+    "name": "etk800_spons_rearlights_dim",
+    "mapTo": "etk800_spons_rearlights_dim",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/etk800/mats/etk800_test_spons_5_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/mats/etk800_test_spons_5_b.color.png",
+        "emissiveFactor": [
+          4.2,
+          3.2,
+          3.2
+        ],
+        "emissiveMap": "/vehicles/etk800/mats/etk800_test_spons_5_g.color.png",
+        "glow": true,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/etk800/mats/etk800_test_spons_5_m.data.png",
+        "normalMap": "/vehicles/etk800/mats/etk800_test_spons_5_n.normal.png",
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/etk800/mats/etk800_test_spons_5_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+
   "etk800_test_spons_5_on_intense": {
     "name": "etk800_test_spons_5_on_intense",
     "mapTo": "etk800_test_spons_5_on_intense",
@@ -1541,5 +1576,38 @@
     "materialTag1": "vehicle",
     "order_simset": 0,
     "version": 1.5
-  }
+  },
+  "etk800_spons_lights_on_intense": {
+    "name": "etk800_spons_lights_on_intense",
+    "mapTo": "etk800_spons_lights_on_intense",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/etk800/etk800_lights_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/etk800_lights_b.color.png",
+        "emissiveFactor": [
+          25,
+          25,
+          25
+        ],
+        "emissiveMap": "/vehicles/etk800/etk800_lights_g_intense.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/etk800/etk800_lights_m.data.png",
+        "normalMap": "/vehicles/etk800/etk800_lights_nm.normal.png",
+        "pixelSpecular": true,
+        "roughnessFactor": 1,
+        "roughnessMap": "/vehicles/etk800/etk800_lights_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
 }

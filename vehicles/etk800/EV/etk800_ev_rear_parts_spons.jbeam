@@ -4,17 +4,17 @@
         "information":{
             "authors":"BeamNG",
             "name":"Rear Electric Motor",
-            "value":7000,
+            "value":7000
         },
         "slotType" : "etk_engine",
-        "slots": [
-            ["type", "default", "description"],
-            ["etk_differential_R_electric","etk800_differential_R_active_LSD_EV_spons", "Rear Differential"],
-            ["etk800_battery_spons", "etk800_battery_100", "Electric vehicle battery"]
-        ],
+        //"slots": [
+        //    ["type", "default", "description"],
+        //    ["etk_differential_R_electric","etk800_differential_R_active_LSD_EV_spons", "Rear Differential"],
+        //    ["etk800_battery_spons", "etk800_battery_100", "Electric vehicle battery"]
+        //],
         "powertrain": [
             ["type", "name", "inputName", "inputIndex"],
-            ["electricMotor", "rearMotor", "dummy", 0],
+            ["electricMotor", "rearMotor", "dummy", 0]
         ],
         "rearMotor":{
             "torque":[
@@ -57,7 +57,7 @@
             "breakTriggerBeam":"rear_motor",
             "uiName":"Rear Motor",
     
-            "soundConfig": "soundConfigRear",
+            "soundConfig": "soundConfigRear"
         },
         "soundConfigRear": {
             "sampleName": "ElectricMotor",
@@ -78,7 +78,7 @@
             "shiftLogicName":"electricMotor",
             "motorNames": ["rearMotor", "frontMotor"],
             "topSpeedLimitReverse": 15,
-            "onePedalRegenCoef": 1.0,
+            "onePedalRegenCoef": 1.0
         },
         "flexbodies": [
              ["mesh", "[group]:", "nonFlexMaterials"],

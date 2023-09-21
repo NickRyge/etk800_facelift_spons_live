@@ -19,7 +19,7 @@
 	"controller": [
 	["fileName"],
 	["adaptiveBlinkers", {"sectionSize":9}],
-    ["welcome"],
+    ["welcome", {"name": "front", "speedMod": 16}],
     ["intelligentLights"]
 	],
 	

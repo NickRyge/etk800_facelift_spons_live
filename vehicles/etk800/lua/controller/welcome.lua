@@ -1,6 +1,9 @@
 -- Author - Niclas Ryge
 -- DON'T USE THIS CODE WITHOUT EXCPLICIT PERMISSION
 
+-- This code needs to change. Notably, the dt counting function is flawed, 
+-- and I plan to use the much simpler adaptive blinkers implementation.
+
 local M = {}
 
 -- Local variables
@@ -10,7 +13,11 @@ local wiggle = false
 local old = 0
 local level = 0
 local lowhighbeam
-local highbeam 
+local highbeam
+local nameString = ""
+local speedModifier
+local sectionAmount = 0
+local timer = 0
 
 -- Car specifics (applies only to Spons facelift mod)
 local yellowlights
@@ -19,83 +26,80 @@ local yellow
 -- This function resetss the lights and either leave them at 0 or at 0.5 depending on if they are on or not.
 local function reset()
     if electrics.values.ignitionLevel > 0 then
-        for i = 1,8,1 do
-            electrics.values["DRL"..i] = 0.5
+        for i = 1,sectionAmount,1 do
+            electrics.values[nameString..i] = 0.5
         end
     end
     pastignition = electrics.values.ignitionLevel
     level = 0
+    timer = 0
 end
 
 
 -- Init
 local function init(jbeamData)
+    -- load jbeam data
+    nameString = jbeamData.nameString or "DRL"
+    speedModifier = jbeamData.timerSpeed or 0.025
+    sectionAmount = jbeamData.sections or 4
+    speedModifier = jbeamData.speedMod or 10
+    
     -- If car spawns started, turn all lights on.
     reset()
+
     yellowlights = electrics.values.yellowlights
     lowhighbeam = electrics.values.lowhighbeam
     highbeam = electrics.values.highbeam
 end
 
 
--- Terribly optimized welcomelights.
-local function welcomeLightsStep(dt, currentValue)
-    -- use dt as counter to count up through lights
-    local step = (20 - currentValue) * dt * 0.85 
-    local newValue = currentValue+step
-    local light = math.ceil(newValue)
+local function welcomeLights(dt)
+    electrics.values["brakelights"] = 0
+    timer = timer + dt
+    local trueValue = math.ceil(timer*speedModifier)
 
-    -- Save resources.
-    if light == math.ceil(currentValue) then
-        return newValue
-    
-    -- Used for the edgecase that a user turns on lights while the car is off. 
-    -- The reason this is needed and that the lights cant be handled in this function is
-    -- that the lights will turn on before this function has the chance to turn them off, leaving them flashing.
-    -- That looks particularly stupid.
-    elseif lowhighbeam+highbeam ~= 0 or yellowlights ~= 0 then
-        wiggle = false
-        reset()
-        return newValue
-    end
-    
-    if light < 5 then
-        electrics.values["DRL"..light] = 1
-        electrics.values["DRL"..light-1] = 0
+    if trueValue <= math.ceil(sectionAmount) then
+        electrics.values[nameString..trueValue] = 1
+        electrics.values[nameString..trueValue-1] = 0
     else
         -- Otherwise go the other way
-        electrics.values["DRL".. 8-light] = 1
-        electrics.values["DRL".. 8-light+1] = 0.5
+        electrics.values[nameString.. sectionAmount*2-trueValue] = 1
+        electrics.values[nameString.. sectionAmount*2-trueValue+1] = 0.5
     end
+    
 
-    if math.ceil(currentValue) == 9 then
+    if math.ceil(trueValue) == (sectionAmount*2) then
+        print("DONE")
+        timer = 0
+        trueValue = 0
         wiggle = false
         electrics.values.yellowlights = yellow
         for i = 1,level,1 do
             electrics.toggle_lights()
         end
-
     end
-    return newValue
 end
 
 
 -- Runs every GFX tick.
 local function updateGFX(dt)
+
+   if wiggle then welcomeLights(dt) end
+
     -- Assign variables
     lowhighbeam = electrics.values.lowhighbeam
     highbeam = electrics.values.highbeam
     yellowlights = electrics.values.yellowlights
 
     -- Do the welcome wiggle
-    if wiggle then old = welcomeLightsStep(dt, old) end
+    -- if wiggle then old = welcomeLightsStep(dt, old) end
     
     ignition = electrics.values.ignitionLevel
 
     if (pastignition%2) > ignition then
 
-        for i = 1,8,1 do
-            electrics.values["DRL"..i] = 0
+        for i = 1,sectionAmount,1 do
+            electrics.values[nameString..i] = 0
         end
         wiggle = false
         
@@ -113,10 +117,10 @@ local function updateGFX(dt)
     end
 
     -- Mathematically proven to be stupid
-    if (ignition%2) > pastignition then
+    if (ignition) > pastignition and pastignition < 1 then
         -- Do the jiggle
         wiggle = true
-
+        electrics.values["brakelights"] = 0
         old = 0
     end
     pastignition = ignition

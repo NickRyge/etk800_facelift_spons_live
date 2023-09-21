@@ -32,15 +32,15 @@
 
         "etk800_taillights_reverse_spons":{"simpleFunction":{"reverse":1}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on"},
 		
-		"tail_R_1":{"simpleFunction":{"rearDLR1":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_R_2":{"simpleFunction":{"rearDLR2":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_R_3":{"simpleFunction":{"rearDLR3":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_R_4":{"simpleFunction":{"rearDLR4":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_R_5":{"simpleFunction":{"rearDLR5":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_R_6":{"simpleFunction":{"rearDLR6":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_R_7":{"simpleFunction":{"rearDLR7":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_R_8":{"simpleFunction":{"rearDLR8":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_R_9":{"simpleFunction":{"rearDLR9":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"}
+		"tail_R_1":{"simpleFunction":{"rearDLR1":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_R_2":{"simpleFunction":{"rearDLR2":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_R_3":{"simpleFunction":{"rearDLR3":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_R_4":{"simpleFunction":{"rearDLR4":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_R_5":{"simpleFunction":{"rearDLR5":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_R_6":{"simpleFunction":{"rearDLR6":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_R_7":{"simpleFunction":{"rearDLR7":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_R_8":{"simpleFunction":{"rearDLR8":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_R_9":{"simpleFunction":{"rearDLR9":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"}
     },
 	
     "props": [
@@ -190,15 +190,15 @@
 		
         "etk800_taillights_reverse_spons":{"simpleFunction":{"reverse":1}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on"},
 		
-        "tail_L_1":{"simpleFunction":{"rearDLR1":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_L_2":{"simpleFunction":{"rearDLR2":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_L_3":{"simpleFunction":{"rearDLR3":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_L_4":{"simpleFunction":{"rearDLR4":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_L_5":{"simpleFunction":{"rearDLR5":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_L_6":{"simpleFunction":{"rearDLR6":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_L_7":{"simpleFunction":{"rearDLR7":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_L_8":{"simpleFunction":{"rearDLR8":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"},
-		"tail_L_9":{"simpleFunction":{"rearDLR9":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on", "on_intense":"etk800_test_spons_5_on_intense"}
+        "tail_L_1":{"simpleFunction":{"rearDLR1":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_L_2":{"simpleFunction":{"rearDLR2":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_L_3":{"simpleFunction":{"rearDLR3":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_L_4":{"simpleFunction":{"rearDLR4":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_L_5":{"simpleFunction":{"rearDLR5":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_L_6":{"simpleFunction":{"rearDLR6":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_L_7":{"simpleFunction":{"rearDLR7":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_L_8":{"simpleFunction":{"rearDLR8":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"},
+		"tail_L_9":{"simpleFunction":{"rearDLR9":1,"brakelights":0.51, "lowhighbeam": 0.2}, "off":"etk800_test_spons_5", "on":"etk800_spons_rearlights_dim", "on_intense":"etk800_test_spons_5_on_intense"}
 		
     },
     "props": [

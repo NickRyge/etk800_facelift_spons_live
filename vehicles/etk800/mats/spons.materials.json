@@ -113,6 +113,41 @@
     "version": 1.5
   },
 
+  "etk800_headlight_L_facelift_spons_on_glass": {
+    "name": "etk800_headlight_L_facelift_spons_on_glass",
+    "mapTo": "etk800_headlight_L_facelift_spons_on_glass",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png",
+        "emissiveFactor": [
+          15,
+          17,
+          20
+        ],
+        "emissiveMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_g.color.png",
+        "glow": true,
+        "metallicMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_m.data.png",
+        "metallicFactor": 1,
+        "normalMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_n.normal.png",
+        "pixelSpecular": true,
+        "roughnessFactor": 1,
+        "roughnessMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+
   "etk800_headlight_L_facelift_spons_on_blinker": {
     "name": "etk800_headlight_L_facelift_spons_on_blinker",
     "mapTo": "etk800_headlight_L_facelift_spons_on_blinker",

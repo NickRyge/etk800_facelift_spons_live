@@ -46,8 +46,8 @@
 		"blinker_R_8":{"simpleFunction":{"signalR8":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
 		"blinker_R_9":{"simpleFunction":{"signalR9":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
 		
-		"etk800_headlight_L_facelift_spons_lowbeam":{"simpleFunction":{"lowhighbeam":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-        "etk800_headlight_L_facelift_spons_highbeam":{"simpleFunction":{"highbeam":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
+		"etk800_headlight_L_facelift_spons_lowbeam":{"simpleFunction":{"lowhighbeam":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_glass", "on_intense":"etk800_headlight_L_facelift_spons_on_glass"},
+        "etk800_headlight_L_facelift_spons_highbeam":{"simpleFunction":{"highbeam":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_glass", "on_intense":"etk800_headlight_L_facelift_spons_on_glass"},
 		"etk800_headlightglass":{"simpleFunction":{"lowbeam":0.49,"highbeam":1}, "off":"etk800_glass", "on":"etk800_glass", "on_intense":"etk800_glass"},
 		
 		"DRL_L_1":{"simpleFunction":{"DRL2":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},

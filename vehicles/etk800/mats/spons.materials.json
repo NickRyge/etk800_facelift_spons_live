@@ -619,9 +619,9 @@
         "ambientOcclusionMap": "/vehicles/etk800/mats/etk800_test_spons_5_ao.data.png",
         "baseColorMap": "/vehicles/etk800/mats/etk800_test_spons_5_b.color.png",
         "emissiveFactor": [
-          6,
-          6,
-          6
+          4,
+          4,
+          4
         ],
         "emissiveMap": "/vehicles/etk800/mats/etk800_test_spons_5_g.color.png",
         "glow": true,
@@ -687,9 +687,9 @@
         "ambientOcclusionMap": "/vehicles/etk800/mats/etk800_test_spons_5_ao.data.png",
         "baseColorMap": "/vehicles/etk800/mats/etk800_test_spons_5_b.color.png",
         "emissiveFactor": [
-          10,
-          10,
-          10
+          8,
+          8,
+          8
         ],
         "emissiveMap": "/vehicles/etk800/mats/etk800_test_spons_5_g.color.png",
         "glow": true,

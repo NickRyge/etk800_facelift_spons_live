@@ -1,0 +1,38 @@
+{
+"etk800_DSE_TC_electric": {
+    "information":{
+        "authors":"Diamondback",
+        "name":"Traction Control (Electric Motors)",
+        "value":250
+    },
+    "slotType" : "etk_DSE_TC",
+    "controller": [
+        ["fileName"],
+        ["drivingDynamics/supervisors/tractionControl", {"name": "tractionControl"}],
+        ["drivingDynamics/supervisors/slipProviders/virtualSpeedSlip"]
+    ],
+    "tractionControl": {
+        "tractionControlledMotors": ["frontMotor", "rearMotor"]
+    },
+    "motorTorqueControl": {
+        "useForTractionControl": true,
+        "tractionControl": {
+            "wheelGroupSettings":[
+                ["motorName",   "slipThreshold",    "kP",   "kI",   "kD",   "integralInCoef",   "integralOutCoef"],
+                ["frontMotor",  0.1,                1.0,    0.8,    0.1,    20,                 2],
+                ["rearMotor",   0.1,                1.0,    0.8,    0.1,    20,                 2]
+            ]
+        }
+    },
+    "brakeControl": {
+        "useForTractionControl": true,
+        "tractionControl": {
+            "wheelGroupSettings":[
+                ["motorName",   "slipThreshold",    "slipRangeThreshold",   "maxVelocity",   "kP",   "kI",   "kD",   "integralInCoef",   "integralOutCoef"],
+                ["frontMotor",  0.1,                0.2,                    10,              1,      1.5,    0,      20,                 2],
+                ["rearMotor",   0.1,                0.2,                    10,              1,      1.5,    0,      20,                 2]
+            ]
+        }
+    }
+}
+}

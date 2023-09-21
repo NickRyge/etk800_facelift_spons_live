@@ -2,18 +2,18 @@
 "etk800_taillight_spons_R": {
     "information":{
         "authors":"Spons",
-        "name":"Right EUDM Taillight Facelift",
+        "name":"Right Taillight Facelift",
         "value":120,
     },
     "slotType" : "etk800_taillight_R",
     "flexbodies": [
          ["mesh", "[group]:", "nonFlexMaterials"],
-		 {"deformGroup":"taillightglass_R_break", "deformMaterialBase":"etk800_glass", "deformMaterialDamaged":"etk800_glass_dmg"},
+		 //{"deformGroup":"taillightglass_R_break", "deformMaterialBase":"etk800_glass", "deformMaterialDamaged":"etk800_glass_dmg"},
          ["etk800_taillightglass_R_spons", ["etk800_taillight_R"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>extglassbreaksound1", "deformVolume":0.3}],
-         {"deformGroup":""},
-         {"deformGroup":"taillightglass_R_break", "deformMaterialBase":"etk800_lights", "deformMaterialDamaged":"etk800_lights_dmg"},
+         //{"deformGroup":""},
+         //{"deformGroup":"taillightglass_R_break", "deformMaterialBase":"etk800_lights", "deformMaterialDamaged":"etk800_lights_dmg"},
          ["etk800_taillight_spons_R", ["etk800_taillight_R"]],
-         {"deformGroup":""},
+         //{"deformGroup":""},
     ],
 	    "glowMap":{
 			"blinker_L_T_1":{"simpleFunction":{"signalL1":0.49}, "off":"etk800_test_spons_5", "on":"etk800_test_spons_5_on_intense_blinker", "on_intense":"etk800_test_spons_5_on_intense_blinker"},
@@ -182,18 +182,18 @@
 "etk800_taillight_spons_L": {
     "information":{
         "authors":"Spons",
-        "name":"Left EUDM Taillight Facelift",
+        "name":"Left Taillight Facelift",
         "value":120,
     },
     "slotType" : "etk800_taillight_L",
     "flexbodies": [
          ["mesh", "[group]:", "nonFlexMaterials"],
-		 {"deformGroup":"taillightglass_L_break", "deformMaterialBase":"etk800_glass", "deformMaterialDamaged":"etk800_glass_dmg"},
+		 //{"deformGroup":"taillightglass_L_break", "deformMaterialBase":"etk800_glass", "deformMaterialDamaged":"etk800_glass_dmg"},
          ["etk800_taillightglass_L_spons", ["etk800_taillight_L"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>extglassbreaksound1", "deformVolume":0.3}],
-         {"deformGroup":""},
-         {"deformGroup":"taillightglass_L_break", "deformMaterialBase":"etk800_lights", "deformMaterialDamaged":"etk800_lights_dmg"},
+         //{"deformGroup":""},
+         //{"deformGroup":"taillightglass_L_break", "deformMaterialBase":"etk800_lights", "deformMaterialDamaged":"etk800_lights_dmg"},
          ["etk800_taillight_spons_L", ["etk800_taillight_L"]],
-         {"deformGroup":""},
+         //{"deformGroup":""},
     ],
     "props": [
         ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"],

@@ -374,7 +374,7 @@
     "etk800_differential_R_active_LSD_EV_spons": {
         "information":{
             "authors":"BeamNG",
-            "name":"electric Rear Differential",
+            "name":"Electric Rear Differential",
             "value":3000,
         },
         "slotType" : "etk800_differential_R",

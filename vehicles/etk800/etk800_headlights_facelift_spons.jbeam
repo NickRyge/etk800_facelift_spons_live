@@ -8,10 +8,10 @@
     "slotType" : "etk800_headlight_R",
     "flexbodies": [
          ["mesh", "[group]:", "nonFlexMaterials"],
-         {"deformGroup":"headlightglass_R_break", "deformMaterialBase":"etk800_glass_spons", "deformMaterialDamaged":"etk800_glass_dmg"},
+         //{"deformGroup":"headlightglass_R_break", "deformMaterialBase":"etk800_glass_spons", "deformMaterialDamaged":"etk800_glass_dmg"},
          ["etk800_headlightglass_spons_R", ["etk800_headlight_R"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>extglassbreaksound3", "deformVolume":0.4}],
-         {"deformGroup":""},
-         {"deformGroup":"headlightglass_R_break", "deformMaterialBase":"etk800_lights", "deformMaterialDamaged":"etk800_lights_dmg"},
+         //{"deformGroup":""},
+         //{"deformGroup":"headlightglass_R_break", "deformMaterialBase":"etk800_lights", "deformMaterialDamaged":"etk800_lights_dmg"},
 		 ["etk800_headlight_R_facelift_spons", ["etk800_headlight_R"]],
 		 ["etk800_headlight_R_facelift_spons_dlr_b", ["etk800_headlight_R"]],
          {"deformGroup":""}
@@ -238,10 +238,10 @@
     "slotType" : "etk800_headlight_L",
     "flexbodies": [
          ["mesh", "[group]:", "nonFlexMaterials"],
-         {"deformGroup":"headlightglass_spons_L_break", "deformMaterialBase":"etk800_glass_spons", "deformMaterialDamaged":"etk800_glass_dmg"},
+         //{"deformGroup":"headlightglass_spons_L_break", "deformMaterialBase":"etk800_glass_spons", "deformMaterialDamaged":"etk800_glass_dmg"},
          ["etk800_headlightglass_spons_L", ["etk800_headlight_L"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>extglassbreaksound3", "deformVolume":0.4}],
-         {"deformGroup":""},
-         {"deformGroup":"headlightglass_L_break", "deformMaterialBase":"etk800_lights", "deformMaterialDamaged":"etk800_lights_dmg"},
+         //{"deformGroup":""},
+         //{"deformGroup":"headlightglass_L_break", "deformMaterialBase":"etk800_lights", "deformMaterialDamaged":"etk800_lights_dmg"},
 		 ["etk800_headlight_L_facelift_spons", ["etk800_headlight_L"]],
 		 ["etk800_headlight_L_facelift_spons_dlr_b", ["etk800_headlight_L"]],
          {"deformGroup":""},

@@ -3,7 +3,7 @@
     "information":{
         "authors":"Spons",
         "name":"Sedan Unibody Facelift",
-        "value":11000,
+        "value":11000
     },
     "slotType" : "etk800_body",
     "slots": [
@@ -54,6 +54,9 @@
         ["etk800_suspension_F","etk800_suspension_F", "Front Suspension"],
         ["soundscape_horn", "soundscape_horn_7", "Horn"],
     ],
+    "glowMap":{	
+        "etk800_chmsl":{"simpleFunction":{"brakelights":100}, "off":"etk800_lights", "on":"etk800_spons_lights_on_intense", "on_intense":"etk800_spons_lights_on_intense"}
+    },
     "refNodes":[
         ["ref:", "back:", "left:", "up:", "leftCorner:", "rightCorner:"],
         ["f2r", "f3r", "f2l", "f7r", "f15ll", "f15rr"],
@@ -96,7 +99,7 @@
     ],
     "sounds": {
         "cabinFilterCoef": 0.12
-    }
+    },
     "torsionbars": [
         ["id1:", "id2:", "id3:", "id4:"],
         //rigidify firewall

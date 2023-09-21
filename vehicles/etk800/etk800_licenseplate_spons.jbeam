@@ -21,7 +21,7 @@
     "licenseplateFormat": "52-11",
     "flexbodies": [
          ["mesh", "[group]:", "nonFlexMaterials"],
-         ["licenseplate-52-11-r2", ["etk800_trunk"],[],{"pos":{"x":0.0, "y":2.27688, "z":0.815657}, "rot":{"x":17.9513, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["licenseplate-52-11-r2", ["etk800_trunk"],[],{"pos":{"x":0.0, "y":2.27688, "z":0.805657}, "rot":{"x":17.9513, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
     ],
 },
 }

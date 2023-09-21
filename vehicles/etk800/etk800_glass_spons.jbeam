@@ -1,0 +1,36 @@
+{
+"etk800_glass_sunroof_wagon_spons": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Sunroof Glass Facelift",
+        "value":650,
+    },
+    "slotType" : "etk800_glass_sunroof_wagon",
+    "nodes": [
+         //redefine roof node
+         ["id", "posX", "posY", "posZ"],
+         {"group":"etk800_body"},
+         {"selfCollision":true},
+         {"collision":true},
+         {"nodeWeight":4.0},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         ["rf2r", -0.56, 0.435, 1.36, {"group":["etk800_body","etk800_roof"]}],
+         ["rf2", 0, 0.40, 1.39, {"group":["etk800_body","etk800_roof"]}],
+         ["rf2l", 0.56, 0.435, 1.36, {"group":["etk800_body","etk800_roof"]}],
+    ],
+    "sounds": {
+        "$+cabinFilterCoef": 0.10
+    }
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //body
+         //["etk800_roof_sunroof", ["etk800_body"]],
+         {"deformGroup":"sunroof_break", "deformMaterialBase":"etk800_glass", "deformMaterialDamaged":"etk800_glass_dmg"},
+         ["etk800_sunroof_facelift", ["etk800_body"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound8", "deformVolume":0.6}],
+         {"deformGroup":"sunroof_break", "deformMaterialBase":"etk800_glass_int", "deformMaterialDamaged":"etk800_glass_dmg"},
+         ["etk800_sunroof_int", ["etk800_body"]],
+         {"deformGroup":""},
+    ],
+},
+}

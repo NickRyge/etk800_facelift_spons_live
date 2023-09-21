@@ -9,8 +9,8 @@
         "slotType" : "etk_engine",
         "slots": [
             ["type", "default", "description"],
-            ["etk_differential_R_electric","", "Rear Differential"],
-            ["etk800_battery_spons", "", "Electric vehicle battery"]
+            ["etk_differential_R_electric","etk800_differential_R_active_LSD_EV_spons", "Rear Differential"],
+            ["etk800_battery_spons", "etk800_battery_100", "Electric vehicle battery"]
         ],
         "powertrain": [
             ["type", "name", "inputName", "inputIndex"],
@@ -82,13 +82,13 @@
         },
         "flexbodies": [
              ["mesh", "[group]:", "nonFlexMaterials"],
-             ["sbr_emotor_large", ["sbr_rear_motor"]],
-             ["sbr_emotor_large_mount", ["sbr_rear_motor"]],
-             ["sbr_emotor_large_support", ["sbr_subframe_R","sbr_lowermounts_R","sbr_uppermounts_R"]],
-             ["sbr_wiring_emotor_b", ["sbr_body"]],
-             ["sbr_ecu_R", ["sbr_body"]],
-             ["sbr_wiring_battery_R", ["sbr_body"]],
-             ["sbr_trunk", ["sbr_body"]],
+             ["sbr_emotor_large_spons", ["etk800_differential_R"]],
+             ["sbr_emotor_large_mount_spons", ["etk800_differential_R"]],
+             ["sbr_emotor_large_support_spons", ["etk800_subframe_R"]],
+             ["sbr_wiring_emotor_b_spons", ["etk800_body"]],
+             ["sbr_ecu_R_spons", ["etk800_body"]],
+             ["sbr_wiring_battery_R_spons", ["etk800_body"]],
+             ["sbr_trunk_spons", ["etk800_body"]],
         ],
         //"nodes": [
         //     ["id", "posX", "posY", "posZ"],
@@ -290,13 +290,11 @@
         "slotType" : "etk800_fueltank",
         "flexbodies": [
             ["mesh", "[group]:", "nonFlexMaterials"],
-            ["sbr_battery", ["sbr_body"]],
-            ["sbr_battery_R", ["sbr_body"]],
-            ["sbr_battery_L", ["sbr_body"]],
-            ["sbr_battery_coolinglines_a", ["sbr_body"]],
-            ["sbr_battery_coolinglines_b", ["sbr_body"]],
-            ["sbr_radiators_small", ["sbr_body"]],
-            ["sbr_wiring_battery_RL", ["sbr_body"]],
+            ["sbr_battery_spons", ["etk800_body"]],
+            //["sbr_battery_coolinglines_a", ["etk800_body"]],
+            //["sbr_battery_coolinglines_b", ["etk800_body"]],
+            //["sbr_radiators_small", ["etk800_body"]],
+            ["sbr_wiring_battery_RL_spons", ["etk800_body"]],
         ],
         "energyStorage": [
             ["type", "name"],
@@ -399,10 +397,10 @@
             "torqueLossCoef": 0.03,
             "visualPositionRelativeChildren":[[-0.6,0,0]]
         },
-        "flexbodies": [
-             ["mesh", "[group]:", "nonFlexMaterials"],
-             ["etk800_diff", ["etk800_subframe_R","etk800_body"]],
-        ],
+        //"flexbodies": [
+        //     ["mesh", "[group]:", "nonFlexMaterials"],
+        //     ["etk800_diff", ["etk800_subframe_R","etk800_body"]],
+        //],
         "nodes": [
              ["id", "posX", "posY", "posZ"],
              //--diff weight--

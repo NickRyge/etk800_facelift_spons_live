@@ -48,13 +48,14 @@
 		
 		"etk800_headlight_L_facelift_spons_lowbeam":{"simpleFunction":{"lowhighbeam":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
         "etk800_headlight_L_facelift_spons_highbeam":{"simpleFunction":{"highbeam":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-		"etk800_headlightglass":{"simpleFunction":{"lowbeam":0.49,"highbeam":1}, "off":"etk800_glass", "on":"etk800_glass_spons", "on_intense":"etk800_glass_spons"},
+		"etk800_headlightglass":{"simpleFunction":{"lowbeam":0.49,"highbeam":1}, "off":"etk800_glass", "on":"etk800_glass", "on_intense":"etk800_glass"},
 		
 		"DRL_L_1":{"simpleFunction":{"DRL2":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
 		"DRL_L_2":{"simpleFunction":{"DRL1":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
 		"DRL_L_3":{"simpleFunction":{"DRL1":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
 		"DRL_L_4":{"simpleFunction":{"DRL2":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
-		"DRL_L_5":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
+		
+        "DRL_L_5":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
 		"DRL_L_6":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
 		"DRL_L_7":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
 		"DRL_L_8":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
@@ -63,7 +64,8 @@
 		"DRL_R_2":{"simpleFunction":{"DRL4":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
 		"DRL_R_3":{"simpleFunction":{"DRL4":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
 		"DRL_R_4":{"simpleFunction":{"DRL3":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
-		"DRL_R_5":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
+		
+        "DRL_R_5":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
 		"DRL_R_6":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
 		"DRL_R_7":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
 		"DRL_R_8":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
@@ -229,7 +231,7 @@
 },
 "etk800_headlight_L_facelift_spons": {
     "information":{
-        "authors":"BeamNG",
+        "authors":"Niclas",
         "name":"Intelligent Bi-LED left Headlight facelift",
         "value":750
     },

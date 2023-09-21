@@ -1,0 +1,27 @@
+{
+"etk800_licenseplate_R_spons": {
+    "information":{
+        "authors":"Spons",
+        "name":"Rear License Plate Facelift",
+        "value":0,
+    },
+    "slotType" : "etk800_licenseplate_R_spons",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["licenseplate", ["etk800_trunk"],[],{"pos":{"x":0.0, "y":2.27628, "z":0.778657}, "rot":{"x":17.9513, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"etk800_licenseplate_R_spons_EU": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Rear EU License Plate Facelift",
+        "value":0,
+    },
+    "slotType" : "etk800_licenseplate_R_spons",
+    "licenseplateFormat": "52-11",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["licenseplate-52-11-r2", ["etk800_trunk"],[],{"pos":{"x":0.0, "y":2.27688, "z":0.815657}, "rot":{"x":17.9513, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+}

@@ -1609,5 +1609,27 @@
     "translucent": true,
     "translucentBlendOp": "None",
     "version": 1.5
+  },
+  "etk800_gauges_screen_spons": {
+    "name": "etk800_gauges_screen_spons",
+    "mapTo": "etk800_gauges_screen_spons",
+    "class": "Material",
+    "persistentId": "e8c015b8-9adf-42cc-a421-e7007d9785bd",
+    "Stages": [
+      {
+        "colorMap": "@etk800_gauges_screen",
+        "emissive": true,
+        "specularMap": "vehicles/common/null.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "castShadows": false,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true
   }
 }

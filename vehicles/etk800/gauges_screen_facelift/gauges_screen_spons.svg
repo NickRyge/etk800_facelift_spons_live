@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="efficiencyBar" width="255" height="255" viewBox="0 0 120 120">
+  <path d="M105.306 91.873A55.87 55.14 21.18 0 1 43.91 111.79" id="path6625" fill="none" stroke="#c6c6c6" stroke-width="2.54" stroke-linejoin="round" stroke-dasharray="1.14708867,1.14708867"/>
+  <circle id="efficiency" cx="36.457" cy="-76.855" r="54" transform="rotate(108.8)" fill="none" stroke-width="5"/>
+  <path style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;text-orientation:mixed;shape-padding:0;isolation:auto;mix-blend-mode:normal" d="M42.213 107.52l-1.634 4.172 1.041.412 1.636-4.173zm-1.46-.581l-.503-.232-1.846 4.08.548.252.106.047.48.19 1.634-4.165zm-2.402-1.107l-.029-.02v.001l-.023-.01-.2.439-1.833 3.548.081.041.105.052.936.43 1.848-4.083zm-2.015-1.063l-2.054 3.978.992.521 2.055-3.977zm-1.84-1.067l-2.256 3.864.965.571 2.257-3.864zm-1.796-1.14l-2.451 3.74.934.62 2.452-3.739zm-1.146-.76l-.604-.449-2.643 3.611.65.478.097.066.26.173 2.453-3.74zm-2.123-1.574l-.185-.153-2.82 3.468.23.19.093.071.662.49 2.64-3.609zm-1.918-1.579l-2.82 3.467.866.715 2.824-3.467zm-1.574-1.429l-2.998 3.316.827.757 3-3.315z" id="path6641" overflow="visible" color="#000" font-family="sans-serif" white-space="normal" fill="#295aac" stroke-width="4.481" stroke-linejoin="round" stroke-dasharray="1.12034721,1.12034721"/>
+  <circle id="efficiencyBackground" cx="36.457" cy="-76.855" r="54" stroke="transparent" transform="rotate(108.8)" fill="none" stroke-width="5"/>
+  <path id="path5050" d="M106.8 94.041a57.3 56.552 21.545 0 1-44.898 22.708 57.3 56.552 21.545 0 1-45.842-21.62" fill="none" stroke="#878787" stroke-width="1.186" stroke-linejoin="round"/>
+  <path id="path6637" d="M23.541 96.473l-.995.967m.985.008l-.97-.996m-2.425-2.484l.97.996m-.461-2.46l-2.49 2.421 4.361 4.474 2.48-2.427-.485-.498.496-.492-.486-.498-.497.485-2.425-2.486.497-.486-.484-.502-.495.486z" fill="#003161" stroke="#295aac" stroke-width=".711"/>
+  <path id="rect7659" d="M45.911 106.336l-2.768 8.13-1.13-.386 2.767-8.13z" fill="#878787" fill-rule="evenodd" stroke-width="2.075" stroke-linejoin="round" stroke-dasharray=".51871251,.51871251"/>
+  <path id="rect7659-9" d="M66.163 108.39l.75 8.657-1.15.158-.74-8.655z" fill="#878787" fill-rule="evenodd" stroke-width="2.054" stroke-linejoin="round" stroke-dasharray=".51345645,.51345645"/>
+  <path id="rect7659-9-4" d="M85.694 102.13l4.126 7.645-.988.601-4.128-7.646z" fill="#878787" fill-rule="evenodd" stroke-width="2.054" stroke-linejoin="round" stroke-dasharray=".51345644,.51345644"/>
+  <path id="rect7659-9-4-7" d="M100.79 88.495l6.93 5.24-.65.958-6.94-5.246z" fill="#878787" fill-rule="evenodd" stroke-width="2.054" stroke-linejoin="round" stroke-dasharray=".51345644,.51345644"/>
+  <text style="line-height:1.25;-inkscape-font-specification:sans-serif" x="44.254" y="105.59" id="text7825" transform="rotate(-1.09)" font-size="6.73" letter-spacing="0" word-spacing="0" font-family="sans-serif" fill="#fff" stroke-width=".168">
+    <tspan id="markOne" x="42.744" y="105.59" style="-inkscape-font-specification:sans-serif;text-align:center" font-weight="700" font-size="5.02" text-anchor="middle">0</tspan>
+  </text>
+  <text style="line-height:1.25;-inkscape-font-specification:sans-serif" x="61.661" y="107.463" id="text7825-7" transform="rotate(-.05)" font-size="6.73" letter-spacing="0" word-spacing="0" font-family="sans-serif" fill="#fff" stroke-width=".168">
+    <tspan id="markTwo" x="61.661" y="107.463" style="-inkscape-font-specification:sans-serif" font-weight="700" font-size="5.02">10</tspan>
+  </text>
+  <text style="line-height:1.25;-inkscape-font-specification:sans-serif" x="70.846" y="109.199" id="text7825-7-2" transform="rotate(-5.472)" font-size="6.73" letter-spacing="0" word-spacing="0" font-family="sans-serif" fill="#fff" stroke-width=".168">
+    <tspan id="markThree" x="70.846" y="109.199" style="-inkscape-font-specification:sans-serif" font-weight="700" font-size="5.02">20</tspan>
+  </text>
+  <text style="line-height:1.25;-inkscape-font-specification:sans-serif" x="103.573" y="86.045" id="text7825-7-0" transform="rotate(2.89)" font-size="6.73" letter-spacing="0" word-spacing="0" font-family="sans-serif" fill="#fff" stroke-width=".168">
+    <tspan id="markFour" x="100.313" y="86.045" style="-inkscape-font-specification:sans-serif;text-align:center" font-weight="700" font-size="5.02" text-anchor="middle">30</tspan>
+  </text>
+  <path id="rect7659-2" d="M22.32 90.162l-6.706 5.363-.747-.933 6.706-5.358z" fill="#878787" fill-rule="evenodd" stroke-width="2.075" stroke-linejoin="round" stroke-dasharray=".51871251,.51871251"/>
+</svg>

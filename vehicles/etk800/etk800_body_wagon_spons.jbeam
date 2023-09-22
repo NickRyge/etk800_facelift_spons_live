@@ -13,6 +13,8 @@
         ["etk800_seat_FR","etk800_seat_FR", "Passenger Seat"],
         ["etk800_seats_R","etk800_seats_R", "Rear Seats"],
         ["linelock", "", "Brake Line Lock"],
+        //lighting
+        ["etk800_spons_interior_lighting", "etk800_spons_interior_lights", "Interior lighting"],
         //glass
         ["etk800_windshield","etk800_windshield", "Windshield"],
         ["etk800_quarterglass_R_wagon","etk800_quarterglass_R_wagon", "Right Quarter Glass"],
@@ -21,7 +23,7 @@
         ["etk800_bumperbar_F","etk800_bumperbar_F", "Front Bumper Support"],
         ["etk800_fender_R","etk800_fender_R", "Front Right Fender"],
         ["etk800_fender_L","etk800_fender_L", "Front Left Fender"],
-        ["etk800_quarterpanels_wagon","etk800_quarterpanels_wagon", "Quarter Panels", {"coreSlot":true}],
+        ["etk800_quarterpanels_wagon_facelift","etk800_quarterpanels_wagon_spons", "Quarter Panels", {"coreSlot":true}],
         ["etk800_headlight_R","etk800_headlight_R", "Right Headlight"],
         ["etk800_headlight_L","etk800_headlight_L", "Left Headlight"],
         ["etk800_taillight_R","etk800_taillight_R", "Right Taillight"],
@@ -31,7 +33,7 @@
         ["etk800_door_RR_wagon","etk800_door_RR_wagon", "Rear Right Door"],
         ["etk800_door_RL_wagon","etk800_door_RL_wagon", "Rear Left Door"],
         ["etk800_hood","etk800_hood", "Hood"],
-        ["etk800_tailgate","etk800_tailgate", "Tailgate"],
+        ["etk800_tailgate_facelift","etk800_tailgate_spons", "Tailgate"],
         ["etk800_bumper_F","etk800_bumper_F", "Front Bumper"],
         ["etk800_bumper_R","etk800_bumper_R", "Rear Bumper"],
         ["etk800_roof_wagon","etk800_roof_wagon_sun", "Roof Panel", {"coreSlot":true}],

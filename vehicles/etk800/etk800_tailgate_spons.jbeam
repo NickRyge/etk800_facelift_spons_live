@@ -5,7 +5,7 @@
         "name":"Tailgate Facelift",
         "value":410,
     },
-    "slotType" : "etk800_tailgate",
+    "slotType" : "etk800_tailgate_facelift",
     "slots": [
         ["type", "default", "description"],
         ["etk800_lettering_85x","etk800_lettering_tailgate_854", "Tailgate Lettering"],

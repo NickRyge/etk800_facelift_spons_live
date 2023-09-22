@@ -24,7 +24,7 @@
         ["etk800_bumperbar_F","etk800_bumperbar_F", "Front Bumper Support"],
         ["etk800_fender_R","etk800_fender_R", "Front Right Fender"],
         ["etk800_fender_L","etk800_fender_L", "Front Left Fender"],
-        ["etk800_quarterpanels","etk800_quarterpanels", "Quarter Panels", {"coreSlot":true}],
+        ["etk800_quarterpanels_facelift","etk800_quarterpanels_spons", "Quarter Panels", {"coreSlot":true}],
         ["etk800_headlight_R","etk800_headlight_R", "Right Headlight"],
         ["etk800_headlight_L","etk800_headlight_L", "Left Headlight"],
         ["etk800_taillight_R","etk800_taillight_R", "Right Taillight"],

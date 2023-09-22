@@ -3,16 +3,16 @@
     "information":{
         "authors":"Spons",
         "name":"Wide Quarter Panels Facelift",
-        "value":550,
+        "value":550
     },
-    "slotType" : "etk800_quarterpanels",
+    "slotType" : "etk800_quarterpanels_facelift",
     "slots": [
         ["type", "default", "description"],
-        ["etk800_wide_sideskirt","etk800_wide_sideskirt", "Side Skirts"],
+        ["etk800_wide_sideskirt","etk800_wide_sideskirt", "Side Skirts"]
     ],
     "flexbodies": [
         ["mesh", "[group]:", "nonFlexMaterials"],
-        ["etk800_body_sedan_quarterpanels_wide_spons", ["etk800_body"]],
+        ["etk800_body_sedan_quarterpanels_wide_spons", ["etk800_body"]]
     ],
     "nodes": [
          ["id", "posX", "posY", "posZ"],
@@ -33,39 +33,39 @@
          ["q7l", 0.94, 1.41, 0.71],
          ["q8r", -0.93, 1.59, 0.67],
          ["q8l", 0.93, 1.59, 0.67],
-         {"group":""},
-    ],
+         {"group":""}
+    ]
 },
 "etk800_quarterpanels_wagon_spons": {
     "information":{
         "authors":"Spons",
         "name":"Quarter Panels Facelift",
-        "value":400,
+        "value":400
     },
-    "slotType" : "etk800_quarterpanels_wagon",
+    "slotType" : "etk800_quarterpanels_wagon_facelift",
     "flexbodies": [
         ["mesh", "[group]:", "nonFlexMaterials"],
-        ["etk800_quarterpanels_spons", ["etk800_body"]],
+        ["etk800_quarterpanels_spons", ["etk800_body"]]
     ],
     "slots": [
         ["type", "default", "description"],
-        ["etk800_cladding","", "Side Cladding"],
-    ],
+        ["etk800_cladding","", "Side Cladding"]
+    ]
 },
 "etk800_quarterpanels_wagon_wide_spons": {
     "information":{
         "authors":"Spons",
         "name":"Widebody Quarter Panels Facelift",
-        "value":550,
+        "value":550
     },
-    "slotType" : "etk800_quarterpanels_wagon",
+    "slotType" : "etk800_quarterpanels_wagon_facelift",
     "slots": [
         ["type", "default", "description"],
-        ["etk800_wide_sideskirt","", "Side Skirts"],
+        ["etk800_wide_sideskirt","", "Side Skirts"]
     ],
     "flexbodies": [
         ["mesh", "[group]:", "nonFlexMaterials"],
-        ["etk800_quarterpanels_wide_spons", ["etk800_body"]],
+        ["etk800_quarterpanels_wide_spons", ["etk800_body"]]
     ],
     "nodes": [
          ["id", "posX", "posY", "posZ"],
@@ -86,23 +86,23 @@
          ["q7l", 0.94, 1.41, 0.71],
          ["q8r", -0.93, 1.59, 0.67],
          ["q8l", 0.93, 1.59, 0.67],
-         {"group":""},
-    ],
+         {"group":""}
+    ]
 },
 "etk800_quarterpanels_spons": {
     "information":{
         "authors":"Spons",
         "name":"Quarter Panels Facelift",
-        "value":400,
+        "value":400
     },
-    "slotType" : "etk800_quarterpanels",
+    "slotType" : "etk800_quarterpanels_facelift",
     "flexbodies": [
         ["mesh", "[group]:", "nonFlexMaterials"],
-        ["etk800_body_sedan_quarterpanels_spons", ["etk800_body"]],
+        ["etk800_body_sedan_quarterpanels_spons", ["etk800_body"]]
     ],
     "slots": [
         ["type", "default", "description"],
-        ["etk800_cladding","", "Side Cladding"],
-    ],
-},
+        ["etk800_cladding","", "Side Cladding"]
+    ]
+}
 }

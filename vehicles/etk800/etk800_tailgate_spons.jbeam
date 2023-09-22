@@ -25,9 +25,9 @@
         ["etk800_tailgatelight_spons_R", ["etk800_tailgate"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound4", "deformVolume":0.3}],
 
         //{"deformGroup":"tailgatelight_L_break", "deformMaterialBase":"etk800_glass", "deformMaterialDamaged":"etk800_glass_dmg"},
-        //["etk800_tailgatelightglass_L_spons", ["etk800_tailgate"]],
+        ["etk800_tailgatelightglass_L_spons", ["etk800_tailgate"]],
         //{"deformGroup":"tailgatelight_R_break", "deformMaterialBase":"etk800_glass", "deformMaterialDamaged":"etk800_glass_dmg"},
-        //["etk800_tailgatelightglass_R_spons", ["etk800_tailgate"]],
+        ["etk800_tailgatelightglass_R_spons", ["etk800_tailgate"]],
         //{"deformGroup":""},
     ],
     "controller": [

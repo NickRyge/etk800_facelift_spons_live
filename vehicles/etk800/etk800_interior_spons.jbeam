@@ -20,13 +20,13 @@
         ["etk800_intcarpet_sedan", ["etk800_body"]],
         ["etk800_dash", ["etk800_dash"]],
         //["etk800_gauges", ["etk800_dash"]],
-        //["etk800_decals_gauges", ["etk800_dash"]],
+            ["etk800_decals_gauges", ["etk800_dash"]],
         ["etk800_intmirror", ["etk800_windshield"]],
         {"deformGroup":"display_break", "deformMaterialBase":"etk800_screen", "deformMaterialDamaged":"invis"},
         ["etk800_gauges_screen_spons", ["etk800_dash"]],
         {"deformGroup":"display_break", "deformMaterialBase":"etk800_screen", "deformMaterialDamaged":"etk800_gauges_break"},
         ["etk800_screen", ["etk800_dash"]],
-        {"deformGroup":""},
+        {"deformGroup":""}
     ],
 
     "glowMap":{
@@ -43,11 +43,11 @@
 
     "gauge": {
         "configuration": {
-            "materialName": "@etk800_gauges_screen"
-            "htmlPath": "local://local/vehicles/etk800/gauges_screen_facelift/gauges_screen_spons.html"
-            "displayWidth":512
+            "materialName": "@etk800_gauges_screen",
+            "htmlPath": "local://local/vehicles/etk800/gauges_screen_facelift/gauges_screen_spons.html",
+            "displayWidth":512,
             "displayHeight":256
-        }
+        },
         "displayData": {
             "electrics": [
                 "signal_L",
@@ -67,19 +67,20 @@
                 "tcs",
                 "tcsActive",
                 "odometer",
-                "trip"
-            ]
+                "trip",
+                "rpm"
+            ],
             "powertrain": [
                 ["deviceName", "property"]
                 //["mainEngine", "outputTorque1"]
                 //["mainEngine", "outputAV1"]
                 //["gearbox", "outputAV1"]
-            ]
+            ],
             "customModules": [
-                ["moduleName", "property"]
-                ["combustionEngineData", "fuelDisplay"]
-                ["combustionEngineData", "fuelConsumption"]
-                ["environmentData", "temperatureEnv"]
+                ["moduleName", "property"],
+                ["combustionEngineData", "fuelDisplay"],
+                ["combustionEngineData", "fuelConsumption"],
+                ["environmentData", "temperatureEnv"],
                 ["environmentData", "time"]
             ]
         }

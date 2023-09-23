@@ -39,22 +39,22 @@ angular.module('gaugesScreen', [])
   $window.updateData = (data) => {
     $scope.$evalAsync(function() {
       // We need access to the efficiency bar svg element so that we can animate it
-      var eff = document.getElementById("efficiency");
+      //var eff = document.getElementById("efficiency");
 
-      if(!eff){return;} //html not ready yet
+      //if(!eff){return;} //html not ready yet
 
       value = data.customModules.combustionEngineData.fuelDisplay;
       // dash array needs to be the same as the circumference of the circle (radius * 2 * PI)
-      eff.style.strokeDasharray = 342
+      //eff.style.strokeDasharray = 342
 
       if (value > 0) {
         // We need to add the value to the negative circumference of the circle so that we can fill up the bar
-        eff.style.strokeDashoffset = -342 + value.toFixed(2) * 23
-        eff.style.stroke = "#BD362F";
+        //eff.style.strokeDashoffset = -342 + value.toFixed(2) * 23
+        //eff.style.stroke = "#BD362F";
       }
       else {
-        eff.style.strokeDashoffset = -342 + value.toFixed(2) * 23
-        eff.style.stroke = "#295AAC";
+        //eff.style.strokeDashoffset = -342 + value.toFixed(2) * 23
+        //eff.style.stroke = "#295AAC";
       }
 
       if (data.electrics.gear === -1) {
@@ -68,7 +68,14 @@ angular.module('gaugesScreen', [])
       }
 
       $scope.data.time = data.customModules.environmentData.time;
+      rpm = data.electrics.rpm;
+      //console.log(JSON.stringify(data.electrics, null, 4))
+      document.getElementById('dennis').setAttribute("offset", (rpm/9000)-0.04);
+      document.getElementById('dennis2').setAttribute("offset", (rpm/9000));
 
+      speed = UiUnits.speed(data.electrics.wheelspeed).val.toFixed(0);
+      document.getElementById('speed1').setAttribute("offset", (speed/300)-0.04);
+      document.getElementById('speed2').setAttribute("offset", (speed/300));
       $scope.data.speedVal = UiUnits.speed(data.electrics.wheelspeed).val.toFixed(0);
       let tempEnv = UiUnits.temperature(data.customModules.environmentData.temperatureEnv)
       if (tempEnv.val.toFixed(1) > 99.9 || tempEnv.val.toFixed(1) < -99.9) {

@@ -61,7 +61,7 @@
             "lightCastShadows":true,
             "flareName":"vehicleHeadLightFlare",
             "flareScale":0,
-            "cookieName":"vehicles/etk800/etk800_headlight.dds",
+            "cookieName":"vehicles/etk800/temporary_lights/etk800_headlight_spons_temp.dds",
             "texSize":128,
             "shadowSoftness":0.4
         },
@@ -82,7 +82,7 @@
             "lightCastShadows":true,
             "flareName":"vehicleHeadLightFlare",
             "flareScale":0,
-            "cookieName":"vehicles/etk800/etk800_headlight_high_test.dds",
+            "cookieName":"vehicles/etk800/temporary_lights/etk800_headlight_high_spons_temp.dds",
             "texSize":128,
             "shadowSoftness":0.3
         },
@@ -261,7 +261,7 @@
             "lightCastShadows":true,
             "flareName":"vehicleHeadLightFlare",
             "flareScale":0,
-            "cookieName":"vehicles/etk800/etk800_headlight.dds",
+            "cookieName":"vehicles/etk800/temporary_lights/etk800_headlight_spons_temp.dds",
             "texSize":128,
             "shadowSoftness":0.4
         },
@@ -282,7 +282,7 @@
             "lightCastShadows":true,
             "flareName":"vehicleHeadLightFlare",
             "flareScale":0,
-            "cookieName":"vehicles/etk800/etk800_headlight_high_test.dds",
+            "cookieName":"vehicles/etk800/temporary_lights/etk800_headlight_high_spons_temp.dds",
             "texSize":128,
             "shadowSoftness":0.3
         },
@@ -295,20 +295,20 @@
 		"deformGroup":"headlightglass_L_break"}],
 
         //Testing sidelights
-        {
-            "lightInnerAngle":0,
-            "lightOuterAngle":90,
-            "lightBrightness":1.5,
-            "lightRange":200,
-            "lightColor":{"r":200, "g":200, "b":255, "a":255},
-            "lightAttenuation":{"x":0, "y":1, "z":1},
-            "lightCastShadows":false,
-            "flareName":"vehicleHeadLightFlare",
-            "flareScale":0,
-            "cookieName":"vehicles/etk800/etk800_headlight_high_left_side.dds",
-            "texSize":128,
-            "shadowSoftness":0.5
-        },
+        //{
+        //    "lightInnerAngle":0,
+        //    "lightOuterAngle":90,
+        //    "lightBrightness":1.5,
+        //    "lightRange":200,
+        //    "lightColor":{"r":200, "g":200, "b":255, "a":255},
+        //    "lightAttenuation":{"x":0, "y":1, "z":1},
+        //    "lightCastShadows":false,
+        //    "flareName":"vehicleHeadLightFlare",
+        //    "flareScale":0,
+        //    "cookieName":"vehicles/etk800/etk800_headlight_high_left_side.dds",
+        //    "texSize":128,
+        //    "shadowSoftness":0.5
+        //},
         //signal
         //{
             //"lightInnerAngle":0,

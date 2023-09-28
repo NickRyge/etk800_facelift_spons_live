@@ -2,7 +2,7 @@
 "etk800_taillight_spons_R": {
     "information":{
         "authors":"Spons",
-        "name":"Right EUDM Taillight Facelift",
+        "name":"Right Taillight Facelift",
         "value":120
     },
     "slotType" : "etk800_taillight_R",

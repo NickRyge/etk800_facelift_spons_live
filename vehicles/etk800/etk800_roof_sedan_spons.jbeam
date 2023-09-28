@@ -7,7 +7,7 @@
     },
     "slots": [
         ["type", "default", "description"],
-        ["etk800_glass_sunroof_wagon","etk800_glass_sunroof_wagon_spons", "Sunroof Glass"],
+        ["etk800_glass_sunroof_wagon_spons","etk800_glass_sunroof_wagon_spons", "Sunroof Glass"],
         ["etk800_headliner_sedan_sunroof","etk800_headliner_sedan_sunroof", "Headliner", {"coreSlot":true}],
     ],
     "slotType" : "etk800_roof",

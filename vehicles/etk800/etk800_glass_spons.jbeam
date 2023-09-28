@@ -5,7 +5,7 @@
         "name":"Sunroof Glass Facelift",
         "value":650
     },
-    "slotType" : "etk800_glass_sunroof_wagon",
+    "slotType" : "etk800_glass_sunroof_wagon_spons",
     "nodes": [
          //redefine roof node
          ["id", "posX", "posY", "posZ"],

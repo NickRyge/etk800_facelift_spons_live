@@ -1631,5 +1631,79 @@
     "materialTag0": "beamng",
     "materialTag1": "vehicle",
     "translucent": true
+  },
+  "sbr": {
+    "name": "sbr",
+    "mapTo": "sbr_old",
+    "class": "Material",
+    "persistentId": "bc8b0c6d-5d36-4b43-997a-b97b0e2a4e6f",
+    "Stages": [
+      {
+        "colorMap": "vehicles/common/null.dds",
+        "normalMap": "vehicles/sbr/sbr_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/common/null.dds",
+        "specularPower": 128,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/sbr/sbr_d.dds",
+        "normalMap": "vehicles/sbr/sbr_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/sbr/sbr_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/sbr/sbr_c.dds",
+        "instanceDiffuse": true,
+        "normalMap": "vehicles/sbr/sbr_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/sbr/sbr_s.dds",
+        "specularPower": 10,
+        "useAnisotropic": true
+      },
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "specularColor0": "1 1 1 1",
+    "specularColor1": "1 1 1 1",
+    "specularColor2": "1 1 1 1",
+    "translucent": true,
+    "translucentBlendOp": "None"
+  },  "sbr_emotor": {
+    "name": "sbr_emotor",
+    "mapTo": "sbr_emotor",
+    "class": "Material",
+    "persistentId": "ebf8f232-caff-4bd7-b205-a15bc91a74da",
+    "Stages": [
+      {
+        "colorMap": "vehicles/common/null.dds",
+        "normalMap": "vehicles/sbr/sbr_emotor_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/common/null.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/sbr/sbr_emotor_d.dds",
+        "normalMap": "vehicles/sbr/sbr_emotor_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/sbr/sbr_emotor_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true,
+    "translucentBlendOp": "None"
   }
 }

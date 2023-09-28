@@ -11,6 +11,7 @@
         ["etk800_lettering_85x","etk800_lettering_tailgate_854", "Tailgate Lettering"],
         ["etk800_tailgateglass","etk800_tailgateglass", "Tailgate Glass"],
         ["etk800_spoiler","","Spoiler"],
+        ["etk800_licenseplate_R_spons_wagon","etk800_licenseplate_R_spons_wagon", "Rear License Plate Wagon"],
     ],
     "flexbodies": [
         ["mesh", "[group]:", "nonFlexMaterials"],

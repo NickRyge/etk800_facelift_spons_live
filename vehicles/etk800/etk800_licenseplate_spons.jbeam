@@ -24,4 +24,29 @@
          ["licenseplate-52-11-r2", ["etk800_trunk"],[],{"pos":{"x":0.0, "y":2.27688, "z":0.805657}, "rot":{"x":17.9513, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
     ],
 },
+"etk800_licenseplate_R_spons_wagon": {
+    "information":{
+        "authors":"Spons",
+        "name":"Rear License Plate Facelift Wagon",
+        "value":0,
+    },
+    "slotType" : "etk800_licenseplate_R_spons_wagon",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["licenseplate", ["etk800_tailgate"],[],{"pos":{"x":0.0, "y":2.27628, "z":0.778657}, "rot":{"x":17.9513, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"etk800_licenseplate_R_spons_wagon_EU": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Rear EU License Plate Facelift Wagon",
+        "value":0,
+    },
+    "slotType" : "etk800_licenseplate_R_spons_wagon",
+    "licenseplateFormat": "52-11",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["licenseplate-52-11-r2", ["etk800_tailgate"],[],{"pos":{"x":0.0, "y":2.27688, "z":0.805657}, "rot":{"x":17.9513, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+}
 }

@@ -18,14 +18,14 @@
     "flexbodies": [
         ["mesh", "[group]:", "nonFlexMaterials"],
         ["etk800_intcarpet_sedan", ["etk800_body"]],
-        ["etk800_dash", ["etk800_dash"]],
-        //["etk800_gauges", ["etk800_dash"]],
-            ["etk800_decals_gauges", ["etk800_dash"]],
+        ["etk800_dash_spons", ["etk800_dash"]],
+        ["etk800_gauges_spons", ["etk800_dash"]],
+        ["etk800_decals_gauges", ["etk800_dash"]],
         ["etk800_intmirror", ["etk800_windshield"]],
         {"deformGroup":"display_break", "deformMaterialBase":"etk800_screen", "deformMaterialDamaged":"invis"},
         ["etk800_gauges_screen_spons", ["etk800_dash"]],
         {"deformGroup":"display_break", "deformMaterialBase":"etk800_screen", "deformMaterialDamaged":"etk800_gauges_break"},
-        ["etk800_screen", ["etk800_dash"]],
+        ["etk800_screen_spons", ["etk800_dash"]],
         {"deformGroup":""}
     ],
 

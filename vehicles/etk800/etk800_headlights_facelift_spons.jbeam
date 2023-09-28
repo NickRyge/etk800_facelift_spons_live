@@ -1,8 +1,8 @@
 {
 "etk800_headlight_R_facelift_spons": {
     "information":{
-        "authors":"Spons",
-        "name":"Intelligent Bi-LED Right Headlight facelift (C)",
+        "authors":"SponsxNickRyge",
+        "name":"Bi-LED Right Headlight facelift (C)",
         "value":750
     },
     "slotType" : "etk800_headlight_R",
@@ -19,8 +19,7 @@
 	"controller": [
 	    ["fileName"],
 	    ["adaptiveBlinkers", {"sectionSize":9}],
-        ["welcome", {"name": "front", "speedMod": 13}],
-        ["intelligentLights"]
+        ["welcome", {"name": "front", "speedMod": 13}]
 	],
     "glowMap":{
         //lights      
@@ -67,7 +66,7 @@
             "shadowSoftness":0.4
         },
         //low beams
-        ["cornerRight"    , "SPOTLIGHT"        , "he4r", "he3r", "he2r", 
+        ["lowhighbeam"    , "SPOTLIGHT"        , "he4r", "he3r", "he2r", 
 		{"x":159, "y":188, "z":-37} , 
 		{"x":0, "y":0, "z":1}    , 
 		{"x":0, "y":0, "z":0}, -360, 360, 360, 1, {"baseTranslation":
@@ -88,7 +87,7 @@
             "shadowSoftness":0.3
         },
         //high beams
-        ["rightHigh" ,         "SPOTLIGHT"        , "he4r", "he3r", "he2r", 
+        ["highbeam" ,         "SPOTLIGHT"        , "he4r", "he3r", "he2r", 
 		{"x":159.2, "y":187, "z":-36} , 
 		{"x":0, "y":0, "z":1}    , 
 		{"x":0, "y":0, "z":0}, -360, 360, 360, 1, {"baseTranslation":
@@ -209,8 +208,8 @@
 
 "etk800_headlight_L_facelift_spons": {
     "information":{
-        "authors":"Niclas",
-        "name":"Intelligent Bi-LED left Headlight facelift",
+        "authors":"SponsxNickRyge",
+        "name":"Bi-LED left Headlight facelift",
         "value":750
     },
     "slotType" : "etk800_headlight_L",
@@ -222,7 +221,7 @@
         //{"deformGroup":"headlightglass_L_break", "deformMaterialBase":"etk800_lights", "deformMaterialDamaged":"etk800_lights_dmg"},
 		["etk800_headlight_L_facelift_spons", ["etk800_headlight_L"]],
 		["etk800_headlight_L_facelift_spons_dlr_b", ["etk800_headlight_L"]],
-        {"deformGroup":""},
+        {"deformGroup":""}
     ],
     "glowMap":{
         //lights
@@ -267,7 +266,7 @@
             "shadowSoftness":0.4
         },
         //low beams angled right slightly to avoid blinding oncoming traffic
-        ["cornerLeft"    , "SPOTLIGHT"        , "he4l", "he3l", "he2l", 
+        ["lowhighbeam"    , "SPOTLIGHT"        , "he4l", "he3l", "he2l", 
 		{"x":-19.85, "y":6, "z":-36} , 
 		{"x":0, "y":0, "z":1}    , 
 		{"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"baseTranslation":
@@ -288,9 +287,9 @@
             "shadowSoftness":0.3
         },
         //high beams
-        ["leftHigh" ,         "SPOTLIGHT"        , "he4l", "he3l", "he2l", 
+        ["highbeam" ,         "SPOTLIGHT"        , "he4l", "he3l", "he2l", 
 		{"x":-19.85, "y":6, "z":-35} , 
-		{"x":0, "y":0, "z":1}    , 
+		{"x":0, "y":0, "z":1}, //Sure wonder what these were originally used for ;)
 		{"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"baseTranslation":
 		{"x":0.0, "y":0.48, "z":-0.055},
 		"deformGroup":"headlightglass_L_break"}],

@@ -87,7 +87,7 @@
             ["sbr_wiring_emotor_b_spons", ["etk800_body"]],
             ["sbr_ecu_R_spons", ["etk800_body"]],
             ["sbr_wiring_battery_R_spons", ["etk800_body"]],
-            ["sbr_trunk_spons", ["etk800_body"]]
+            ["sbr_frunk_spons", ["etk800_body"]]
         ],
         "nodes": [
             ["id", "posX", "posY", "posZ"],
@@ -372,7 +372,7 @@
             ["sbr_wiring_emotor_b_spons", ["etk800_body"]],
             ["sbr_ecu_R_spons", ["etk800_body"]],
             ["sbr_wiring_battery_R_spons", ["etk800_body"]],
-            ["sbr_trunk_spons", ["etk800_body"]]
+            ["sbr_frunk_spons", ["etk800_body"]]
         ],
         "nodes": [
             ["id", "posX", "posY", "posZ"],

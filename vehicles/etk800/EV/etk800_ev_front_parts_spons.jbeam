@@ -80,12 +80,12 @@
     },
     "flexbodies": [
          ["mesh", "[group]:", "nonFlexMaterials"],
-         ["etk800_emotor_small", ["etk800_front_motor"]],
-         ["etk800_emotor_small_mount", ["etk800_front_motor"]],
-         ["etk800_ecu_F", ["etk800_body"]],
-         ["etk800_wiring_battery_F", ["etk800_body"]],
+         ["sbr_emotor_small", ["etk800_front_motor"]],
+         ["sbr_emotor_small_mount", ["etk800_front_motor"]],
+         ["sbr_ecu_F", ["etk800_body"]],
+         ["sbr_wiring_battery_F", ["etk800_body"]],
          {"deformGroup":"wiring_emotor_a_break", "deformMaterialBase":"etk800_emotor", "deformMaterialDamaged":"invis"},
-         ["etk800_wiring_emotor_a", ["etk800_body","etk800_front_motor"]],
+         ["sbr_wiring_emotor_a", ["etk800_body","etk800_front_motor"]],
          {"deformGroup":""},
     ],
     "nodes": [

@@ -1,0 +1,346 @@
+{
+"etk800_motor_electric_F_performance": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Performance Front Electric Motor",
+        "value":15000,
+    },
+    "slotType" : "etk800_differential_F",
+    "slots": [
+        ["type", "default", "description"],
+        ["etk800_differential_F_electric","etk800_differential_F_electric", "Front Differential"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["electricMotor", "frontMotor", "dummy", 0],
+    ],
+    "frontMotor":{
+        "torque":[
+            ["rpm", "torque"],
+            [0, 320],
+            [500, 320],
+            [1000, 320],
+            [1500, 320],
+            [2000, 320],
+            [3000, 320],
+            [4000, 320],
+            [5000, 320],
+            [6000, 320],
+            [7000, 290],
+            [8000, 260],
+            [9000, 237],
+            [10000, 210],
+            [11000, 180],
+            [12000, 160],
+            [13000, 145],
+            [14000, 135],
+            [15000, 127],
+            [16000, 121]
+        ],
+
+        "maxRPM":16000,
+        "maxRegenPower":100,
+        "maxRegenTorque":100,
+        "inertia":0.10,
+        "friction":1,
+        "dynamicFriction":0.0003,
+        "electricalEfficiency":0.95,
+        "torqueReactionNodes:":["fem1l","fem1r","fem4r"],
+        "energyStorage": "mainBattery",
+        "electricsThrottleFactorName": "throttleFactorFront",
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["front_motor_waterdamage"]},
+        "engineBlock": {"[engineGroup]:":["front_motor_block"]},
+        "breakTriggerBeam":"front_motor",
+        "uiName":"Front Motor",
+
+        "soundConfig": "soundConfigFront",
+    },
+    "soundConfigFront": {
+        "sampleName": "ElectricMotor",
+        "mainGain": -10,
+        //"maxLoadMix": 0.65,
+        //"minLoadMix": 0,
+        //"onLoadGain":1,
+        //"offLoadGain":0.65,
+        //"eqLowGain": -15,
+        //"eqLowFreq": 100,
+        //"eqLowWidth": 0.05,
+        //"eqHighGain": -5,
+        //"eqHighFreq": 6000,
+        //"eqHighWidth": 0.1,
+        //"eqFundamentalGain": -5,
+    },
+    "vehicleController": {
+        "shiftLogicName":"electricMotor",
+        "motorNames": ["rearMotor", "frontMotor"],
+        "topSpeedLimitReverse": 15,
+        "onePedalRegenCoef": 0.85,
+    },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etk800_emotor_small", ["etk800_front_motor"]],
+         ["etk800_emotor_small_mount", ["etk800_front_motor"]],
+         ["etk800_ecu_F", ["etk800_body"]],
+         ["etk800_wiring_battery_F", ["etk800_body"]],
+         {"deformGroup":"wiring_emotor_a_break", "deformMaterialBase":"etk800_emotor", "deformMaterialDamaged":"invis"},
+         ["etk800_wiring_emotor_a", ["etk800_body","etk800_front_motor"]],
+         {"deformGroup":""},
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"selfCollision":false},
+         {"collision":true},
+         {"group":"etk800_front_motor"},
+         {"engineGroup":"front_motor_block"},
+         {"nodeWeight":7.75},
+         {"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.15},
+         ["fem1r", -0.16, -1.48, 0.20],
+         ["fem1l", 0.16, -1.48, 0.20],
+         ["fem2r", -0.16, -1.32, 0.20],
+         ["fem2l", 0.16, -1.32, 0.20],
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false},
+         {"engineGroup":["front_motor_block","front_motor_waterdamage"]},
+         ["fem3r", -0.16, -1.48, 0.35],
+         ["fem3l", 0.16, -1.48, 0.35],
+         ["fem4r", -0.16, -1.32, 0.35],
+         ["fem4l", 0.16, -1.32, 0.35],
+         {"engineGroup":""},
+         {"nodeWeight":3.5},
+         ["fem5r", -0.21, -1.33, 0.335],
+         ["fem5l", 0.21, -1.33, 0.335],
+         {"group":["etk800_front_motor","etk800_frontdiff"]},
+         ["fem6", 0.0, -1.53, 0.235],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":3751000,"beamDamp":250},
+          {"beamDeform":100000,"beamStrength":"FLT_MAX"},
+          //engine
+          ["fem1r","fem1l"],
+          ["fem2r","fem2l"],
+          ["fem3r","fem3l"],
+          ["fem4r","fem4l"],
+
+          ["fem1r","fem2r"],
+          ["fem1l","fem2l"],
+          ["fem3r","fem4r"],
+          ["fem3l","fem4l"],
+
+          ["fem1r","fem3r"],
+          ["fem1l","fem3l"],
+          ["fem2r","fem4r"],
+          ["fem2l","fem4l"],
+
+          ["fem2r","fem3r"],
+          ["fem2l","fem3l"],
+          ["fem2r","fem3l"],
+          ["fem2l","fem3r"],
+
+          ["fem1r","fem4r"],
+          ["fem1l","fem4l"],
+          ["fem1r","fem4l"],
+          ["fem1l","fem4r"],
+
+          ["fem1r","fem2l"],
+          ["fem1l","fem2r"],
+          ["fem3r","fem4l"],
+          ["fem3l","fem4r"],
+
+          ["fem1r","fem3l"],
+          ["fem1l","fem3r"],
+          ["fem2r","fem4l"],
+          ["fem2l","fem4r"],
+
+          {"beamSpring":2501000,"beamDamp":100},
+          ["fem6", "fem1l"],
+          ["fem6", "fem1r"],
+          ["fem6", "fem3r"],
+          ["fem6", "fem3l"],
+          ["fem6", "fem2l"],
+          ["fem6", "fem2r"],
+          ["fem6", "fem4r"],
+          ["fem6", "fem4l"],
+
+          ["fem5l", "fem4l"],
+          ["fem5l", "fem2l"],
+          ["fem5l", "fem4r"],
+          ["fem5l", "fem2r"],
+          ["fem5l", "fem3l"],
+          ["fem5l", "fem1l"],
+
+          ["fem5r", "fem4r"],
+          ["fem5r", "fem2r"],
+          ["fem5r", "fem4l"],
+          ["fem5r", "fem2l"],
+          ["fem5r", "fem3r"],
+          ["fem5r", "fem1r"],
+
+          //motor mounts
+          {"beamSpring":2501000,"beamDamp":500},
+          {"beamDeform":17000,"beamStrength":90000},
+          ["fem5r", "fx3r", {"name":"front_motor","beamStrength":50000,"disableMeshBreaking":true,"disableTriangleBreaking":true}],
+          ["fem5r", "fx2r"],
+          ["fem5r", "fx1r"],
+          ["fem5r", "f10rr"],
+          ["fem5r", "f12rr"],
+          ["fem5r", "fx5r"],
+
+          ["fem5l", "fx3l", {"name":"front_motor","beamStrength":50000,"disableMeshBreaking":true,"disableTriangleBreaking":true}],
+          ["fem5l", "fx2l"],
+          ["fem5l", "fx1l"],
+          ["fem5l", "f10ll"],
+          ["fem5l", "f12ll"],
+          ["fem5l", "fx5l"],
+
+          ["fem6", "fx3r"],
+          ["fem6", "fx3l"],
+          ["fem6", "fx1r"],
+          ["fem6", "fx1l"],
+          ["fem6", "fx2l"],
+          ["fem6", "fx2r"],
+
+          {"beamSpring":501000,"beamDamp":2500},
+          {"beamDeform":14000,"beamStrength":"FLT_MAX"},
+          ["fem3r", "f1r"],
+          ["fem3r", "fx1l"],
+          ["fem3l", "f1l"],
+          ["fem3l", "fx1r"],
+
+          //break wiring
+          {"beamSpring":14100,"beamDamp":0},
+          {"beamDeform":1315.85,"beamStrength":3096.05},
+          {"breakGroup":"wiring_emotor_a"},
+          {"deformGroup":"wiring_emotor_a_break"},
+          {"optional":true},
+          ["fem3l","f5r"],
+          ["fem3r","f5l"],
+          {"optional":false},
+          {"deformGroup":""},
+          {"breakGroup":""}
+
+    ]
+},
+
+"etk800_halfshafts_electric_F": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Front Halfshafts",
+        "value":200,
+    },
+    "slotType" : "etk800_halfshafts_electric_F",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["etk800_halfshaft_e_F", ["etk800_frontdiff","etk800_hub_F","etk800_tierod_F","etk800_lowerarm_F","etk800_upperarm_F", "wheelhub_FR","wheelhub_FL"]],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.04, "beamShortBound":0.04},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3600,"beamStrength":9500},
+          {"beamLimitSpring":7501000,"beamLimitDamp":300},
+          ["fw1r","fdiffr", {"name":"halfshaft_FR", "breakGroup":"wheel_FR", "breakGroupType":1, "deformGroup":"wheelaxleFR", "deformationTriggerRatio":0.001, "optional":true}],
+          ["fw1l","fdiffl", {"name":"halfshaft_FL", "breakGroup":"wheel_FL", "breakGroupType":1, "deformGroup":"wheelaxleFL", "deformationTriggerRatio":0.001, "optional":true}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["shaft", "wheelaxleFL", "differential_F", 1, {"deformGroups":["wheelaxleFL"], "breakTriggerBeam":"halfshaft_FL", "uiName":"Front Left Halfshaft", "friction":1.2, "dynamicFriction":0.0015}],
+        ["shaft", "wheelaxleFR", "differential_F", 2, {"deformGroups":["wheelaxleFR"], "breakTriggerBeam":"halfshaft_FR", "uiName":"Front Right Halfshaft", "friction":1.2, "dynamicFriction":0.0015}],
+    ],
+},
+
+"etk800_finaldrive_electric_F_76": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"7.6:1 Front Final Drive",
+        "value":250,
+    },
+
+    "slotType" : "etk800_finaldrive_electric_F",
+
+    "torsionReactorF" : {
+        "gearRatio":7.6,
+    },
+},
+
+"etk800_differential_F_electric": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Open Front Differential",
+        "value":900,
+    },
+    "slotType" : "etk800_differential_F_electric",
+    "slots": [
+        ["type", "default", "description"],
+        ["etk800_finaldrive_electric_F","etk800_finaldrive_electric_F_76", "Front Final Drive", {"coreSlot":true}],
+        ["etk800_halfshafts_electric_F","etk800_halfshafts_electric_F", "Front Halfshafts"],
+    ],
+    "controller": [
+        ["fileName"],
+        ["drivingDynamics/actuators/electronicDiffLock" {"name":"lockFront", "differentialName":"differential_F"}]
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torsionReactor", "torsionReactorF", "frontMotor", 1],
+        ["differential", "differential_F", "torsionReactorF", 1, {"diffType":"open", "friction":8, "uiName":"Front Differential","defaultVirtualInertia":0.25}],
+    ],
+    "differential_F": {
+        "friction": 1.7,
+        "dynamicFriction": 0.001,
+        "torqueLossCoef": 0.017,
+    },
+    "torsionReactorF": {
+        "torqueReactionNodes:":["fdiffl","fdiffr","fem6"],
+    },
+     "props": [
+        ["func"      , "mesh"           , "idRef:", "idX:", "idY:", "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["wheelaxleFR", "etk800_emotor_small_shaft", "fdiffl", "fdiffr", "fem4l",    {"x":0, "y":0, "z":0}, {"x":-1, "y":0, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"breakGroup":"wheel_FR","deformGroup":"wheel_FR","optional":true}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--front motor weight
+         {"selfCollision":false},
+         {"collision":false},
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"etk800_frontdiff"},
+         {"nodeWeight":14},
+         ["fdiffr",-0.15, -1.25, 0.275],
+         ["fdiffl", 0.15, -1.25, 0.275],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //differential
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":2001000,"beamDamp":100},
+          {"beamDeform":12000,"beamStrength":"FLT_MAX"},
+
+          ["fdiffl","fdiffr"],
+
+          ["fdiffl", "fem4l"],
+          ["fdiffl", "fem2l"],
+          ["fdiffr", "fem4r"],
+          ["fdiffr", "fem2r"],
+          ["fdiffr", "fem4l"],
+          ["fdiffr", "fem2l"],
+          ["fdiffl", "fem4r"],
+          ["fdiffl", "fem2r"],
+          {"beamSpring":101000,"beamDamp":1000},
+          ["fdiffr", "fx4r"],
+          ["fdiffr", "fx3r"],
+          ["fdiffl", "fx4l"],
+          ["fdiffl", "fx3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+
+}

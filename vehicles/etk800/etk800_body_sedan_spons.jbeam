@@ -14,7 +14,7 @@
         ["etk800_seats_R","etk800_seats_R", "Rear Seats"],
         ["linelock", "", "Brake Line Lock"],
         //lighting
-        ["etk800_spons_interior_lighting", "etk800_spons_interior_lights", "Interior lighting"],
+        ["etk800_spons_interior_lighting_s", "etk800_spons_interior_lights_sedan", "Interior lighting"],
         //glass
         ["etk800_windshield","etk800_windshield", "Windshield"],
         ["etk800_quarterglass_R","etk800_quarterglass_R", "Right Quarter Glass"],

@@ -1,6 +1,5 @@
 {
   "format":2,
-  "licenseName":"NikkeSouls",
   "mainPartName":"etk800",
   "model":"etk800",
   "paints":[

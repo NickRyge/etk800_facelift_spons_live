@@ -64,7 +64,7 @@ local function init(jbeamData)
     highbeam = electrics.values.highbeam
 end
 
-
+local previous = 1
 local function welcomeLights(dt)
 
     -- Used for the edgecase that a user turns on lights while the car is off. 
@@ -82,12 +82,27 @@ local function welcomeLights(dt)
 
     -- Timer increment and val calculation
     timer = timer + dt
-    local trueValue = math.ceil(timer*speedModifier)
 
+    -- Check for whether the counter is slower than the speed of the light
+    -- This was discovered by CAT.
+    -- With very low FPS, the timer is actually slower than the speed of the light
+    -- So ever so often, a skip in the counter occurs.
+    -- This checks for if we jumped more than a single number. If we did, go back one number.
+    if math.ceil((timer)*speedModifier) > (previous + 1) then
+        timer = (previous+1)/speedModifier
+        -- debug print
+        --print("number " .. tostring(previous+1) .. " triggered the override in " .. nameString)
+    end
+
+    local trueValue = math.ceil(timer*speedModifier)
+    previous = trueValue
+
+    
     -- Start going op
     if trueValue <= math.ceil(sectionAmount) then
         electrics.values[nameString..trueValue] = 1
         electrics.values[nameString..trueValue-1] = -1
+        
     else
         -- Then go the other way
         electrics.values[nameString.. sectionAmount*2-trueValue] = 1

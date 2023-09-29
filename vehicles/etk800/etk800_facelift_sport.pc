@@ -1,6 +1,5 @@
 {
   "format":2,
-  "licenseName":"NJB-1109",
   "mainPartName":"etk800",
   "model":"etk800",
   "paints":[

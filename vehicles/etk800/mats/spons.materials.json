@@ -25,28 +25,45 @@
     "translucentBlendOp": "None",
     "version": 1.5
   },
-
-  "etk800_headlight_L_facelift_spons_on": {
-    "name": "etk800_headlight_L_facelift_spons_on",
-    "mapTo": "etk800_headlight_L_facelift_spons_on",
+  "etk800_headlight_L_facelift_spons_dlr": {
+    "name": "etk800_headlight_L_facelift_spons_dlr",
+    "mapTo": "etk800_headlight_L_facelift_spons_dlr",
     "class": "Material",
     "Stages": [
       {
-        "ambientOcclusionMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_ao.data.png",
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png",
-        "emissiveFactor": [
-          7,
-          9,
-          9
-        ],
-        "emissiveMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_g.color.png",
-        "glow": true,
-        "metallicMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_m.data.png",
+        "ambientOcclusionMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png",
         "metallicFactor": 1,
-        "normalMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_n.normal.png",
+        "metallicMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_m.data.png",
+        "normalMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_n.normal.png",
         "pixelSpecular": true,
-        "roughnessFactor": 1,
-        "roughnessMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_r.data.png"
+        "roughnessMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "etk800_headlight_L_facelift_spons_signal_R": {
+    "name": "etk800_headlight_L_facelift_spons_signal_R",
+    "mapTo": "etk800_headlight_L_facelift_spons_signal_R",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_m.data.png",
+        "normalMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_n.normal.png",
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_r.data.png"
       },
       {},
       {},
@@ -61,27 +78,97 @@
     "version": 1.5
   },
 
-  "etk800_headlight_L_facelift_spons_on_intense": {
-    "name": "etk800_headlight_L_facelift_spons_on_intense",
-    "mapTo": "etk800_headlight_L_facelift_spons_on_intense",
+  "etk800_headlight_L_facelift_spons_on": {
+    "name": "etk800_headlight_L_facelift_spons_on",
+    "mapTo": "etk800_headlight_L_facelift_spons_on",
     "class": "Material",
     "Stages": [
       {
-        "ambientOcclusionMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_ao.data.png",
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png",
+        "ambientOcclusionMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png",
         "emissiveFactor": [
-          20,
-          25,
-          25
+          6,
+          6,
+          6
         ],
         "emissiveMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_g.color.png",
         "glow": true,
-        "metallicMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_m.data.png",
+        "metallicMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_m.data.png",
         "metallicFactor": 1,
-        "normalMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_n.normal.png",
+        "normalMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_n.normal.png",
         "pixelSpecular": true,
         "roughnessFactor": 1,
-        "roughnessMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_r.data.png"
+        "roughnessMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+
+  "etk800_headlight_L_facelift_spons_on_glass": {
+    "name": "etk800_headlight_L_facelift_spons_on_glass",
+    "mapTo": "etk800_headlight_L_facelift_spons_on_glass",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png",
+        "emissiveFactor": [
+          15,
+          17,
+          20
+        ],
+        "emissiveMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_g.color.png",
+        "glow": true,
+        "metallicMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_m.data.png",
+        "metallicFactor": 1,
+        "normalMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_n.normal.png",
+        "pixelSpecular": true,
+        "roughnessFactor": 1,
+        "roughnessMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+
+  "etk800_headlight_L_facelift_spons_on_blinker": {
+    "name": "etk800_headlight_L_facelift_spons_on_blinker",
+    "mapTo": "etk800_headlight_L_facelift_spons_on_blinker",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png",
+        "emissiveFactor": [
+          12,
+          12,
+          12
+        ],
+        "emissiveMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_g.color.png",
+        "glow": true,
+        "metallicMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_m.data.png",
+        "metallicFactor": 1,
+        "normalMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_n.normal.png",
+        "pixelSpecular": true,
+        "roughnessFactor": 1,
+        "roughnessMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_r.data.png"
       },
       {},
       {},
@@ -102,8 +189,8 @@
     "class": "Material",
     "Stages": [
       {
-        "ambientOcclusionMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_ao.data.png",
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png",
+        "ambientOcclusionMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png",
         "emissiveFactor": [
           16,
           16,
@@ -111,12 +198,12 @@
         ],
         "emissiveMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_m_g.color.png",
         "glow": true,
-        "metallicMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_m.data.png",
+        "metallicMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_m.data.png",
         "metallicFactor": 1,
-        "normalMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_n.normal.png",
+        "normalMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_n.normal.png",
         "pixelSpecular": true,
         "roughnessFactor": 1,
-        "roughnessMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_r.data.png"
+        "roughnessMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_r.data.png"
       },
       {},
       {},
@@ -131,16 +218,39 @@
     "version": 1.5
   },
 
-  "etk800_headlight_L_facelift_spons_dlr": {
-    "name": "etk800_headlight_L_facelift_spons_dlr",
-    "mapTo": "etk800_headlight_L_facelift_spons_dlr",
+  "etk800_headlight_L_facelift_spons_on_intense": {
+    "name": "etk800_headlight_L_facelift_spons_on_intense",
+    "mapTo": "etk800_headlight_L_facelift_spons_on_intense",
     "class": "Material",
     "Stages": [
-      {},
+      {
+        "ambientOcclusionMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png",
+        "emissiveFactor": [
+          16,
+          16,
+          16
+        ],
+        "emissiveMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_g.color.png",
+        "glow": true,
+        "metallicMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_m.data.png",
+        "metallicFactor": 1,
+        "normalMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_n.normal.png",
+        "pixelSpecular": true,
+        "roughnessFactor": 1,
+        "roughnessMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_r.data.png"
+      },
       {},
       {},
       {}
-    ]
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
   },
   "etk800_headlight_L_facelift_spons_lowbeam": {
     "name": "etk800_headlight_L_facelift_spons_lowbeam",
@@ -156,17 +266,6 @@
   "etk800_headlight_L_facelift_spons_highbeam": {
     "name": "etk800_headlight_L_facelift_spons_highbeam",
     "mapTo": "etk800_headlight_L_facelift_spons_highbeam",
-    "class": "Material",
-    "Stages": [
-      {},
-      {},
-      {},
-      {}
-    ]
-  },
-  "etk800_headlight_L_facelift_spons_signal_R": {
-    "name": "etk800_headlight_L_facelift_spons_signal_R",
-    "mapTo": "etk800_headlight_L_facelift_spons_signal_R",
     "class": "Material",
     "Stages": [
       {},
@@ -216,7 +315,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -229,7 +328,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -242,7 +341,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -255,7 +354,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -268,7 +367,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -280,7 +379,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -292,7 +391,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -304,7 +403,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -316,7 +415,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -340,7 +439,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -353,7 +452,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -366,7 +465,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -379,7 +478,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -391,7 +490,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -403,7 +502,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -416,7 +515,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -429,43 +528,14 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
       {}
     ]
   },
-  "etk800_glass_spons": {
-    "name": "etk800_glass_spons",
-    "mapTo": "etk800_glass_spons",
-    "class": "Material",
-    "Stages": [
-      {
-        "ambientOcclusionMap": "/vehicles/etk800/etk800_glass_ao.data.png",
-        "baseColorMap": "vehicles/etk800/etk800_glass_b.color.png",
-        "metallicFactor": 1,
-        "metallicMap": "/vehicles/etk800/etk800_glass_m.data.png",
-        "normalMap": "/vehicles/etk800/etk800_glass_nm.normal.png",
-        "opacityMap": "/vehicles/etk800/etk800_glass_o.data.png",
-        "pixelSpecular": true,
-        "roughnessFactor": 1,
-        "roughnessMap": "/vehicles/etk800/etk800_glass_r.data.png"
-      },
-      {},
-      {},
-      {}
-    ],
-    "alphaRef": 0,
-    "castShadows": false,
-    "dynamicCubemap": true,
-    "materialTag0": "beamng",
-    "materialTag1": "vehicle",
-    "translucent": true,
-    "translucentBlendOp": "PreMulAlpha",
-    "translucentRecvShadows": true,
-    "version": 1.5
-  },
+
   "etk800_test_spons_5": {
     "name": "etk800_test_spons_5",
     "mapTo": "etk800_test_spons_5",
@@ -549,9 +619,9 @@
         "ambientOcclusionMap": "/vehicles/etk800/mats/etk800_test_spons_5_ao.data.png",
         "baseColorMap": "/vehicles/etk800/mats/etk800_test_spons_5_b.color.png",
         "emissiveFactor": [
-          8,
-          8,
-          8
+          4,
+          4,
+          4
         ],
         "emissiveMap": "/vehicles/etk800/mats/etk800_test_spons_5_g.color.png",
         "glow": true,
@@ -573,6 +643,41 @@
     "translucentBlendOp": "None",
     "version": 1.5
   },
+
+  "etk800_spons_rearlights_dim": {
+    "name": "etk800_spons_rearlights_dim",
+    "mapTo": "etk800_spons_rearlights_dim",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/etk800/mats/etk800_test_spons_5_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/mats/etk800_test_spons_5_b.color.png",
+        "emissiveFactor": [
+          4.2,
+          3.2,
+          3.2
+        ],
+        "emissiveMap": "/vehicles/etk800/mats/etk800_test_spons_5_g.color.png",
+        "glow": true,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/etk800/mats/etk800_test_spons_5_m.data.png",
+        "normalMap": "/vehicles/etk800/mats/etk800_test_spons_5_n.normal.png",
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/etk800/mats/etk800_test_spons_5_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+
   "etk800_test_spons_5_on_intense": {
     "name": "etk800_test_spons_5_on_intense",
     "mapTo": "etk800_test_spons_5_on_intense",
@@ -582,9 +687,9 @@
         "ambientOcclusionMap": "/vehicles/etk800/mats/etk800_test_spons_5_ao.data.png",
         "baseColorMap": "/vehicles/etk800/mats/etk800_test_spons_5_b.color.png",
         "emissiveFactor": [
-          10,
-          10,
-          10
+          8,
+          8,
+          8
         ],
         "emissiveMap": "/vehicles/etk800/mats/etk800_test_spons_5_g.color.png",
         "glow": true,
@@ -645,7 +750,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -658,7 +763,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -671,7 +776,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -684,7 +789,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -697,7 +802,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -709,7 +814,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -721,7 +826,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -733,7 +838,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -745,7 +850,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -758,7 +863,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -771,7 +876,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -784,7 +889,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -797,7 +902,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -810,7 +915,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -822,7 +927,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -834,7 +939,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -846,7 +951,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -859,7 +964,7 @@
     "class": "Material",
     "Stages": [
       {
-        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_on_b.color.png"
+        "baseColorMap": "/vehicles/etk800/mats/etk800_headlight_L_facelift_spons_b.color.png"
       },
       {},
       {},
@@ -1141,5 +1246,503 @@
       {},
       {}
     ]
+  },
+  "etk800_glass_spons": {
+    "name": "etk800_glass_spons",
+    "mapTo": "etk800_glass_spons",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/etk800/mats/etk800_glass_spons_ao.data.png",
+        "baseColorMap": "vehicles/etk800/mats/etk800_glass_spons_b.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/etk800/mats/etk800_glass_spons_m.data.png",
+        "normalMap": "/vehicles/etk800/mats/etk800_glass_spons_n.normal.png",
+        "opacityMap": "/vehicles/etk800/mats/etk800_glass_spons_o.data.png",
+        "pixelSpecular": true,
+        "roughnessFactor": 1,
+        "roughnessMap": "/vehicles/etk800/mats/etk800_glass_spons_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "castShadows": false,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true,
+    "translucentBlendOp": "PreMulAlpha",
+    "translucentRecvShadows": true,
+    "version": 1.5
+  },
+  "spons_grille_test": {
+    "name": "spons_grille_test",
+    "mapTo": "spons_grille_test",
+    "class": "Material",
+    "Stages": [
+      {
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "tail_L_1": {
+    "name": "tail_L_1",
+    "mapTo": "tail_L_1",
+    "class": "Material",
+    "Stages": [
+      {
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "tail_L_2": {
+    "name": "tail_L_2",
+    "mapTo": "tail_L_2",
+    "class": "Material",
+    "Stages": [
+      {
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "tail_L_3": {
+    "name": "tail_L_3",
+    "mapTo": "tail_L_3",
+    "class": "Material",
+    "Stages": [
+      {
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "tail_L_4": {
+    "name": "tail_L_4",
+    "mapTo": "tail_L_4",
+    "class": "Material",
+    "Stages": [
+      {
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "tail_L_5": {
+    "name": "tail_L_5",
+    "mapTo": "tail_L_5",
+    "class": "Material",
+    "Stages": [
+      {
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "tail_L_6": {
+    "name": "tail_L_6",
+    "mapTo": "tail_L_6",
+    "class": "Material",
+    "Stages": [
+      {
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "tail_L_7": {
+    "name": "tail_L_7",
+    "mapTo": "tail_L_7",
+    "class": "Material",
+    "Stages": [
+      {
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "tail_L_8": {
+    "name": "tail_L_8",
+    "mapTo": "tail_L_8",
+    "class": "Material",
+    "Stages": [
+      {
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "tail_L_9": {
+    "name": "tail_L_9",
+    "mapTo": "tail_L_9",
+    "class": "Material",
+    "Stages": [
+      {
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "tail_R_1": {
+    "name": "tail_R_1",
+    "mapTo": "tail_R_1",
+    "class": "Material",
+    "Stages": [
+      {
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "tail_R_2": {
+    "name": "tail_R_2",
+    "mapTo": "tail_R_2",
+    "class": "Material",
+    "Stages": [
+      {
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "tail_R_3": {
+    "name": "tail_R_3",
+    "mapTo": "tail_R_3",
+    "class": "Material",
+    "Stages": [
+      {
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "tail_R_4": {
+    "name": "tail_R_4",
+    "mapTo": "tail_R_4",
+    "class": "Material",
+    "Stages": [
+      {
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "tail_R_5": {
+    "name": "tail_R_5",
+    "mapTo": "tail_R_5",
+    "class": "Material",
+    "Stages": [
+      {
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "tail_R_6": {
+    "name": "tail_R_6",
+    "mapTo": "tail_R_6",
+    "class": "Material",
+    "Stages": [
+      {
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "tail_R_7": {
+    "name": "tail_R_7",
+    "mapTo": "tail_R_7",
+    "class": "Material",
+    "Stages": [
+      {
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "tail_R_8": {
+    "name": "tail_R_8",
+    "mapTo": "tail_R_8",
+    "class": "Material",
+    "Stages": [
+      {
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "tail_R_9": {
+    "name": "tail_R_9",
+    "mapTo": "tail_R_9",
+    "class": "Material",
+    "Stages": [
+      {
+      },
+      {},
+      {},
+      {}
+    ]
+  },
+  "grille_spons": {
+    "name": "grille_spons",
+    "mapTo": "grille_spons",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/etk800/mats/grille_spons_ev_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/mats/grille_spons_b.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/etk800/mats/grille_spons_m.data.png",
+        "normalMap": "/vehicles/etk800/mats/grille_spons_n.normal.png",
+        "roughnessMap": "/vehicles/etk800/mats/grille_spons_r.data.png",
+        "useAnisotropic": true
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/etk800/mats/grille_spons_ao.data.png",
+        "clearCoatFactor": 1,
+        "clearCoatMap": "/vehicles/etk800/mats/grille_spons_cc.data.png",
+        "clearCoatRoughnessFactor": 1,
+        "colorPaletteMap": "/vehicles/etk800/mats/grille_spons_c.data.png",
+        "colorPaletteMapUseUV": 1,
+        "instanceDiffuse": true,
+        "metallicFactor": 1,
+        "normalMap": "/vehicles/etk800/mats/grille_spons_n.normal.png",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "version": 1.5
+  },
+  "grille_spons_ev": {
+    "name": "grille_spons_ev",
+    "mapTo": "grille_spons_ev",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/etk800/mats/grille_spons_ev_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/mats/grille_spons_ev_b.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/etk800/mats/grille_spons_ev_m.data.png",
+        "normalMap": "/vehicles/etk800/mats/grille_spons_ev_n.normal.png",
+        "roughnessMap": "/vehicles/etk800/mats/grille_spons_ev_r.data.png",
+        "useAnisotropic": true
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/etk800/mats/grille_spons_ev_ao.data.png",
+        "clearCoatFactor": 1,
+        "clearCoatMap": "/vehicles/etk800/mats/grille_spons_ev_cc.data.png",
+        "clearCoatRoughnessFactor": 1,
+        "colorPaletteMap": "/vehicles/etk800/mats/grille_spons_ev_c.data.png",
+        "colorPaletteMapUseUV": 1,
+        "instanceDiffuse": true,
+        "metallicFactor": 1,
+        "normalMap": "/vehicles/etk800/mats/grille_spons_ev_n.normal.png",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "version": 1.5
+  },
+  "etk800_spons_lights_on_intense": {
+    "name": "etk800_spons_lights_on_intense",
+    "mapTo": "etk800_spons_lights_on_intense",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/etk800/etk800_lights_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/etk800_lights_b.color.png",
+        "emissiveFactor": [
+          25,
+          25,
+          25
+        ],
+        "emissiveMap": "/vehicles/etk800/etk800_lights_g_intense.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/etk800/etk800_lights_m.data.png",
+        "normalMap": "/vehicles/etk800/etk800_lights_nm.normal.png",
+        "pixelSpecular": true,
+        "roughnessFactor": 1,
+        "roughnessMap": "/vehicles/etk800/etk800_lights_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "etk800_gauges_screen_spons": {
+    "name": "etk800_gauges_screen_spons",
+    "mapTo": "etk800_gauges_screen_spons",
+    "class": "Material",
+    "persistentId": "e8c015b8-9adf-42cc-a421-e7007d9785bd",
+    "Stages": [
+      {
+        "colorMap": "@etk800_gauges_screen",
+        "emissive": true,
+        "specularMap": "vehicles/common/null.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "castShadows": false,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true
+  },
+  "sbr": {
+    "name": "sbr",
+    "mapTo": "sbr_old",
+    "class": "Material",
+    "persistentId": "bc8b0c6d-5d36-4b43-997a-b97b0e2a4e6f",
+    "Stages": [
+      {
+        "colorMap": "vehicles/common/null.dds",
+        "normalMap": "vehicles/sbr/sbr_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/common/null.dds",
+        "specularPower": 128,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/sbr/sbr_d.dds",
+        "normalMap": "vehicles/sbr/sbr_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/sbr/sbr_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/sbr/sbr_c.dds",
+        "instanceDiffuse": true,
+        "normalMap": "vehicles/sbr/sbr_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/sbr/sbr_s.dds",
+        "specularPower": 10,
+        "useAnisotropic": true
+      },
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "specularColor0": "1 1 1 1",
+    "specularColor1": "1 1 1 1",
+    "specularColor2": "1 1 1 1",
+    "translucent": true,
+    "translucentBlendOp": "None"
+  },  
+  "sbr_emotor": {
+    "name": "sbr_emotor",
+    "mapTo": "sbr_emotor",
+    "class": "Material",
+    "persistentId": "ebf8f232-caff-4bd7-b205-a15bc91a74da",
+    "Stages": [
+      {
+        "colorMap": "vehicles/common/null.dds",
+        "normalMap": "vehicles/sbr/sbr_emotor_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/common/null.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {
+        "colorMap": "vehicles/sbr/sbr_emotor_d.dds",
+        "normalMap": "vehicles/sbr/sbr_emotor_n.dds",
+        "pixelSpecular": true,
+        "specularMap": "vehicles/sbr/sbr_emotor_s.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true,
+    "translucentBlendOp": "None"
+  },
+  "sbr_main": {
+    "name": "sbr_main",
+    "mapTo": "sbr",
+    "class": "Material",
+    "persistentId": "c149d182-981e-4864-8d0d-6449b0372ece",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/sbr/sbr_main_ao.data.png",
+        "baseColorMap": "/vehicles/sbr/sbr_main_b.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/sbr/sbr_main_m.data.png",
+        "normalMap": "vehicles/sbr/sbr_main_n.normal.png",
+        "roughnessMap": "/vehicles/sbr/sbr_main_r.data.png",
+        "useAnisotropic": true
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/sbr/sbr_main_ao.data.png",
+        "clearCoatFactor": 1,
+        "clearCoatMap": "/vehicles/sbr/sbr_main_cc.data.png",
+        "clearCoatRoughnessFactor": 1,
+        "colorPaletteMap": "/vehicles/sbr/sbr_main_p.color.png",
+        "colorPaletteMapUseUV": 1,
+        "instanceDiffuse": true,
+        "metallicFactor": 1,
+        "normalMap": "/vehicles/sbr/sbr_main_n.normal.png",
+        "opacityMap": "/vehicles/sbr/sbr_main_c.data.png",
+        "useAnisotropic": true
+      },
+      {},
+      {}
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "version": 1.5
   }
 }

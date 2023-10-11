@@ -1,74 +1,54 @@
 {
 "etk800_headlight_R_facelift_spons": {
     "information":{
-        "authors":"Spons",
-        "name":"Xenon Right Headlight Facelift",
-        "value":350,
+        "authors":"SponsxNickRyge",
+        "name":"Bi-LED Right Headlight facelift (C)",
+        "value":750
     },
     "slotType" : "etk800_headlight_R",
     "flexbodies": [
-         ["mesh", "[group]:", "nonFlexMaterials"],
-         {"deformGroup":"headlightglass_R_break", "deformMaterialBase":"etk800_glass_spons", "deformMaterialDamaged":"etk800_glass_dmg"},
-         ["etk800_headlightglass_spons_R", ["etk800_headlight_R"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>extglassbreaksound3", "deformVolume":0.4}],
-         {"deformGroup":""},
-         {"deformGroup":"headlightglass_R_break", "deformMaterialBase":"etk800_lights", "deformMaterialDamaged":"etk800_lights_dmg"},
-		 ["etk800_headlight_R_facelift_spons", ["etk800_headlight_R"]],
-		 ["etk800_headlight_R_facelift_spons_dlr_b", ["etk800_headlight_R"]],
-         {"deformGroup":""},
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //{"deformGroup":"headlightglass_R_break", "deformMaterialBase":"etk800_glass_spons", "deformMaterialDamaged":"etk800_glass_dmg"},
+        ["etk800_headlightglass_spons_R", ["etk800_headlight_R"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>extglassbreaksound3", "deformVolume":0.4}],
+        //{"deformGroup":""},
+        //{"deformGroup":"headlightglass_R_break", "deformMaterialBase":"etk800_lights", "deformMaterialDamaged":"etk800_lights_dmg"},
+		["etk800_headlight_R_facelift_spons", ["etk800_headlight_R"]],
+		["etk800_headlight_R_facelift_spons_dlr_b", ["etk800_headlight_R"]],
+        {"deformGroup":""}
     ],
 	"controller": [
-	["fileName"],
-	["adaptiveBlinkers", {"sectionSize":9}],
-    ["welcome"],
-    ["intelligentLights"]
+	    ["fileName"],
+	    ["adaptiveBlinkers", {"sectionSize":9}],
+        ["welcome", {"name": "front", "speedMod": 13}]
 	],
-	
-	
-	"glowMap":{
-        //lights
-        "blinker_L_1":{"simpleFunction":{"signalL1":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-		"blinker_L_2":{"simpleFunction":{"signalL2":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-		"blinker_L_3":{"simpleFunction":{"signalL3":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-		"blinker_L_4":{"simpleFunction":{"signalL4":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-		"blinker_L_5":{"simpleFunction":{"signalL5":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-		"blinker_L_6":{"simpleFunction":{"signalL6":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-		"blinker_L_7":{"simpleFunction":{"signalL7":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-		"blinker_L_8":{"simpleFunction":{"signalL8":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-		"blinker_L_9":{"simpleFunction":{"signalL9":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-        
-		"blinker_R_1":{"simpleFunction":{"signalR1":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-		"blinker_R_2":{"simpleFunction":{"signalR2":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-		"blinker_R_3":{"simpleFunction":{"signalR3":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-		"blinker_R_4":{"simpleFunction":{"signalR4":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-		"blinker_R_5":{"simpleFunction":{"signalR5":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-		"blinker_R_6":{"simpleFunction":{"signalR6":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-		"blinker_R_7":{"simpleFunction":{"signalR7":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-		"blinker_R_8":{"simpleFunction":{"signalR8":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-		"blinker_R_9":{"simpleFunction":{"signalR9":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
+    "glowMap":{
+        //lights      
+		"blinker_R_1":{"simpleFunction":{"signalR1":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_blinker", "on_intense":"etk800_headlight_L_facelift_spons_on_blinker"},
+		"blinker_R_2":{"simpleFunction":{"signalR2":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_blinker", "on_intense":"etk800_headlight_L_facelift_spons_on_blinker"},
+		"blinker_R_3":{"simpleFunction":{"signalR3":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_blinker", "on_intense":"etk800_headlight_L_facelift_spons_on_blinker"},
+		"blinker_R_4":{"simpleFunction":{"signalR4":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_blinker", "on_intense":"etk800_headlight_L_facelift_spons_on_blinker"},
+		"blinker_R_5":{"simpleFunction":{"signalR5":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_blinker", "on_intense":"etk800_headlight_L_facelift_spons_on_blinker"},
+		"blinker_R_6":{"simpleFunction":{"signalR6":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_blinker", "on_intense":"etk800_headlight_L_facelift_spons_on_blinker"},
+		"blinker_R_7":{"simpleFunction":{"signalR7":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_blinker", "on_intense":"etk800_headlight_L_facelift_spons_on_blinker"},
+		"blinker_R_8":{"simpleFunction":{"signalR8":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_blinker", "on_intense":"etk800_headlight_L_facelift_spons_on_blinker"},
+		"blinker_R_9":{"simpleFunction":{"signalR9":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_blinker", "on_intense":"etk800_headlight_L_facelift_spons_on_blinker"},
 		
-		"etk800_headlight_L_facelift_spons_lowbeam":{"simpleFunction":{"lowhighbeam":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-        "etk800_headlight_L_facelift_spons_highbeam":{"simpleFunction":{"highbeam":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on"},
-		"etk800_headlightglass":{"simpleFunction":{"lowbeam":0.49,"highbeam":1}, "off":"etk800_glass", "on":"etk800_glass_spons", "on_intense":"etk800_glass_spons"},
-		
-		"DRL_L_1":{"simpleFunction":{"DRL2":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
-		"DRL_L_2":{"simpleFunction":{"DRL1":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
-		"DRL_L_3":{"simpleFunction":{"DRL1":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
-		"DRL_L_4":{"simpleFunction":{"DRL2":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
-		"DRL_L_5":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
-		"DRL_L_6":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
-		"DRL_L_7":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
-		"DRL_L_8":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
-		
+		"etk800_headlight_L_facelift_spons_lowbeam":{"simpleFunction":{"lowhighbeam":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_glass", "on_intense":"etk800_headlight_L_facelift_spons_on_glass"},
+        "etk800_headlight_L_facelift_spons_highbeam":{"simpleFunction":{"highbeam":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_glass", "on_intense":"etk800_headlight_L_facelift_spons_on_glass"},
+		"etk800_headlightglass":{"simpleFunction":{"lowbeam":0.49,"highbeam":1}, "off":"etk800_glass", "on":"etk800_glass", "on_intense":"etk800_glass"},
+				
 		"DRL_R_1":{"simpleFunction":{"DRL3":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
 		"DRL_R_2":{"simpleFunction":{"DRL4":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
 		"DRL_R_3":{"simpleFunction":{"DRL4":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
 		"DRL_R_4":{"simpleFunction":{"DRL3":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
-		"DRL_R_5":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
+		
+        "DRL_R_5":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
 		"DRL_R_6":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
 		"DRL_R_7":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
 		"DRL_R_8":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
     },
-	
+    //The light props are not moved from the intelligent headlights to avoid screwing up the tolerances.
+    //Instead, I added new props to act as lensflares.
     "props": [
         ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"],
         {
@@ -80,13 +60,13 @@
             "lightAttenuation":{"x":0, "y":1, "z":1},
             "lightCastShadows":true,
             "flareName":"vehicleHeadLightFlare",
-            "flareScale":0.1,
-            "cookieName":"vehicles/etk800/etk800_headlight.dds",
+            "flareScale":0,
+            "cookieName":"vehicles/etk800/temporary_lights/etk800_headlight_spons_temp.dds",
             "texSize":128,
             "shadowSoftness":0.4
         },
         //low beams
-        ["cornerRight"    , "SPOTLIGHT"        , "he4r", "he3r", "he2r", 
+        ["lowhighbeam"    , "SPOTLIGHT"        , "he4r", "he3r", "he2r", 
 		{"x":159, "y":188, "z":-37} , 
 		{"x":0, "y":0, "z":1}    , 
 		{"x":0, "y":0, "z":0}, -360, 360, 360, 1, {"baseTranslation":
@@ -101,13 +81,13 @@
             "lightAttenuation":{"x":0, "y":1, "z":1},
             "lightCastShadows":true,
             "flareName":"vehicleHeadLightFlare",
-            "flareScale":0.3,
-            "cookieName":"vehicles/etk800/etk800_headlight_high_test.dds",
+            "flareScale":0,
+            "cookieName":"vehicles/etk800/temporary_lights/etk800_headlight_high_spons_temp.dds",
             "texSize":128,
             "shadowSoftness":0.3
         },
         //high beams
-        ["rightHigh" ,         "SPOTLIGHT"        , "he4r", "he3r", "he2r", 
+        ["highbeam" ,         "SPOTLIGHT"        , "he4r", "he3r", "he2r", 
 		{"x":159.2, "y":187, "z":-36} , 
 		{"x":0, "y":0, "z":1}    , 
 		{"x":0, "y":0, "z":0}, -360, 360, 360, 1, {"baseTranslation":
@@ -126,121 +106,149 @@
         ["signal_R"    , "SPOTLIGHT"        , "he3r", "he4r", "he1r", {"x":-20, "y":0, "z":10} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":1, "z":-0.025},"flareScale":0.0,"lightBrightness":0.0,"deformGroup":"headlightglass_R_break"}], //0.02;0.04 signal 0.7;0.05 and 0.8;0.05 for beams
      ],
     "nodes": [
-         ["id", "posX", "posY", "posZ"],
-         //--HEADLIGHT--
-         //right
-         {"selfCollision":true},
-         {"collision":true},
-         {"nodeMaterial":"|NM_PLASTIC"},
-         {"frictionCoef":0.5},
-         {"nodeWeight":0.6},
-         {"group":"etk800_headlight_R"},
-         ["he1r",-0.50, -2.10, 0.76],
-         ["he3r",-0.49, -2.11, 0.72],
-         ["he2r",-0.78, -1.84, 0.78],
-         ["he4r",-0.78, -1.88, 0.68],
-         //{"selfCollision":false}
-         ["he5r",-0.60, -1.76, 0.72],
-         {"group":""},
+        ["id", "posX", "posY", "posZ"],
+        //--HEADLIGHT--
+        //right
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeMaterial":"|NM_PLASTIC"},
+        {"frictionCoef":0.5},
+        {"nodeWeight":0.6},
+        {"group":"etk800_headlight_R"},
+        ["he1r",-0.50, -2.10, 0.76],
+        ["he3r",-0.49, -2.11, 0.72],
+        ["he2r",-0.78, -1.84, 0.78],
+        ["he4r",-0.78, -1.88, 0.68],
+        //{"selfCollision":false}
+        ["he5r",-0.60, -1.76, 0.72],
+        {"group":""},
     ],
 
     "beams": [
-          ["id1:", "id2:"],
-          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
-          //--HEADLIGHT--
-          {"beamSpring":1001000,"beamDamp":60},
-          {"beamDeform":12000,"beamStrength":62000},
-          //headlight main shape
-          {"deformGroup":"headlightglass_R_break", "deformationTriggerRatio":0.05},
-          //r
-          {"deformLimitExpansion":1.1},
-          ["he1r","he2r"],
-          ["he3r","he4r"],
-          ["he1r","he3r"],
-          ["he2r","he4r"],
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //--HEADLIGHT--
+        {"beamSpring":1001000,"beamDamp":60},
+        {"beamDeform":12000,"beamStrength":62000},
+        //headlight main shape
+        {"deformGroup":"headlightglass_R_break", "deformationTriggerRatio":0.05},
+        //r
+        {"deformLimitExpansion":1.1},
+        ["he1r","he2r"],
+        ["he3r","he4r"],
+        ["he1r","he3r"],
+        ["he2r","he4r"],
 
-          ["he1r","he4r"],
-          ["he2r","he3r"],
+        ["he1r","he4r"],
+        ["he2r","he3r"],
 
-          ["he1r","he5r"],
-          ["he2r","he5r"],
-          ["he3r","he5r"],
-          ["he4r","he5r"],
+        ["he1r","he5r"],
+        ["he2r","he5r"],
+        ["he3r","he5r"],
+        ["he4r","he5r"],
 
-          //attach
-          {"beamSpring":301000,"beamDamp":60},
-          {"beamDeform":3000,"beamStrength":24000},
-          //r
-          {"deformLimitExpansion":""},
-          {"breakGroup":"headlight_R"},
-          ["he5r","f15rr"],
-          ["he5r","f15r"],
-          ["he2r","f15rr"],
-          ["he2r","f15r"],
-          ["he4r","f15rr"],
+        //attach
+        {"beamSpring":301000,"beamDamp":60},
+        {"beamDeform":3000,"beamStrength":24000},
+        //r
+        {"deformLimitExpansion":""},
+        {"breakGroup":"headlight_R"},
+        ["he5r","f15rr"],
+        ["he5r","f15r"],
+        ["he2r","f15rr"],
+        ["he2r","f15r"],
+        ["he4r","f15rr"],
 
-          {"beamDeform":3000,"beamStrength":24000},
-          {"breakGroup":"headlight_R"},
-          ["he1r","f15r"],
-          ["he1r","f15rr"],
-          ["he3r","f15r"],
-          ["he3r","f13rr"],
-          //["he1r","f13rr"],
+        {"beamDeform":3000,"beamStrength":24000},
+        {"breakGroup":"headlight_R"},
+        ["he1r","f15r"],
+        ["he1r","f15rr"],
+        ["he3r","f15r"],
+        ["he3r","f13rr"],
+        //["he1r","f13rr"],
 
-          {"beamDeform":1500,"beamStrength":46000},
-          ["he2r","f18r"],
-          ["he4r","f18r"],
-          ["he3r","f11rr"],
-          {"breakGroup":""},
-          {"deformGroup":""},
+        {"beamDeform":1500,"beamStrength":46000},
+        ["he2r","f18r"],
+        ["he4r","f18r"],
+        ["he3r","f11rr"],
+        {"breakGroup":""},
+        {"deformGroup":""},
 
-          //headlight support beams
-          {"beamType":"|SUPPORT", "beamLongBound":9},
-          {"beamSpring":601000,"beamDamp":90},
-          {"beamDeform":13000,"beamStrength":330000},
-          {"optional":true},
-          ["he2r","h4"],
-          ["he3r","h4r"],
-          ["he5r","h4rr"],
-          {"optional":false},
-          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
-          {"deformLimitExpansion":1.1},
+        //headlight support beams
+        {"beamType":"|SUPPORT", "beamLongBound":9},
+        {"beamSpring":601000,"beamDamp":90},
+        {"beamDeform":13000,"beamStrength":330000},
+        {"optional":true},
+        ["he2r","h4"],
+        ["he3r","h4r"],
+        ["he5r","h4rr"],
+        {"optional":false},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"deformLimitExpansion":1.1},
     ],
     "triangles": [
-            ["id1:","id2:","id3:"],
-            //right headlight
-            {"groundModel":"plastic"},
-            {"group":"etk800_headlight_R"},
-            {"dragCoef":5},
-            ["he3r","he1r","he4r"],
-            ["he4r","he1r","he2r"],
+        ["id1:","id2:","id3:"],
+        //right headlight
+        {"groundModel":"plastic"},
+        {"group":"etk800_headlight_R"},
+        {"dragCoef":5},
+        ["he3r","he1r","he4r"],
+        ["he4r","he1r","he2r"],
 
-            {"triangleType":"NONCOLLIDABLE"},
-            ["he4r","he2r","he5r"],
-            ["he1r","he5r","he2r"],
-            ["he3r","he5r","he1r"],
-            ["he4r","he5r","he3r"],
-            {"triangleType":"NORMALTYPE"},
-            {"group":""},
-    ],
+        {"triangleType":"NONCOLLIDABLE"},
+        ["he4r","he2r","he5r"],
+        ["he1r","he5r","he2r"],
+        ["he3r","he5r","he1r"],
+        ["he4r","he5r","he3r"],
+        {"triangleType":"NORMALTYPE"},
+        {"group":""}
+    ]
 },
+
+
 "etk800_headlight_L_facelift_spons": {
     "information":{
-        "authors":"BeamNG",
-        "name":"Xenon Left Headlight Facelift",
-        "value":350,
+        "authors":"SponsxNickRyge",
+        "name":"Bi-LED left Headlight facelift",
+        "value":750
     },
     "slotType" : "etk800_headlight_L",
     "flexbodies": [
-         ["mesh", "[group]:", "nonFlexMaterials"],
-         {"deformGroup":"headlightglass_spons_L_break", "deformMaterialBase":"etk800_glass_spons", "deformMaterialDamaged":"etk800_glass_dmg"},
-         ["etk800_headlightglass_spons_L", ["etk800_headlight_L"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>extglassbreaksound3", "deformVolume":0.4}],
-         {"deformGroup":""},
-         {"deformGroup":"headlightglass_L_break", "deformMaterialBase":"etk800_lights", "deformMaterialDamaged":"etk800_lights_dmg"},
-		 ["etk800_headlight_L_facelift_spons", ["etk800_headlight_L"]],
-		 ["etk800_headlight_L_facelift_spons_dlr_b", ["etk800_headlight_L"]],
-         {"deformGroup":""},
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //{"deformGroup":"headlightglass_spons_L_break", "deformMaterialBase":"etk800_glass_spons", "deformMaterialDamaged":"etk800_glass_dmg"},
+        ["etk800_headlightglass_spons_L", ["etk800_headlight_L"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>extglassbreaksound3", "deformVolume":0.4}],
+        //{"deformGroup":""},
+        //{"deformGroup":"headlightglass_L_break", "deformMaterialBase":"etk800_lights", "deformMaterialDamaged":"etk800_lights_dmg"},
+		["etk800_headlight_L_facelift_spons", ["etk800_headlight_L"]],
+		["etk800_headlight_L_facelift_spons_dlr_b", ["etk800_headlight_L"]],
+        {"deformGroup":""}
     ],
+    "glowMap":{
+        //lights
+        "blinker_L_1":{"simpleFunction":{"signalL1":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_blinker", "on_intense":"etk800_headlight_L_facelift_spons_on_blinker"},
+		"blinker_L_2":{"simpleFunction":{"signalL2":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_blinker", "on_intense":"etk800_headlight_L_facelift_spons_on_blinker"},
+		"blinker_L_3":{"simpleFunction":{"signalL3":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_blinker", "on_intense":"etk800_headlight_L_facelift_spons_on_blinker"},
+		"blinker_L_4":{"simpleFunction":{"signalL4":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_blinker", "on_intense":"etk800_headlight_L_facelift_spons_on_blinker"},
+		"blinker_L_5":{"simpleFunction":{"signalL5":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_blinker", "on_intense":"etk800_headlight_L_facelift_spons_on_blinker"},
+		"blinker_L_6":{"simpleFunction":{"signalL6":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_blinker", "on_intense":"etk800_headlight_L_facelift_spons_on_blinker"},
+		"blinker_L_7":{"simpleFunction":{"signalL7":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_blinker", "on_intense":"etk800_headlight_L_facelift_spons_on_blinker"},
+		"blinker_L_8":{"simpleFunction":{"signalL8":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_blinker", "on_intense":"etk800_headlight_L_facelift_spons_on_blinker"},
+		"blinker_L_9":{"simpleFunction":{"signalL9":0.49}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_blinker", "on_intense":"etk800_headlight_L_facelift_spons_on_blinker"},
+        		
+		"etk800_headlight_L_facelift_spons_lowbeam":{"simpleFunction":{"lowhighbeam":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_glass", "on_intense":"etk800_headlight_L_facelift_spons_on_glass"},
+        "etk800_headlight_L_facelift_spons_highbeam":{"simpleFunction":{"highbeam":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on_glass", "on_intense":"etk800_headlight_L_facelift_spons_on_glass"},
+		"etk800_headlightglass":{"simpleFunction":{"lowbeam":0.49,"highbeam":1}, "off":"etk800_glass", "on":"etk800_glass", "on_intense":"etk800_glass"},
+		
+		"DRL_L_1":{"simpleFunction":{"DRL2":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
+		"DRL_L_2":{"simpleFunction":{"DRL1":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
+		"DRL_L_3":{"simpleFunction":{"DRL1":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
+		"DRL_L_4":{"simpleFunction":{"DRL2":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
+		
+        "DRL_L_5":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
+		"DRL_L_6":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
+		"DRL_L_7":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
+		"DRL_L_8":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"}
+    },
     "props": [
         ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"],
         {
@@ -252,13 +260,13 @@
             "lightAttenuation":{"x":0, "y":1, "z":1},
             "lightCastShadows":true,
             "flareName":"vehicleHeadLightFlare",
-            "flareScale":0.1,
-            "cookieName":"vehicles/etk800/etk800_headlight.dds",
+            "flareScale":0,
+            "cookieName":"vehicles/etk800/temporary_lights/etk800_headlight_spons_temp.dds",
             "texSize":128,
             "shadowSoftness":0.4
         },
         //low beams angled right slightly to avoid blinding oncoming traffic
-        ["cornerLeft"    , "SPOTLIGHT"        , "he4l", "he3l", "he2l", 
+        ["lowhighbeam"    , "SPOTLIGHT"        , "he4l", "he3l", "he2l", 
 		{"x":-19.85, "y":6, "z":-36} , 
 		{"x":0, "y":0, "z":1}    , 
 		{"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"baseTranslation":
@@ -273,38 +281,34 @@
             "lightAttenuation":{"x":0, "y":1, "z":1},
             "lightCastShadows":true,
             "flareName":"vehicleHeadLightFlare",
-            "flareScale":0.3,
-            "cookieName":"vehicles/etk800/etk800_headlight_high_test.dds",
+            "flareScale":0,
+            "cookieName":"vehicles/etk800/temporary_lights/etk800_headlight_high_spons_temp.dds",
             "texSize":128,
             "shadowSoftness":0.3
         },
         //high beams
-        ["leftHigh" ,         "SPOTLIGHT"        , "he4l", "he3l", "he2l", 
+        ["highbeam" ,         "SPOTLIGHT"        , "he4l", "he3l", "he2l", 
 		{"x":-19.85, "y":6, "z":-35} , 
-		{"x":0, "y":0, "z":1}    , 
+		{"x":0, "y":0, "z":1}, //Sure wonder what these were originally used for ;)
 		{"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"baseTranslation":
 		{"x":0.0, "y":0.48, "z":-0.055},
 		"deformGroup":"headlightglass_L_break"}],
 
         //Testing sidelights
-        {
-            "lightInnerAngle":0,
-            "lightOuterAngle":90,
-            "lightBrightness":1.5,
-            "lightRange":200,
-            "lightColor":{"r":200, "g":200, "b":255, "a":255},
-            "lightAttenuation":{"x":0, "y":1, "z":1},
-            "lightCastShadows":false,
-            "flareName":"vehicleHeadLightFlare",
-            "flareScale":0.3,
-            "cookieName":"vehicles/etk800/etk800_headlight_high_left_side.dds",
-            "texSize":128,
-            "shadowSoftness":0.5
-        },
-        //low beams angled right slightly to avoid blinding oncoming traffic
-        //["lowhighbeam"    , "SPOTLIGHT"        , "he4l", "he3l", "he2l", {"x":-48, "y":24, "z":-37} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.75, "y":-0.1, "z":0},"lightRange":50,"lightBrightness":0.7,"flareScale":0.05,"lightOuterAngle":80,"deformGroup":"headlightglass_L_break"}],
-        //high beams
-        //["highbeam" ,         "SPOTLIGHT"        , "he4l", "he3l", "he2l", {"x":-40, "y":24, "z":-37} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0, "y":0.48, "z":-0.095},"lightRange":80,"lightBrightness":0.8,"flareScale":0.07,"lightOuterAngle":80,"deformGroup":"headlightglass_L_break"}],
+        //{
+        //    "lightInnerAngle":0,
+        //    "lightOuterAngle":90,
+        //    "lightBrightness":1.5,
+        //    "lightRange":200,
+        //    "lightColor":{"r":200, "g":200, "b":255, "a":255},
+        //    "lightAttenuation":{"x":0, "y":1, "z":1},
+        //    "lightCastShadows":false,
+        //    "flareName":"vehicleHeadLightFlare",
+        //    "flareScale":0,
+        //    "cookieName":"vehicles/etk800/etk800_headlight_high_left_side.dds",
+        //    "texSize":128,
+        //    "shadowSoftness":0.5
+        //},
         //signal
         //{
             //"lightInnerAngle":0,
@@ -318,100 +322,99 @@
         //["signal_L"    , "SPOTLIGHT"        , "he3l", "he4l", "he1l", {"x":200, "y":0, "z":-10} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":1, "z":-0.025},"flareScale":0.02,"lightBrightness":0.04,"deformGroup":"headlightglass_L_break"}],
      ],
     "nodes": [
-         ["id", "posX", "posY", "posZ"],
-         //--HEADLIGHT--
-         //left
-         {"selfCollision":true},
-         {"collision":true},
-         {"nodeMaterial":"|NM_PLASTIC"},
-         {"frictionCoef":0.5},
-         {"nodeWeight":0.6},
-         {"group":"etk800_headlight_L"},
-         ["he1l", 0.50, -2.10, 0.76],
-         ["he3l", 0.49, -2.11, 0.72],
-         ["he2l", 0.78, -1.84, 0.78],
-         ["he4l", 0.78, -1.88, 0.68],
-         //{"selfCollision":false}
-         ["he5l", 0.60, -1.76, 0.72],
-         {"group":""},
-
+        ["id", "posX", "posY", "posZ"],
+        //--HEADLIGHT--
+        //left
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeMaterial":"|NM_PLASTIC"},
+        {"frictionCoef":0.5},
+        {"nodeWeight":0.6},
+        {"group":"etk800_headlight_L"},
+        ["he1l", 0.50, -2.10, 0.76],
+        ["he3l", 0.49, -2.11, 0.72],
+        ["he2l", 0.78, -1.84, 0.78],
+        ["he4l", 0.78, -1.88, 0.68],
+        //{"selfCollision":false}
+        ["he5l", 0.60, -1.76, 0.72],
+        {"group":""}
     ],
     "beams": [
-          ["id1:", "id2:"],
-          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
-          //--HEADLIGHT--
-          {"beamSpring":1001000,"beamDamp":60},
-          {"beamDeform":12000,"beamStrength":128000},
-          //headlight main shape
-          {"deformGroup":"headlightglass_L_break", "deformationTriggerRatio":0.05},
-          //l
-          {"deformLimitExpansion":1.1},
-          ["he1l","he2l"],
-          ["he3l","he4l"],
-          ["he1l","he3l"],
-          ["he2l","he4l"],
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //--HEADLIGHT--
+        {"beamSpring":1001000,"beamDamp":60},
+        {"beamDeform":12000,"beamStrength":128000},
+        //headlight main shape
+        {"deformGroup":"headlightglass_L_break", "deformationTriggerRatio":0.05},
+        //l
+        {"deformLimitExpansion":1.1},
+        ["he1l","he2l"],
+        ["he3l","he4l"],
+        ["he1l","he3l"],
+        ["he2l","he4l"],
 
-          ["he1l","he4l"],
-          ["he2l","he3l"],
+        ["he1l","he4l"],
+        ["he2l","he3l"],
 
-          ["he1l","he5l"],
-          ["he2l","he5l"],
-          ["he3l","he5l"],
-          ["he4l","he5l"],
-          //attach
-          {"deformLimitExpansion":""},
-          {"beamSpring":301000,"beamDamp":60},
-          {"beamDeform":3000,"beamStrength":28000},
-          //l
-          {"breakGroup":"headlight_L"},
-          ["he5l","f15ll"],
-          ["he5l","f15l"],
-          ["he2l","f15ll"],
-          ["he2l","f15l"],
-          ["he4l","f15ll"],
+        ["he1l","he5l"],
+        ["he2l","he5l"],
+        ["he3l","he5l"],
+        ["he4l","he5l"],
+        //attach
+        {"deformLimitExpansion":""},
+        {"beamSpring":301000,"beamDamp":60},
+        {"beamDeform":3000,"beamStrength":28000},
+        //l
+        {"breakGroup":"headlight_L"},
+        ["he5l","f15ll"],
+        ["he5l","f15l"],
+        ["he2l","f15ll"],
+        ["he2l","f15l"],
+        ["he4l","f15ll"],
 
-          {"beamDeform":3000,"beamStrength":28000},
-          {"breakGroup":"headlight_L"},
-          ["he1l","f15ll"],
-          ["he1l","f15l"],
-          ["he3l","f15l"],
-          ["he3l","f13ll"],
-          //["he1l","f13ll"],
+        {"beamDeform":3000,"beamStrength":28000},
+        {"breakGroup":"headlight_L"},
+        ["he1l","f15ll"],
+        ["he1l","f15l"],
+        ["he3l","f15l"],
+        ["he3l","f13ll"],
+        //["he1l","f13ll"],
 
-          {"beamDeform":1500,"beamStrength":46000},
-          ["he2l","f18l"],
-          ["he4l","f18l"],
-          ["he3l","f11ll"],
-          {"breakGroup":""},
-          {"deformGroup":""},
+        {"beamDeform":1500,"beamStrength":46000},
+        ["he2l","f18l"],
+        ["he4l","f18l"],
+        ["he3l","f11ll"],
+        {"breakGroup":""},
+        {"deformGroup":""},
 
-          //headlight support beams
-          {"beamType":"|SUPPORT", "beamLongBound":9},
-          {"beamSpring":601000,"beamDamp":90},
-          {"beamDeform":13000,"beamStrength":330000},
-          {"optional":true},
-          ["he2l","h4"],
-          ["he3l","h4l"],
-          ["he5l","h4ll"],
-          {"optional":false},
-          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
-          {"deformLimitExpansion":1.1},
+        //headlight support beams
+        {"beamType":"|SUPPORT", "beamLongBound":9},
+        {"beamSpring":601000,"beamDamp":90},
+        {"beamDeform":13000,"beamStrength":330000},
+        {"optional":true},
+        ["he2l","h4"],
+        ["he3l","h4l"],
+        ["he5l","h4ll"],
+        {"optional":false},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"deformLimitExpansion":1.1},
     ],
     "triangles": [
-            ["id1:","id2:","id3:"],
-            //left headlight
-            {"groundModel":"plastic"},
-            {"group":"etk800_headlight_L"},
-            {"dragCoef":5},
-            ["he1l","he3l","he4l"],
-            ["he1l","he4l","he2l"],
-            {"triangleType":"NONCOLLIDABLE"},
-            ["he2l","he4l","he5l"],
-            ["he5l","he1l","he2l"],
-            ["he5l","he3l","he1l"],
-            ["he5l","he4l","he3l"],
-            {"triangleType":"NORMALTYPE"},
-            {"group":""},
-    ],
-},
+        ["id1:","id2:","id3:"],
+        //left headlight
+        {"groundModel":"plastic"},
+        {"group":"etk800_headlight_L"},
+        {"dragCoef":5},
+        ["he1l","he3l","he4l"],
+        ["he1l","he4l","he2l"],
+        {"triangleType":"NONCOLLIDABLE"},
+        ["he2l","he4l","he5l"],
+        ["he5l","he1l","he2l"],
+        ["he5l","he3l","he1l"],
+        ["he5l","he4l","he3l"],
+        {"triangleType":"NORMALTYPE"},
+        {"group":""},
+    ]
+}
 }

@@ -1,5 +1,6 @@
 -- Author - Niclas Ryge
--- DON'T USE THIS CODE WITHOUT EXCPLICIT PERMISSION
+-- Don't reupload this code without permission and claim it as your own.
+-- You can however use it for your own projects without permission.
 
 local M = {}
 
@@ -7,118 +8,166 @@ local M = {}
 local ignition
 local pastignition
 local wiggle = false
-local old = 0
 local level = 0
 local lowhighbeam
-local highbeam 
+local highbeam
+local nameString = ""
+local speedModifier
+local sectionAmount = 0
+local timer = 0
+local override = false
+local finalValue = 0.5
+
+-- DEBUG - The controller name
+local name
 
 -- Car specifics (applies only to Spons facelift mod)
 local yellowlights
 local yellow
 
+local function setAll(val)
+    for i = 1,sectionAmount,1 do
+        electrics.values[nameString..i] = val
+    end
+end
+
 -- This function resetss the lights and either leave them at 0 or at 0.5 depending on if they are on or not.
 local function reset()
     if electrics.values.ignitionLevel > 0 then
-        for i = 1,8,1 do
-            electrics.values["DRL"..i] = 0.5
-        end
+        setAll(finalValue)
+    else
+        setAll(0)
     end
     pastignition = electrics.values.ignitionLevel
     level = 0
+    timer = 0
 end
-
 
 -- Init
 local function init(jbeamData)
+    -- load jbeam data
+    nameString = jbeamData.nameString or "DRL"
+    speedModifier = jbeamData.timerSpeed or 0.025
+    sectionAmount = jbeamData.sections or 4
+    speedModifier = jbeamData.speedMod or 10
+    override = jbeamData.override or false
+    finalValue = jbeamData.finalValue or 0.5
+
+    --DEBUG
+    name = jbeamData.name
+
     -- If car spawns started, turn all lights on.
     reset()
-    yellowlights = electrics.values.yellowlights
+    
+    yellowlights = electrics.values.yellowlights or 0
     lowhighbeam = electrics.values.lowhighbeam
     highbeam = electrics.values.highbeam
 end
 
+local previous = 1
+local function welcomeLights(dt)
 
--- Terribly optimized welcomelights.
-local function welcomeLightsStep(dt, currentValue)
-    -- use dt as counter to count up through lights
-    local step = (20 - currentValue) * dt * 0.85 
-    local newValue = currentValue+step
-    local light = math.ceil(newValue)
-
-    -- Save resources.
-    if light == math.ceil(currentValue) then
-        return newValue
-    
     -- Used for the edgecase that a user turns on lights while the car is off. 
     -- The reason this is needed and that the lights cant be handled in this function is
     -- that the lights will turn on before this function has the chance to turn them off, leaving them flashing.
-    -- That looks particularly stupid.
-    elseif lowhighbeam+highbeam ~= 0 or yellowlights ~= 0 then
+    -- That looks particularly stupid. 
+    --NOTE: Only runs on the first pass, because there can be multiple controllers fucking with this.
+    if timer == 0 and (lowhighbeam+highbeam ~= 0 or yellowlights ~= 0) then
         wiggle = false
         reset()
-        return newValue
+    end
+
+    -- If override then turn off brakelights
+    if override then electrics.values["brakelights"] = 0 end
+
+    -- Timer increment and val calculation
+    timer = timer + dt
+
+    -- Check for whether the counter is slower than the speed of the light
+    -- This was discovered by CAT.
+    -- With very low FPS, the timer is actually slower than the speed of the light
+    -- So ever so often, a skip in the counter occurs.
+    -- This checks for if we jumped more than a single number. If we did, go back one number.
+    if math.ceil((timer)*speedModifier) > (previous + 1) then
+        timer = (previous+1)/speedModifier
+        -- debug print
+        --print("number " .. tostring(previous+1) .. " triggered the override in " .. nameString)
+    end
+
+    local trueValue = math.ceil(timer*speedModifier)
+    previous = trueValue
+
+    
+    -- Start going op
+    if trueValue <= math.ceil(sectionAmount) then
+        electrics.values[nameString..trueValue] = 1
+        electrics.values[nameString..trueValue-1] = -1
+        
+    else
+        -- Then go the other way
+        electrics.values[nameString.. sectionAmount*2-trueValue] = 1
+
+        --Do this if override brakelights true
+        -- We do it because we assume that if we override brakelights, this must be the rear lights
+        -- in that case, we turn on the welcome lights if they were on before the car came on.
+        if override and level > 0 then
+            electrics.values[nameString.. sectionAmount*2-trueValue+1] = finalValue+0.2
+        else
+            electrics.values[nameString.. sectionAmount*2-trueValue+1] = finalValue
+        end
     end
     
-    if light < 5 then
-        electrics.values["DRL"..light] = 1
-        electrics.values["DRL"..light-1] = 0
-    else
-        -- Otherwise go the other way
-        electrics.values["DRL".. 8-light] = 1
-        electrics.values["DRL".. 8-light+1] = 0.5
-    end
-
-    if math.ceil(currentValue) == 9 then
+    -- If we reached the end
+    if math.ceil(trueValue) == (sectionAmount*2) then
+        timer = 0
+        trueValue = 0
         wiggle = false
         electrics.values.yellowlights = yellow
-        for i = 1,level,1 do
-            electrics.toggle_lights()
-        end
+        --Turn lights back on
+        electrics.setLightsState(level)
 
+        -- Turn the overwritten lights back off
+        if override and level > 0 then setAll(finalValue) end
     end
-    return newValue
 end
 
 
 -- Runs every GFX tick.
 local function updateGFX(dt)
-    -- Assign variables
+    --If welcome activated then do the welcome lights
+    if wiggle then welcomeLights(dt) end
+
+    -- Update variables
     lowhighbeam = electrics.values.lowhighbeam
     highbeam = electrics.values.highbeam
     yellowlights = electrics.values.yellowlights
-
-    -- Do the welcome wiggle
-    if wiggle then old = welcomeLightsStep(dt, old) end
-    
     ignition = electrics.values.ignitionLevel
 
+    -- Checks if the car has been turned off.
     if (pastignition%2) > ignition then
 
-        for i = 1,8,1 do
-            electrics.values["DRL"..i] = 0
-        end
+        --Reset everything
+        setAll(0)
         wiggle = false
+        timer = 0
         
-        -- This introduces the edgecase that the lights are turned on while the car is off, then this doesn't catch.
+        --Saves the state of the lights before setting them to 0
         level = lowhighbeam+highbeam
         yellow = yellowlights
 
-        -- My brain is so smooth
-        -- This toggles the lights the amount of times that would be required to restore them to 0 and back again.
-        -- The reason this applies is because there is no function to turn it on or off, only to "toggle" them
         electrics.values.yellowlights = 0
-        for i = 1,(1+lowhighbeam-highbeam)*lowhighbeam,1 do
-            electrics.toggle_lights()
-        end
+        electrics.setLightsState(0)
     end
 
-    -- Mathematically proven to be stupid
-    if (ignition%2) > pastignition then
-        -- Do the jiggle
+    -- If ignition is on, but only turned on once, then
+    if ignition > pastignition and pastignition < 1 then
+        -- Do the welcome dance
         wiggle = true
-
-        old = 0
+        --Overwrite brakelights here so prevent them turning on before we have the chance to turn them off
+        --Only really applies to electric cars.
+        if override then electrics.values["brakelights"] = 0 end
     end
+    -- Saves ignition state
     pastignition = ignition
 end
 

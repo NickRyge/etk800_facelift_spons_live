@@ -1,6 +1,3 @@
--- Author - Niclas Ryge
--- DON'T USE THIS CODE WITHOUT EXCPLICIT PERMISSION
-
 local M = {}
 
 -- Local variables

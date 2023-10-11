@@ -7,13 +7,15 @@
     },
     "slotType" : "etk800_mirror_R",
     "flexbodies": [
-        ["mesh", "[group]:", "nonFlexMaterials"],
-        ["etk800_mirror_R_spons", ["etk800_mirror_R"]],
-        ["etk800_mirror_R_spons_blinker", ["etk800_mirror_R"]],
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etk800_mirror_R_spons", ["etk800_mirror_R"]],
+         ["etk800_mirror_R_spons_blinker", ["etk800_mirror_R"]],
     ],
 	
 	"glowMap":{
-        "blinker_mirror_R":{"simpleFunction":{"signalR1":0.49}, "off":"etk800_mirror_facelift_spons", "on":"etk800_mirror_facelift_spons_on", "on_intense":"etk800_mirror_facelift_spons_on"}
+			"blinker_mirror_L":{"simpleFunction":{"signalL5":0.49}, "off":"etk800_mirror_facelift_spons", "on":"etk800_mirror_facelift_spons_on", "on_intense":"etk800_mirror_facelift_spons_on"},
+			
+			"blinker_mirror_R":{"simpleFunction":{"signalR5":0.49}, "off":"etk800_mirror_facelift_spons", "on":"etk800_mirror_facelift_spons_on", "on_intense":"etk800_mirror_facelift_spons_on"},
     },
 	
     "nodes": [
@@ -135,12 +137,264 @@
         "value":180,
     },
     "slotType" : "etk800_mirror_L",
-    "glowMap":{
-		"blinker_mirror_L":{"simpleFunction":{"signalL1":0.49}, "off":"etk800_mirror_facelift_spons", "on":"etk800_mirror_facelift_spons_on", "on_intense":"etk800_mirror_facelift_spons_on"}
-    }, 
     "flexbodies": [
          ["mesh", "[group]:", "nonFlexMaterials"],
          ["etk800_mirror_L_spons", ["etk800_mirror_L"]],
+		 ["etk800_mirror_L_spons_blinker", ["etk800_mirror_L"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--MIRROR--
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"nodeWeight":0.3},
+         {"selfCollision":true},
+         {"collision":true},
+         {"frictionCoef":1},
+         {"group":"etk800_mirror_L"},
+         ["mi1l", 0.83, -0.40, 1.055],
+         ["mi2l", 1.005, -0.36, 1.025],
+         ["mi3l", 0.84, -0.40, 0.94],
+         ["mi4l", 1.02, -0.36, 0.94],
+         ["mi5l", 0.92, -0.46, 1.01],
+         {"collision":false},
+         {"selfCollision":false},
+         {"group":""},
+         ["mi6l", 0.81, -0.45, 0.93],
+         ["mi7l", 0.81, -0.45, 0.98],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--MIRRORS--
+          {"beamSpring":401000,"beamDamp":30},
+          {"beamDeform":3000,"beamStrength":62500},
+          //mirror
+          {"deformLimitExpansion":1.1},
+          //l
+          ["mi1l","mi2l"],
+          ["mi1l","mi3l"],
+          ["mi1l","mi4l"],
+          ["mi1l","mi5l"],
+          ["mi2l","mi3l"],
+          ["mi2l","mi4l"],
+          ["mi2l","mi5l"],
+          ["mi3l","mi4l"],
+          ["mi3l","mi5l"],
+          ["mi4l","mi5l"],
+
+          //attach
+          {"deformLimitExpansion":""},
+          {"beamDeform":3000,"beamStrength":7000},
+          {"breakGroup":"mirror_L"},
+          ["mi1l","mi7l"],
+          ["mi2l","mi7l"],
+          ["mi3l","mi7l"],
+          ["mi4l","mi7l"],
+          ["mi5l","mi7l"],
+
+          ["mi1l","mi6l"],
+          ["mi2l","mi6l"],
+          ["mi3l","mi6l"],
+          ["mi4l","mi6l"],
+          ["mi5l","mi6l"],
+
+          {"beamSpring":101000,"beamDamp":80},
+          {"beamDeform":2000,"beamStrength":6000},
+          {"breakGroupType":1},
+          ["mi2l","d8l"],
+          ["mi4l","d8l"],
+          ["mi4l","d4l"],
+          ["mi4l","d5l"],
+
+          ["mi3l","d5l"],
+          ["mi5l","d5l"],
+
+          ["mi1l","d7l"],
+          ["mi2l","d7l"],
+          ["mi3l","d7l"],
+          ["mi4l","d7l"],
+          ["mi5l","d7l"],
+          {"breakGroupType":0},
+          {"breakGroup":""},
+
+          {"beamSpring":301000,"beamDamp":30},
+          {"beamDeform":12000,"beamStrength":"FLT_MAX"},
+          ["mi6l","mi7l"],
+          ["mi6l","d10l"],
+          ["mi7l","d10l"],
+          ["mi6l","d4l"],
+          ["mi7l","d4l"],
+          ["mi6l","d7l"],
+          ["mi7l","d7l"],
+
+          ["mi6l","d8l"],
+          ["mi7l","d8l"],
+          ["mi6l","d5l"],
+          ["mi7l","d5l"],
+
+          ["mi6l", "d14l"],
+          ["mi7l", "d14l"],
+          {"deformGroup":""},
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.1},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //left mirror
+            {"groundModel":"plastic"},
+            {"group":"etk800_mirror_L"},
+            {"dragCoef":35},
+            ["mi1l","mi2l","mi3l"],
+            ["mi3l","mi2l","mi4l"],
+
+            ["mi2l","mi1l","mi5l"],
+            ["mi4l","mi2l","mi5l"],
+            ["mi3l","mi4l","mi5l"],
+            ["mi1l","mi3l","mi5l"],
+            {"group":""},
+    ],
+},
+"etk800_mirror_R_spons_ttsport": {
+    "information":{
+        "authors":"Spons",
+        "name":"Right Mirror ttSport Facelift",
+        "value":180,
+    },
+    "slotType" : "etk800_mirror_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etk800_mirror_ttsport_R_spons", ["etk800_mirror_R"]],
+         ["etk800_mirror_R_spons_blinker", ["etk800_mirror_R"]],
+    ],
+	
+	"glowMap":{
+			"blinker_mirror_L":{"simpleFunction":{"signalL5":0.49}, "off":"etk800_mirror_facelift_spons", "on":"etk800_mirror_facelift_spons_on", "on_intense":"etk800_mirror_facelift_spons_on"},
+			
+			"blinker_mirror_R":{"simpleFunction":{"signalR5":0.49}, "off":"etk800_mirror_facelift_spons", "on":"etk800_mirror_facelift_spons_on", "on_intense":"etk800_mirror_facelift_spons_on"},
+    },
+	
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--MIRROR--
+         {"nodeWeight":0.3},
+         {"selfCollision":true},
+         {"collision":true},
+         {"frictionCoef":1},
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"group":"etk800_mirror_R"},
+         ["mi1r",-0.83, -0.40, 1.055],
+         ["mi2r",-1.005, -0.36, 1.025],
+         ["mi3r",-0.84, -0.40, 0.94],
+         ["mi4r",-1.02, -0.36, 0.94],
+         ["mi5r",-0.92, -0.49, 1.01],
+         {"collision":false},
+         {"selfCollision":false},
+         {"group":""},
+         ["mi6r",-0.81, -0.45, 0.93],
+         ["mi7r",-0.81, -0.45, 0.98],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--MIRRORS--
+          {"beamSpring":401000,"beamDamp":30},
+          {"beamDeform":3000,"beamStrength":62500},
+          //mirror
+          //r
+          {"deformLimitExpansion":1.1},
+          ["mi1r","mi2r"],
+          ["mi1r","mi3r"],
+          ["mi1r","mi4r"],
+          ["mi1r","mi5r"],
+          ["mi2r","mi3r"],
+          ["mi2r","mi4r"],
+          ["mi2r","mi5r"],
+          ["mi3r","mi4r"],
+          ["mi3r","mi5r"],
+          ["mi4r","mi5r"],
+
+          //attach
+          {"deformLimitExpansion":""},
+          {"beamDeform":3000,"beamStrength":7000},
+          {"breakGroup":"mirror_R"},
+          ["mi1r","mi7r"],
+          ["mi2r","mi7r"],
+          ["mi3r","mi7r"],
+          ["mi4r","mi7r"],
+          ["mi5r","mi7r"],
+
+          ["mi1r","mi6r"],
+          ["mi2r","mi6r"],
+          ["mi3r","mi6r"],
+          ["mi4r","mi6r"],
+          ["mi5r","mi6r"],
+
+          {"beamSpring":101000,"beamDamp":80},
+          {"beamDeform":2000,"beamStrength":6000},
+          {"breakGroupType":1},
+          ["mi2r","d8r"],
+          ["mi4r","d8r"],
+          ["mi4r","d4r"],
+          ["mi4r","d5r"],
+
+          ["mi3r","d5r"],
+          ["mi5r","d5r"],
+
+          ["mi1r","d7r"],
+          ["mi2r","d7r"],
+          ["mi3r","d7r"],
+          ["mi4r","d7r"],
+          ["mi5r","d7r"],
+          {"breakGroupType":0},
+          {"breakGroup":""},
+
+          {"beamSpring":301000,"beamDamp":30},
+          {"beamDeform":12000,"beamStrength":"FLT_MAX"},
+          ["mi6r","mi7r"],
+          ["mi6r","d10r"],
+          ["mi7r","d10r"],
+          ["mi6r","d4r"],
+          ["mi7r","d4r"],
+          ["mi6r","d7r"],
+          ["mi7r","d7r"],
+
+          ["mi6r","d8r"],
+          ["mi7r","d8r"],
+          ["mi6r","d5r"],
+          ["mi7r","d5r"],
+
+          ["mi6r", "d14r"],
+          ["mi7r", "d14r"],
+          {"deformGroup":""},
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.1},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //right mirror
+            {"groundModel":"plastic"},
+            {"group":"etk800_mirror_R"},
+            {"dragCoef":35},
+            ["mi2r","mi1r","mi3r"],
+            ["mi2r","mi3r","mi4r"],
+
+            ["mi1r","mi2r","mi5r"],
+            ["mi2r","mi4r","mi5r"],
+            ["mi4r","mi3r","mi5r"],
+            ["mi3r","mi1r","mi5r"],
+            {"group":""},
+    ],
+},
+"etk800_mirror_L_spons_ttsport": {
+    "information":{
+        "authors":"Spons",
+        "name":"Left Mirror ttSport Facelift",
+        "value":180,
+    },
+    "slotType" : "etk800_mirror_L",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etk800_mirror_ttsport_L_spons", ["etk800_mirror_L"]],
 		 ["etk800_mirror_L_spons_blinker", ["etk800_mirror_L"]],
     ],
     "nodes": [

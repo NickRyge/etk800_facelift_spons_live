@@ -1,0 +1,269 @@
+{
+"etk800_dash_spons": {
+    "information":{
+        "authors":"Spons",
+        "name":"Interior Facelift",
+        "value":400,
+    },
+    "slotType" : "etk800_dash",
+    "slots":[
+        ["type", "default", "description"],
+        ["skin_interior","etk800_skin_interior", "Interior Color", {"coreSlot":true}],
+        ["skin_gauges","etk800_gauges_imperial", "Gauges", {"coreSlot":true}],
+        ["etk800_screen_branding","etk800_screen_branding_default", "Branding", {"coreSlot":true}],
+        ["etk800_steer","etk800_steer", "Steering Wheel"],
+        ["gps","","Navigation Unit", {"nodeOffset":{"x":0.08,"y":-0.56,"z":1.06}}],
+        ["etk800_shifter","etk800_shifter_M", "Shifter"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["etk800_intcarpet_sedan", ["etk800_body"]],
+        ["etk800_dash_spons", ["etk800_dash"]],
+        ["etk800_gauges", ["etk800_dash"]],
+        ["etk800_decals_gauges", ["etk800_dash"]],
+        ["etk800_intmirror", ["etk800_windshield"]],
+        {"deformGroup":"display_break", "deformMaterialBase":"etk800_screen", "deformMaterialDamaged":"invis"},
+        ["etk800_gauges_screen", ["etk800_dash"]],
+        {"deformGroup":"display_break", "deformMaterialBase":"etk800_screen", "deformMaterialDamaged":"etk800_gauges_break"},
+        ["etk800_screen_spons", ["etk800_dash"]],
+        {"deformGroup":""}
+    ],
+
+    "glowMap":{
+        "etk800_gauges_screen":{"simpleFunction":{"ignitionLevel":0.5}, "off":"screen_off", "on":"etk800_gauges_screen_accessory", "on_intense":"etk800_gauges_screen"},
+    },
+
+    "controller": [
+        ["fileName"],
+        ["beamNavigator", {"screenMaterialName": "@etk800_screen", "htmlFilePath": "local://local/vehicles/common/ETK_navi_screen.html", "name":"etk800_navi"}],
+        ["gauges/genericGauges", {"name":"gauge" }],
+        ["gauges/customModules/environmentData"],
+        ["gauges/customModules/combustionEngineData"],
+    ],
+
+    "gauge": {
+        "configuration": {
+            "materialName": "@etk800_gauges_screen",
+            "htmlPath": "local://local/vehicles/etk800/gauges_screen/gauges_screen.html"
+            "displayWidth":512,
+            "displayHeight":256
+        },
+        "displayData": {
+            "electrics": [
+                "signal_L",
+                "signal_R",
+                "lights",
+                "highbeam",
+                "fog",
+                "lowpressure",
+                "lowfuel",
+                "parkingbrake",
+                "checkengine",
+                "gear",//
+                "fuel",
+                "wheelspeed",//
+                "esc",
+                "escActive",
+                "tcs",
+                "tcsActive",
+                "odometer",
+                "trip",
+                "rpm"
+            ],
+            "powertrain": [
+                ["deviceName", "property"]
+                //["mainEngine", "outputTorque1"]
+                //["mainEngine", "outputAV1"]
+                //["gearbox", "outputAV1"]
+            ],
+            "customModules": [
+                ["moduleName", "property"],
+                ["combustionEngineData", "fuelDisplay"],
+                ["combustionEngineData", "fuelConsumption"],
+                ["environmentData", "temperatureEnv"],
+                ["environmentData", "time"]
+            ]
+        }
+    },
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"],
+
+        //pedals
+        ["brake","etk800_brakepedal", "f1l","f1ll","f6l",  {"x":0, "y":0, "z":0}, {"x":-25, "y":0, "z":0}    , {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+        ["throttle","etk800_gaspedal", "f1l","f1ll","f6l",  {"x":-5, "y":0, "z":0}, {"x":20, "y":0, "z":0}    , {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+
+        //turn signal stalk
+        ["turnsignal", "etk800_signalstalk", "f5l","f5r","dsh5",  {"x":45, "y":0, "z":180}, {"x":0, "y":-16, "z":-12}    , {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+        //wiper stalk
+        ["wipers", "etk800_wiperstalk", "f5l","f5r","dsh5",  {"x":0, "y":0, "z":180}, {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, -1, 1, 0, 1],
+    ],
+    "soundscape": [
+        ["name", "src"],
+        //indicator6,
+        {"node:":"dsh1l"},
+        ["indicatorStart", "event:>Vehicle>Interior>Indicator>AU5_On"],
+        ["indicatorStop", "event:>Vehicle>Interior>Indicator>AU5_Off"],
+        ["indLoop1", "event:>Vehicle>Interior>Indicator>AU5_Click"],
+        ["indLoop2", "event:>Vehicle>Interior>Indicator>AU5_Clack"],
+        //lights11
+        ["LightOn", "event:>Vehicle>Interior>Light>BM1_On"],
+        ["LightOff", "event:>Vehicle>Interior>Light>BM1_On"],
+        //handbrake2
+        {"node:":"dsh3"},
+        ["handbrakeDisengaged","event:>Vehicle>Interior>Handbrake_Electric>Electric_01_Unlock"],
+        ["handbrakeEngaging","event:>Vehicle>Interior>Handbrake_Electric>Electric_01_Lock"],
+        //affects horn location because horn soundscape is loaded after
+        {"node:":"f15"},
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //dashboard
+         {"group":"etk800_dash"},
+         {"nodeWeight":5},
+         ["dsh1r",-0.613,-0.546,0.982],
+         ["dsh1",0.0,-0.56,1.016],
+         ["dsh1l",0.613,-0.546,0.982],
+
+         ["dsh2r",-0.667,-0.476,0.793],
+         ["dsh2",0.0,-0.476,0.793],
+         ["dsh2l",0.667,-0.476,0.793],
+
+         ["dsh3",0.0,-0.265,0.6],
+         ["dsh4",0.0,0.352,0.6],
+
+         //steering column
+         {"nodeWeight":2.0},
+         ["dsh5", 0.4, -0.364, 0.89, {"selfCollision":false}],
+         {"group":""},
+
+         //floor thickness nodes
+         {"collision":false},
+         {"selfCollision":false},
+         {"nodeWeight":6.0},
+         ["f7r", -0.33, -0.23, 0.43, {"group":["etk800_body","etk800_dash"]}],
+         ["f7l", 0.33, -0.23, 0.43, {"group":["etk800_body","etk800_dash"]}],
+         ["f8r", -0.33, 0.30, 0.43, {"group":["etk800_body","etk800_dash"]}],
+         ["f8l", 0.33, 0.30, 0.43, {"group":["etk800_body","etk800_dash"]}],
+         ["f9r", -0.33, 0.99, 0.5],
+         ["f9l", 0.33, 0.99, 0.5],
+    ],
+    "beams":[
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          //--DASHBOARD--
+          {"beamSpring":2501000,"beamDamp":250},
+          {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":""},
+          {"deformGroup":"display_break","deformationTriggerRatio":0.05},
+          ["dsh2l", "dsh2"],
+          ["dsh2", "dsh2r"],
+          ["dsh1l", "dsh1"],
+          ["dsh1", "dsh1r"],
+          ["dsh2", "dsh1"],
+          ["dsh2l", "dsh1l"],
+          ["dsh2r", "dsh1r"],
+          ["dsh2", "dsh3"],
+          ["dsh3", "dsh4"],
+          ["dsh1r", "f6rr"],
+          ["dsh2r", "f5rr"],
+          ["dsh1l", "f6ll"],
+          ["dsh2l", "f5ll"],
+          ["dsh1", "f6l"],
+          ["dsh1", "f6r"],
+          ["dsh2", "f5l"],
+          ["dsh2", "f5r"],
+          ["dsh3", "f7l"],
+          ["dsh3", "f7r"],
+          ["dsh4", "f8r"],
+          ["dsh4", "f8l"],
+          ["dsh3", "f5l"],
+          ["dsh3", "f5r"],
+          ["dsh2", "f7l"],
+          ["dsh2", "f7r"],
+          ["dsh3", "f8l"],
+          ["dsh4", "f7l"],
+          ["dsh4", "f7r"],
+          ["dsh3", "f8r"],
+          ["dsh2l", "f5l"],
+          ["dsh2", "f5ll"],
+          ["dsh2", "f5rr"],
+          ["dsh2r", "f5r"],
+          ["dsh2r", "f6rr"],
+          ["dsh1r", "f5rr"],
+          ["dsh1l", "f5ll"],
+          ["dsh2l", "f6ll"],
+          ["dsh1l", "dsh2"],
+          ["dsh2l", "dsh1"],
+          ["dsh1", "dsh2r"],
+          ["dsh1r", "dsh2"],
+          ["dsh1r", "f6r"],
+          ["dsh1l", "f6l"],
+          ["dsh1", "f6ll"],
+          ["dsh1", "f6rr"],
+          ["dsh1", "f5r"],
+          ["dsh1", "f5l"],
+          ["dsh2", "f6r"],
+          ["dsh2", "f6l"],
+          {"deformGroup":""},
+
+          //steering column
+          ["dsh5", "f5l"],
+          ["dsh5", "f1l"],
+          ["dsh5", "f5ll"],
+          ["dsh5", "f5r"],
+          ["dsh5", "f6l"],
+          ["dsh5", "dsh2l"],
+          ["dsh5", "dsh1l"],
+          ["dsh5", "dsh2"],
+          ["dsh5", "dsh1"],
+
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":""},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"groundModel":"plastic"},
+            {"group":"etk800_dash"},
+            {"dragCoef":0},
+            ["dsh1r", "f6rr", "f6r"],
+            ["dsh1r", "f6r", "dsh1"],
+            ["dsh1", "f6r", "f6l"],
+            ["dsh1", "f6l", "dsh1l"],
+            ["dsh1l", "f6l", "f6ll"],
+            ["dsh1l", "f6ll", "dsh2l"],
+            ["f6ll", "f5ll", "dsh2l"],
+            ["dsh1r", "dsh2r", "f6rr"],
+            ["f6rr", "dsh2r", "f5rr"],
+            ["dsh1", "dsh2", "dsh2r"],
+            ["dsh2r", "dsh1r", "dsh1"],
+            ["dsh1", "dsh1l", "dsh2l"],
+            ["dsh2l", "dsh2", "dsh1"],
+            ["dsh2l", "f5l", "dsh2"],
+            ["dsh2l", "f5ll", "f5l"],
+            ["dsh2", "f5r", "dsh2r"],
+            ["dsh2r", "f5r", "f5rr"],
+            ["f5l", "dsh3", "dsh2"],
+            ["dsh2", "dsh3", "f5r"],
+            ["f5r", "fi1r", "f1rr"],
+            ["f1rr", "f5rr", "f5r"],
+            ["f5l", "f1ll", "fi1l"],
+            ["f5l", "f5ll", "f1ll"],
+            ["dsh4", "fi3l", "fi3r"],
+            ["fi3r", "fi2r", "dsh3"],
+            ["dsh3", "dsh4", "fi3r"],
+            ["dsh3", "fi2l", "fi3l"],
+            ["fi3l", "dsh4", "dsh3"],
+            ["dsh3", "fi2r", "fi1r"],
+            ["fi1r", "f5r", "dsh3"],
+            ["fi2l", "dsh3", "fi1l"],
+            ["f5l",  "fi1l", "dsh3"],
+
+            {"group":""},
+    ],
+},
+}

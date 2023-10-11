@@ -1,0 +1,740 @@
+{
+    "etk800_motor_electric_R": {
+        "information":{
+            "authors":"BeamNG",
+            "name":"Rear EV Motor (235Kw)",
+            "value":7000
+        },
+        "slotType" : "etk_engine",
+        //"slots": [
+        //    ["type", "default", "description"],
+        //    ["etk_differential_R_electric","etk800_differential_R_active_LSD_EV_spons", "Rear Differential"],
+        //    ["etk800_battery_spons", "etk800_battery_100", "Electric vehicle battery"]
+        //],
+        "powertrain": [
+            ["type", "name", "inputName", "inputIndex"],
+            ["electricMotor", "rearMotor", "dummy", 0]
+        ],
+        "rearMotor":{
+            "torque":[
+                ["rpm", "torque"],
+                [0, 500],
+                [500, 500],
+                [1000, 500],
+                [1500, 500],
+                [2000, 500],
+                [3000, 500],
+                [4000, 500],
+                [5000, 450],
+                [6000, 385],
+                [7000, 330],
+                [8000, 285],
+                [9000, 250],
+                [10000, 225],
+                [11000, 200],
+                [12000, 160],
+                [13000, 135],
+                [14000, 110],
+                [15000, 90],
+                [16000, 80],
+            ],
+    
+            "maxRPM":16000,
+            "maxRegenPower":150,
+            "maxRegenTorque":100,
+            "inertia":0.10,
+            "friction":2,
+            "dynamicFriction":0.0003,
+            "electricalEfficiency":0.95,
+            //"torqueReactionNodes:":["e1l","e2l","e4r"],
+            "energyStorage": "mainBattery",
+            "electricsThrottleFactorName": "throttleFactorRear",
+    
+            //node beam interface
+            "waterDamage": {"[engineGroup]:":["rear_motor_waterdamage"]},
+            "engineBlock": {"[engineGroup]:":["rear_motor_block"]},
+            "breakTriggerBeam":"rear_motor",
+            "uiName":"Rear Motor",
+    
+            "soundConfig": "soundConfigRear"
+        },
+        "soundConfigRear": {
+            "sampleName": "ElectricMotor",
+            "mainGain": -3.5,
+            "maxLoadMix": 0.65,
+            "minLoadMix": 0,
+            "onLoadGain":1,
+            "offLoadGain":0.1,
+            "eqLowGain": -15,
+            "eqLowFreq": 100,
+            "eqLowWidth": 0.05,
+            "eqHighGain": -5,
+            "eqHighFreq": 6000,
+            "eqHighWidth": 0.1,
+            "eqFundamentalGain": -5,
+        },
+        "vehicleController": {
+            "shiftLogicName":"electricMotor",
+            "motorNames": ["rearMotor", "frontMotor"],
+            "topSpeedLimitReverse": 15,
+            "onePedalRegenCoef": 1.0
+        },
+        "flexbodies": [
+            ["mesh", "[group]:", "nonFlexMaterials"],
+            ["sbr_emotor_large_spons", ["etk800_differential_R"]],
+            ["sbr_emotor_large_mount_spons", ["etk800_differential_R"]],
+            ["sbr_emotor_large_support_spons", ["etk800_subframe_R"]],
+            ["sbr_wiring_emotor_b_spons", ["etk800_body"]],
+            ["sbr_ecu_R_spons", ["etk800_body"]],
+            ["sbr_wiring_battery_R_spons", ["etk800_body"]],
+            ["sbr_frunk_spons", ["etk800_body"]]
+        ],
+        "nodes": [
+            ["id", "posX", "posY", "posZ"],
+            {"frictionCoef":0.5},
+            {"nodeMaterial":"|NM_METAL"},
+            {"selfCollision":false},
+            {"collision":true},
+            {"group":"sbr_rear_motor"},
+            {"engineGroup":"rear_motor_block"},
+            {"nodeWeight":8},
+            {"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.15},
+            ["rem1r", -0.38, 1.38, 0.26],
+            ["rem1l", 0.38, 1.38, 0.26],
+            ["rem2r", -0.38, 1.58, 0.26],
+            ["rem2l", 0.38, 1.58, 0.26],
+            {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false},
+            {"engineGroup":["rear_motor_block","rear_motor_waterdamage"]},
+            ["rem3r", -0.38, 1.38, 0.47],
+            ["rem3l", 0.38, 1.38, 0.47],
+            ["rem4r", -0.38, 1.58, 0.47],
+            ["rem4l", 0.38, 1.58, 0.47],
+            {"engineGroup":""},
+            {"nodeWeight":4},
+            ["rem5r", -0.21, 1.615, 0.225],
+            ["rem5l", 0.21, 1.615, 0.225],
+            {"selfCollision":false},
+            {"collision":true},
+            {"group":"sbr_transaxle"},
+            {"nodeWeight":8},
+            ["tra1", 0.0, 1.12, 0.19],
+            {"nodeWeight":15},
+            {"group":["rear_motor_block","sbr_reardiff"]},
+            ["rem6", 0.0, 1.44, 0.34],
+            {"engineGroup":""},
+            {"group":""}
+        ],
+        "beams": [
+            ["id1:", "id2:"],
+            {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+            {"beamSpring":5001000,"beamDamp":500},
+            {"beamDeform":100000,"beamStrength":"FLT_MAX"},
+
+            //Taken directly from the SBR
+
+            //engine
+            ["rem1r","rem1l"],
+            ["rem2r","rem2l"],
+            ["rem3r","rem3l"],
+            ["rem4r","rem4l"],
+    //
+            ["rem1r","rem2r"],
+            ["rem1l","rem2l"],
+            ["rem3r","rem4r"],
+            ["rem3l","rem4l"],
+    //
+            ["rem1r","rem3r"],
+            ["rem1l","rem3l"],
+            ["rem2r","rem4r"],
+            ["rem2l","rem4l"],
+    //
+            ["rem2r","rem3r"],
+            ["rem2l","rem3l"],
+            ["rem2r","rem3l"],
+            ["rem2l","rem3r"],
+    //
+            ["rem1r","rem4r"],
+            ["rem1l","rem4l"],
+            ["rem1r","rem4l"],
+            ["rem1l","rem4r"],
+    //
+            ["rem1r","rem2l"],
+            ["rem1l","rem2r"],
+            ["rem3r","rem4l"],
+            ["rem3l","rem4r"],
+    //
+            ["rem1r","rem3l"],
+            ["rem1l","rem3r"],
+            ["rem2r","rem4l"],
+            ["rem2l","rem4r"],
+    //
+            {"beamSpring":3751000,"beamDamp":250},
+            ["rem5l", "rem5r"],
+            ["rem5l", "rem2l"],
+            ["rem5r", "rem2r"],
+            ["rem5l", "rem2r"],
+            ["rem5r", "rem2l"],
+            ["rem5l", "rem1l"],
+            ["rem5r", "rem1r"],
+            //["rem5l", "tra2"],
+            //["rem5r", "tra2"],
+            ["rem5r", "rem4r"],
+            ["rem5l", "rem4l"],
+            ["rem5l", "rem4r"],
+            ["rem5r", "rem4l"],
+    //
+            ["rem6", "rdiff", {"optional":true}],
+            ["rem6", "rem1l"],
+            ["rem6", "rem3l"],
+            ["rem6", "rem1r"],
+            ["rem6", "rem3r"],
+            ["rem6", "rem2l"],
+            ["rem6", "rem4l"],
+            ["rem6", "rem2r"],
+            ["rem6", "rem4r"],
+    //
+            //--TRANSMISSION CONE--
+            {"beamSpring":5001000,"beamDamp":250},
+            {"beamDeform":75000,"beamStrength":"FLT_MAX"},
+            ["tra1","rem1r"],
+            ["tra1","rem3r"],
+            ["tra1","rem1l"],
+            ["tra1","rem3l"],
+    //
+            //motor and transaxle mounting
+            {"optional":true},
+            {"beamDeform":14000,"beamStrength":90000},
+            {"beamSpring":501000,"beamDamp":1000},
+            ["rem5l", "rx2l", {"dampCutoffHz":500}],
+            ["rem5l", "rx5l", {"dampCutoffHz":500}],
+            ["rem5l", "r2ll", {"name":"rear_motor","beamStrength":50000,"disableMeshBreaking":true,"disableTriangleBreaking":true}],
+            ["rem5l", "r5ll"],
+            ["rem5l", "r2rr"],
+            ["rem5l", "r5rr"],
+            ["rem5l", "r1"],
+            ["rem5l", "rx1", {"dampCutoffHz":500}],
+    //
+            ["rem5r", "rx2r", {"dampCutoffHz":500}],
+            ["rem5r", "rx5r", {"dampCutoffHz":500}],
+            ["rem5r", "r2rr", {"name":"rear_motor","beamStrength":50000,"disableMeshBreaking":true,"disableTriangleBreaking":true}],
+            ["rem5r", "r5rr"],
+            ["rem5r", "r2ll"],
+            ["rem5r", "r5ll"],
+            ["rem5r", "r1"],
+            ["rem5r", "rx1", {"dampCutoffHz":500}],
+    //
+            {"beamSpring":501000,"beamDamp":500},
+            //transmission soft mounts
+            ["tra1","f9r"],
+            ["tra1","f9l"],
+            ["tra1","f4r"],
+            ["tra1","f4l"],
+            ["tra1","r1"],
+    //
+            ["tra1", "rx1l", {"dampCutoffHz":500}],
+            ["tra1", "rx1r", {"dampCutoffHz":500}],
+    //
+            //engine limiters
+            {"beamPrecompression":1, "beamType":"|SUPPORT", "beamLongBound":1.0},
+            {"beamSpring":2501000,"beamDamp":150,"beamDeform":250000,"beamStrength":"FLT_MAX"},
+            {"beamPrecompression":0.9},
+            //upper limiter
+            ["rem2r", "tb1"],
+            ["rem2l", "tb1"],
+            ["rem1l", "r1"],
+            ["rem1r", "r1"],
+    //
+            //rear body to engine
+            {"beamPrecompression":0.7},
+            ["r6", "e1r"],
+            ["r6", "e1l"],
+            ["r3", "e3r"],
+            ["r3", "e3l"],
+    //
+            //side to engine
+            {"beamPrecompression":0.8},
+            ["r2rr", "e3l"],
+            ["r2rr", "e4l"],
+            ["r2ll", "e3r"],
+            ["r2ll", "e4r"],
+    //
+            //front body to engine
+            {"beamSpring":5001000,"beamDamp":150,"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
+            {"beamPrecompression":0.95},
+            ["f4l", "e4r"],
+            ["f4r", "e4l"],
+            //{"beamPrecompression":0.9},
+            ["e2l", "f9r"],
+            ["e2r", "f9l"],
+    //  
+            //transmission limiter
+            {"beamSpring":2501000,"beamDamp":150,"beamDeform":250000,"beamStrength":"FLT_MAX"},
+            {"beamPrecompression":0.95},
+            ["tra1", "f9r"],
+            ["tra1", "f9l"],
+            ["tra1", "f4r"],
+            ["tra1", "f4l"],
+            ["tra1", "q3r"],
+            ["tra1", "q3l"],
+            {"beamPrecompression":0.8},
+            ["tra1", "r1"],
+            {"beamPrecompression":1},
+            {"optional":false},
+            {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0}
+        ]
+    },
+
+    "etk800_motor_electric_R_sport": {
+        "information":{
+            "authors":"BeamNG",
+            "name":"Rear EV Motor (235Kw)",
+            "value":7000
+        },
+        "slotType" : "etk_engine",
+        //"slots": [
+        //    ["type", "default", "description"],
+        //    ["etk_differential_R_electric","etk800_differential_R_active_LSD_EV_spons", "Rear Differential"],
+        //    ["etk800_battery_spons", "etk800_battery_100", "Electric vehicle battery"]
+        //],
+        "powertrain": [
+            ["type", "name", "inputName", "inputIndex"],
+            ["electricMotor", "rearMotor", "dummy", 0]
+        ],
+        "rearMotor":{
+            "torque":[
+                ["rpm", "torque"],
+                [0,     600],
+                [500,   600],
+                [1000,  600],
+                [1500,  600],
+                [2000,  600],
+                [3000,  600],
+                [4000,  600],
+                [5000,  600],
+                [6000,  525],
+                [7000,  485],
+                [8000,  455],
+                [9000,  420],
+                [10000, 400],
+                [11000, 380],
+                [12000, 320],
+                [13000, 300],
+                [14000, 210],
+                [15000, 150],
+                [16000, 100]
+            ],
+    
+            "maxRPM":16000,
+            "maxRegenPower":150,
+            "maxRegenTorque":100,
+            "inertia":0.10,
+            "friction":2,
+            "dynamicFriction":0.0003,
+            "electricalEfficiency":0.95,
+            //"torqueReactionNodes:":["e1l","e2l","e4r"],
+            "energyStorage": "mainBattery",
+            "electricsThrottleFactorName": "throttleFactorRear",
+    
+            //node beam interface
+            "waterDamage": {"[engineGroup]:":["rear_motor_waterdamage"]},
+            "engineBlock": {"[engineGroup]:":["rear_motor_block"]},
+            "breakTriggerBeam":"rear_motor",
+            "uiName":"Rear Motor",
+    
+            "soundConfig": "soundConfigRear"
+        },
+        "soundConfigRear": {
+            "sampleName": "ElectricMotor",
+            "mainGain": -3.5,
+            "maxLoadMix": 0.65,
+            "minLoadMix": 0,
+            "onLoadGain":1,
+            "offLoadGain":0.1,
+            "eqLowGain": -15,
+            "eqLowFreq": 100,
+            "eqLowWidth": 0.05,
+            "eqHighGain": -5,
+            "eqHighFreq": 6000,
+            "eqHighWidth": 0.1,
+            "eqFundamentalGain": -5,
+        },
+        "vehicleController": {
+            "shiftLogicName":"electricMotor",
+            "motorNames": ["rearMotor", "frontMotor"],
+            "topSpeedLimitReverse": 15,
+            "onePedalRegenCoef": 1.0
+        },
+        "flexbodies": [
+            ["mesh", "[group]:", "nonFlexMaterials"],
+            ["sbr_emotor_large_spons", ["etk800_differential_R"]],
+            ["sbr_emotor_large_mount_spons", ["etk800_differential_R"]],
+            ["sbr_emotor_large_support_spons", ["etk800_subframe_R"]],
+            ["sbr_wiring_emotor_b_spons", ["etk800_body"]],
+            ["sbr_ecu_R_spons", ["etk800_body"]],
+            ["sbr_wiring_battery_R_spons", ["etk800_body"]],
+            ["sbr_frunk_spons", ["etk800_body"]]
+        ],
+        "nodes": [
+            ["id", "posX", "posY", "posZ"],
+            {"frictionCoef":0.5},
+            {"nodeMaterial":"|NM_METAL"},
+            {"selfCollision":false},
+            {"collision":true},
+            {"group":"sbr_rear_motor"},
+            {"engineGroup":"rear_motor_block"},
+            {"nodeWeight":8},
+            {"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.15},
+            ["rem1r", -0.38, 1.38, 0.26],
+            ["rem1l", 0.38, 1.38, 0.26],
+            ["rem2r", -0.38, 1.58, 0.26],
+            ["rem2l", 0.38, 1.58, 0.26],
+            {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false},
+            {"engineGroup":["rear_motor_block","rear_motor_waterdamage"]},
+            ["rem3r", -0.38, 1.38, 0.47],
+            ["rem3l", 0.38, 1.38, 0.47],
+            ["rem4r", -0.38, 1.58, 0.47],
+            ["rem4l", 0.38, 1.58, 0.47],
+            {"engineGroup":""},
+            {"nodeWeight":4},
+            ["rem5r", -0.21, 1.615, 0.225],
+            ["rem5l", 0.21, 1.615, 0.225],
+            {"selfCollision":false},
+            {"collision":true},
+            {"group":"sbr_transaxle"},
+            {"nodeWeight":8},
+            ["tra1", 0.0, 1.12, 0.19],
+            {"nodeWeight":15},
+            {"group":["rear_motor_block","sbr_reardiff"]},
+            ["rem6", 0.0, 1.44, 0.34],
+            {"engineGroup":""},
+            {"group":""}
+        ],
+        "beams": [
+            ["id1:", "id2:"],
+            {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+            {"beamSpring":5001000,"beamDamp":500},
+            {"beamDeform":100000,"beamStrength":"FLT_MAX"},
+
+            //Taken directly from the SBR
+
+            //engine
+            ["rem1r","rem1l"],
+            ["rem2r","rem2l"],
+            ["rem3r","rem3l"],
+            ["rem4r","rem4l"],
+    //
+            ["rem1r","rem2r"],
+            ["rem1l","rem2l"],
+            ["rem3r","rem4r"],
+            ["rem3l","rem4l"],
+    //
+            ["rem1r","rem3r"],
+            ["rem1l","rem3l"],
+            ["rem2r","rem4r"],
+            ["rem2l","rem4l"],
+    //
+            ["rem2r","rem3r"],
+            ["rem2l","rem3l"],
+            ["rem2r","rem3l"],
+            ["rem2l","rem3r"],
+    //
+            ["rem1r","rem4r"],
+            ["rem1l","rem4l"],
+            ["rem1r","rem4l"],
+            ["rem1l","rem4r"],
+    //
+            ["rem1r","rem2l"],
+            ["rem1l","rem2r"],
+            ["rem3r","rem4l"],
+            ["rem3l","rem4r"],
+    //
+            ["rem1r","rem3l"],
+            ["rem1l","rem3r"],
+            ["rem2r","rem4l"],
+            ["rem2l","rem4r"],
+    //
+            {"beamSpring":3751000,"beamDamp":250},
+            ["rem5l", "rem5r"],
+            ["rem5l", "rem2l"],
+            ["rem5r", "rem2r"],
+            ["rem5l", "rem2r"],
+            ["rem5r", "rem2l"],
+            ["rem5l", "rem1l"],
+            ["rem5r", "rem1r"],
+            //["rem5l", "tra2"],
+            //["rem5r", "tra2"],
+            ["rem5r", "rem4r"],
+            ["rem5l", "rem4l"],
+            ["rem5l", "rem4r"],
+            ["rem5r", "rem4l"],
+    //
+            ["rem6", "rdiff", {"optional":true}],
+            ["rem6", "rem1l"],
+            ["rem6", "rem3l"],
+            ["rem6", "rem1r"],
+            ["rem6", "rem3r"],
+            ["rem6", "rem2l"],
+            ["rem6", "rem4l"],
+            ["rem6", "rem2r"],
+            ["rem6", "rem4r"],
+    //
+            //--TRANSMISSION CONE--
+            {"beamSpring":5001000,"beamDamp":250},
+            {"beamDeform":75000,"beamStrength":"FLT_MAX"},
+            ["tra1","rem1r"],
+            ["tra1","rem3r"],
+            ["tra1","rem1l"],
+            ["tra1","rem3l"],
+    //
+            //motor and transaxle mounting
+            {"optional":true},
+            {"beamDeform":14000,"beamStrength":90000},
+            {"beamSpring":501000,"beamDamp":1000},
+            ["rem5l", "rx2l", {"dampCutoffHz":500}],
+            ["rem5l", "rx5l", {"dampCutoffHz":500}],
+            ["rem5l", "r2ll", {"name":"rear_motor","beamStrength":50000,"disableMeshBreaking":true,"disableTriangleBreaking":true}],
+            ["rem5l", "r5ll"],
+            ["rem5l", "r2rr"],
+            ["rem5l", "r5rr"],
+            ["rem5l", "r1"],
+            ["rem5l", "rx1", {"dampCutoffHz":500}],
+    //
+            ["rem5r", "rx2r", {"dampCutoffHz":500}],
+            ["rem5r", "rx5r", {"dampCutoffHz":500}],
+            ["rem5r", "r2rr", {"name":"rear_motor","beamStrength":50000,"disableMeshBreaking":true,"disableTriangleBreaking":true}],
+            ["rem5r", "r5rr"],
+            ["rem5r", "r2ll"],
+            ["rem5r", "r5ll"],
+            ["rem5r", "r1"],
+            ["rem5r", "rx1", {"dampCutoffHz":500}],
+    //
+            {"beamSpring":501000,"beamDamp":500},
+            //transmission soft mounts
+            ["tra1","f9r"],
+            ["tra1","f9l"],
+            ["tra1","f4r"],
+            ["tra1","f4l"],
+            ["tra1","r1"],
+    //
+            ["tra1", "rx1l", {"dampCutoffHz":500}],
+            ["tra1", "rx1r", {"dampCutoffHz":500}],
+    //
+            //engine limiters
+            {"beamPrecompression":1, "beamType":"|SUPPORT", "beamLongBound":1.0},
+            {"beamSpring":2501000,"beamDamp":150,"beamDeform":250000,"beamStrength":"FLT_MAX"},
+            {"beamPrecompression":0.9},
+            //upper limiter
+            ["rem2r", "tb1"],
+            ["rem2l", "tb1"],
+            ["rem1l", "r1"],
+            ["rem1r", "r1"],
+    //
+            //rear body to engine
+            {"beamPrecompression":0.7},
+            ["r6", "e1r"],
+            ["r6", "e1l"],
+            ["r3", "e3r"],
+            ["r3", "e3l"],
+    //
+            //side to engine
+            {"beamPrecompression":0.8},
+            ["r2rr", "e3l"],
+            ["r2rr", "e4l"],
+            ["r2ll", "e3r"],
+            ["r2ll", "e4r"],
+    //
+            //front body to engine
+            {"beamSpring":5001000,"beamDamp":150,"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
+            {"beamPrecompression":0.95},
+            ["f4l", "e4r"],
+            ["f4r", "e4l"],
+            //{"beamPrecompression":0.9},
+            ["e2l", "f9r"],
+            ["e2r", "f9l"],
+    //  
+            //transmission limiter
+            {"beamSpring":2501000,"beamDamp":150,"beamDeform":250000,"beamStrength":"FLT_MAX"},
+            {"beamPrecompression":0.95},
+            ["tra1", "f9r"],
+            ["tra1", "f9l"],
+            ["tra1", "f4r"],
+            ["tra1", "f4l"],
+            ["tra1", "q3r"],
+            ["tra1", "q3l"],
+            {"beamPrecompression":0.8},
+            ["tra1", "r1"],
+            {"beamPrecompression":1},
+            {"optional":false},
+            {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0}
+        ]
+    },
+
+
+    "etk800_battery_100": {
+        "information":{
+            "authors":"BeamNG",
+            "name":"100kWh Solid State Battery Pack",
+            "value":50000,
+        },
+        "slotType" : "etk800_fueltank",
+        "flexbodies": [
+            ["mesh", "[group]:", "nonFlexMaterials"],
+            ["sbr_battery_spons", ["etk800_body"]],
+            ["sbr_wiring_battery_RL_spons", ["etk800_body"]]
+
+            //["sbr_battery_coolinglines_a", ["etk800_body"]],
+            //["sbr_battery_coolinglines_b", ["etk800_body"]],
+            //["sbr_radiators_small", ["etk800_body"]],
+        ],
+        "energyStorage": [
+            ["type", "name"],
+            ["electricBattery", "mainBattery"],
+        ],
+        "variables": [
+            ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+            ["$fuel", "range", "kWh", "Chassis", 100, 0, 100, "Battery Level", "Initial battery charge", {"stepDis":0.5}],
+        ],
+        "mainBattery": {
+            "energyType":"electricEnergy",
+            "batteryCapacity": 100,
+            "startingCapacity": "$fuel"
+        },
+        "nodes": [
+            ["id", "posX", "posY", "posZ"],
+            {"frictionCoef":0.5},
+            {"nodeMaterial":"|NM_METAL"},
+            {"selfCollision":false},
+            {"collision":false},
+            //{"group":"tunnel_battery"},
+            {"engineGroup":"tunnel_battery"},
+            {"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.15},
+            {"nodeWeight":150},
+            ["btt1", 0.0, -0.85, 0.25],
+            {"nodeWeight":95},
+            ["btt2", 0.0, -0.05, 0.25],
+            ["btt3", 0.0,  0.75, 0.25],
+            {"nodeWeight":45},
+            ["btt4l", 0.45,  0.75, 0.27],
+            ["btt4r",-0.45,  0.75, 0.27],
+            {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false},
+            {"engineGroup":""},
+            {"group":""}
+        ],
+       "beams": [
+            ["id1:", "id2:"],
+            {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+            {"beamSpring":501000,"beamDamp":150},
+            {"beamDeform":5000,"beamStrength":"FLT_MAX"},
+            ["btt1", "f1l"],
+            ["btt1", "f1r"],
+            ["btt1", "f5r"],
+            ["btt1", "f5l"],
+            ["btt1", "f2l"],
+            ["btt1", "f2r"],
+
+            ["btt2", "f2r"],
+            ["btt2", "f7r"],
+            ["btt2", "f2l"],
+            ["btt2", "f7l"],
+            ["btt2", "f1l"],
+            ["btt2", "f1r"],
+            ["btt2", "f3l"],
+            ["btt2", "f3r"],
+
+            ["btt3", "f4r"],
+            ["btt3", "f9r"],
+            ["btt3", "f4l"],
+            ["btt3", "f9l"],
+            ["btt3", "f3l"],
+            ["btt3", "f3r"],
+
+            ["btt4l", "f4l"],
+            ["btt4l", "f3l"],
+            ["btt4l", "f8l"],
+            ["btt4l", "f9l"],
+            ["btt4l", "btt3"],
+
+            ["btt4r", "f4r"],
+            ["btt4r", "f3r"],
+            ["btt4r", "f8r"],
+            ["btt4r", "f9r"],
+            ["btt4r", "btt3"],
+            {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0}
+       ]
+    },
+    "etk800_differential_R_active_LSD_EV_spons": {
+        "information":{
+            "authors":"BeamNG",
+            "name":"Electric Limited slip Rear Differential",
+            "value":2300
+        },
+        "slotType" : "etk800_differential_R",
+        "slots": [
+            ["type", "default", "description"],
+            ["etk800_halfshafts_R","etk800_halfshafts_R", "Rear Halfshafts"],
+            ["etk_finaldrive_R_EV_spons","etk800_finaldrive_electric_R_76", "Rear Final Drive", {"coreSlot":true}]
+        ],
+        "controller": [
+            ["fileName"],
+            ["drivingDynamics/actuators/activeDiffLock", {"name":"lockRear", "differentialName":"differential_R"}]
+        ],
+        "powertrain" : [
+            ["type", "name", "inputName", "inputIndex"],
+            ["differential", "differential_R", "rearMotor", 1, {"deformGroups":["differential_R"], "diffType":"activeLock", "uiName":"Rear Differential","defaultVirtualInertia":0.25}]
+        ],
+        "differential_R": {
+            "friction": 3.92,
+            "dynamicFriction": 0.00184,
+            "torqueLossCoef": 0.03,
+            "visualPositionRelativeChildren":[[-0.6,0,0]]
+        },
+        //"flexbodies": [
+        //     ["mesh", "[group]:", "nonFlexMaterials"],
+        //     ["etk800_diff", ["etk800_subframe_R","etk800_body"]],
+        //],
+        "nodes": [
+            ["id", "posX", "posY", "posZ"],
+            //--diff weight--
+            {"selfCollision":false},
+            {"collision":false},
+            {"nodeMaterial":"|NM_METAL"},
+            {"frictionCoef":0.5},
+            {"group":"etk800_diff_R"},
+            {"nodeWeight":15},
+            ["rdiff", 0, 1.41, 0.26],
+            {"group":""},
+        ],
+        "beams": [
+            ["id1:", "id2:"],
+            //differential node
+            {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+            {"beamSpring":4800600,"beamDamp":138},
+            {"beamDeform":27000,"beamStrength":"FLT_MAX"},
+            {"deformGroup":"differential_R", "deformationTriggerRatio":0.001},
+            ["rdiff","rx2r"],
+            ["rdiff","rx2l"],
+            ["rdiff","rx1r"],
+            ["rdiff","rx1l"],
+            ["rdiff","rx4r"],
+            ["rdiff","rx4l"],
+            ["rdiff","rx5r"],
+            ["rdiff","rx5l"],
+            {"deformGroup":""},
+            {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0}
+        ]
+    },
+    "etk800_finaldrive_electric_R_76": {
+        "information":{
+            "authors":"BeamNG",
+            "name":"7.6:1 EV Rear final drive",
+            "value":250
+        },
+    
+        "slotType" : "etk_finaldrive_R_EV_spons",
+    
+        "differential_R" : {
+            "gearRatio":7.6
+        }
+    }
+
+}

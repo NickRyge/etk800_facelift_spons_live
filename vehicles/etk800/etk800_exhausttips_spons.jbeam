@@ -1,0 +1,17 @@
+{
+"etk800_exhausttips_i6_tt_spons": {
+    "information":{
+        "authors":"Spons",
+        "name":"Double Exhaust Tips Facelift",
+        "value":350,
+    },
+    "slotType" : "etk800_exhausttips_i6_spons",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etk800_exhausttip_R_a_spons", ["etk800_exhaust_R"]],
+         ["etk800_exhausttip_R_b_spons", ["etk800_exhaust_R"]],
+         ["etk800_exhausttip_L_a_spons", ["etk800_exhaust_L"]],
+         ["etk800_exhausttip_L_b_spons", ["etk800_exhaust_L"]],
+    ],
+},
+}

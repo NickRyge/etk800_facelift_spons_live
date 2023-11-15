@@ -587,7 +587,7 @@
 "etk800_roof_lightbar": {
     "information":{
         "authors":"NickRyge, BeamNG",
-        "name":"Danish police light bar",
+        "name":"Spons police light bar",
         "value":100
     },
     "slotType" : "spons_roof_light",
@@ -1056,11 +1056,10 @@
             "cookieName":"/art/special/BNG_light_cookie_lightbar.dds"
         },
         
-        ["blue_l"    , "POINTLIGHT"        , "fb1ll", "fb0ll", "fb1l", {"x":80, "y":-40, "z":170} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.2, "y":0.5, "z":-0.05},"deformGroup":"frontflashers_break"}],
-        ["blue_r"    , "POINTLIGHT"        , "fb1rr", "fb0rr", "fb1r", {"x":80, "y":-110, "z":0} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.2, "y":0.5, "z":-0.05},"deformGroup":"frontflashers_break"}],
-        ["blue_r"    , "POINTLIGHT"        , "fb1ll", "fb0ll", "fb1l", {"x":80, "y":-40, "z":210} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.2, "y":0.5, "z":-0.05},"deformGroup":"frontflashers_break"}],
-        ["blue_l"    , "POINTLIGHT"        , "fb1rr", "fb0rr", "fb1r", {"x":80, "y":-110, "z":-40} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.2, "y":0.5, "z":-0.05},"deformGroup":"frontflashers_break"}],
-        
+        ["blue_r"    , "SPOTLIGHT"        , "fb2", "fb3", "fb3r", {"x":3.395, "y":-97.761, "z":2.995} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-0.324, "y":0.614, "z":-0.004},"deformGroup":"frontflashers_break"}],
+        ["blue_l"    , "SPOTLIGHT"        , "fb2", "fb3", "fb3r", {"x":-5.308, "y":-102.340, "z":50.808} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-2.062, "y":1.803, "z":-0.368},"deformGroup":"frontflashers_break"}],
+        ["blue_l"    , "SPOTLIGHT"        , "fb2", "fb3", "fb3l", {"x":-176.294, "y":97.751, "z":-0.711} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-0.324, "y":0.614, "z":-0.004},"deformGroup":"frontflashers_break"}],
+        ["blue_r"    , "SPOTLIGHT"        , "fb2", "fb3", "fb3l", {"x":-166.588, "y":102.322, "z":50.808} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-2.062, "y":1.803, "z":0.368},"deformGroup":"frontflashers_break"}],        
         //White
         {
             "lightInnerAngle":0,
@@ -1135,11 +1134,10 @@
             "cookieName":"/art/special/BNG_light_cookie_lightbar.dds"
         },
         
-        ["blue_l"    , "POINTLIGHT"        , "fb1ll", "fb0ll", "fb1l", {"x":-63.987, "y":126.111, "z":0.969} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.338, "y":1.563, "z":0.119},"deformGroup":"frontflashers_break"}],
-        ["blue_r"    , "POINTLIGHT"        , "fb1rr", "fb0rr", "fb1r", {"x":78.787, "y":-156.919, "z":24.874} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.338, "y":1.563, "z":-0.119},"deformGroup":"frontflashers_break"}],
-        ["blue_r"    , "POINTLIGHT"        , "fb1ll", "fb0ll", "fb1l", {"x":-77.616, "y":131.174, "z":-2.922} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-1.056, "y":0.325, "z":0.053},"deformGroup":"frontflashers_break"}],
-        ["blue_l"    , "POINTLIGHT"        , "fb1rr", "fb0rr", "fb1r", {"x":96.491, "y":-141.647, "z":7.804} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-1.056, "y":0.325, "z":-0.053},"deformGroup":"frontflashers_break"}],
-        
+        ["blue_r"    , "SPOTLIGHT"        , "fb2", "fb3", "fb3r", {"x":3.395, "y":-97.761, "z":2.995} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-0.324, "y":0.614, "z":-0.004},"deformGroup":"frontflashers_break"}],
+        ["blue_l"    , "SPOTLIGHT"        , "fb2", "fb3", "fb3r", {"x":-5.308, "y":-102.340, "z":50.808} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-2.062, "y":1.803, "z":-0.368},"deformGroup":"frontflashers_break"}],
+        ["blue_l"    , "SPOTLIGHT"        , "fb2", "fb3", "fb3l", {"x":-176.294, "y":97.751, "z":-0.711} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-0.324, "y":0.614, "z":-0.004},"deformGroup":"frontflashers_break"}],
+        ["blue_r"    , "SPOTLIGHT"        , "fb2", "fb3", "fb3l", {"x":-166.588, "y":102.322, "z":50.808} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-2.062, "y":1.803, "z":0.368},"deformGroup":"frontflashers_break"}],        
         //White
         {
             "lightInnerAngle":0,
@@ -1214,9 +1212,10 @@
             "flareScale":0.1,
             "cookieName":"/art/special/BNG_light_cookie_lightbar.dds"
         },
-        
-        ["blue_l"    , "POINTLIGHT"        , "fb1ll", "fb0ll", "fb1l", {"x":-63.987, "y":126.111, "z":0.969} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.338, "y":1.563, "z":0.119},"deformGroup":"frontflashers_break"}],
-        ["blue_r"    , "POINTLIGHT"        , "fb1ll", "fb0ll", "fb1l", {"x":-77.616, "y":131.174, "z":-2.922} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-1.056, "y":0.325, "z":0.053},"deformGroup":"frontflashers_break"}],
+        ["blue_l"    , "SPOTLIGHT"        , "fb1ll", "fb0ll", "fb1l", {"x":161.050, "y":89.229, "z":49.470} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation": {"x":0.338, "y":1.563, "z":0.119},"deformGroup":"frontflashers_break"}],
+        ["blue_r"    , "SPOTLIGHT"        , "fb1ll", "fb0ll", "fb1l", {"x":172.148  , "y":99.189, "z":48.520} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-1.056, "y":0.325, "z":0.053},"deformGroup":"frontflashers_break"}],
+        //["blue_l"    , "POINTLIGHT"        , "fb1ll", "fb0ll", "fb1l", {"x":-63.987, "y":126.111, "z":0.969} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation": {"x":0.338, "y":1.563, "z":0.119} ,"deformGroup":"frontflashers_break"}],
+        //["blue_r"    , "POINTLIGHT"        , "fb1ll", "fb0ll", "fb1l", {"x":-77.616, "y":131.174, "z":-2.922} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-1.056, "y":0.325, "z":0.053},"deformGroup":"frontflashers_break"}],
         //Blue
         {
             "lightInnerAngle":0,
@@ -1231,14 +1230,16 @@
             "flareScale":0.1,
             "cookieName":"/art/special/BNG_light_cookie_lightbar.dds"
         },
+        ["blue_r"    , "SPOTLIGHT"        ,  "fb1rr", "fb0rr", "fb1r", {"x":161.050, "y":180, "z":-49.470} , {"x":100, "y":0, "z":0}  , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":    {"x":0.338, "y":1.563, "z":-0.119},"deformGroup":"frontflashers_break"}],
+        ["blue_l"    , "SPOTLIGHT"        ,  "fb1rr", "fb0rr", "fb1r", {"x":172.148  , "y":190, "z":-48.520} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-1.056, "y":0.325, "z":-0.053},"deformGroup":"frontflashers_break"}],
         
-        ["blue_r"    , "POINTLIGHT"        , "fb1rr", "fb0rr", "fb1r", {"x":78.787, "y":-156.919, "z":24.874} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.338, "y":1.563, "z":-0.119},"deformGroup":"frontflashers_break"}],
-        ["blue_l"    , "POINTLIGHT"        , "fb1rr", "fb0rr", "fb1r", {"x":96.491, "y":-141.647, "z":7.804} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-1.056, "y":0.325, "z":-0.053},"deformGroup":"frontflashers_break"}],
+        //["blue_r"    , "POINTLIGHT"        , "fb1rr", "fb0rr", "fb1r", {"x":78.787, "y":-156.919, "z":24.874} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.338, "y":1.563, "z":-0.119},"deformGroup":"frontflashers_break"}],
+        //["blue_l"    , "POINTLIGHT"        , "fb1rr", "fb0rr", "fb1r", {"x":96.491, "y":-141.647, "z":7.804} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation": {"x":-1.056, "y":0.325, "z":-0.053},"deformGroup":"frontflashers_break"}],
         
         //White
         {
             "lightInnerAngle":0,
-            "lightOuterAngle":20,
+            "lightOuterAngle":100,
             "lightBrightness":0.2,
             "lightRange":15,
             "lightColor":{"r":230, "g":255, "b":255, "a":255},
@@ -1250,7 +1251,7 @@
             "cookieName":"/art/special/BNG_light_cookie_lightbar.dds"
         },
 
-        ["white_l"    , "POINTLIGHT"        , "fb1ll", "fb0ll", "fb1l", {"x":-56.251, "y":110.161, "z":2.572} , {"x":90, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1,   {"baseTranslation":{"x":-1.478, "y":1.648, "z":0.239},"deformGroup":"frontflashers_break"}],
+        ["white_l"    , "SPOTLIGHT"        , "fb1ll", "fb0ll", "fb1l", {"x":172.148  , "y":99.189, "z":48.520} , {"x":100, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-1.478, "y":1.648, "z":0.239},"deformGroup":"frontflashers_break"}],
         ["white_r"    , "POINTLIGHT"        , "fb1rr", "fb0rr", "fb1r", {"x":115.622, "y":-106.153, "z":18.809} , {"x":90, "y":0, "z":0}    , {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-1.478, "y":1.648, "z":-0.239},"deformGroup":"frontflashers_break"}],   
     ],
     "flexbodies": [

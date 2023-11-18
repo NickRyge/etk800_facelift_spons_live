@@ -1,0 +1,22 @@
+{
+
+    "etk_sspons_finaldrive_R_race": {
+        "information":{
+            "authors":"BeamNG",
+            "name":"Hyper Rear Final drive (Adjustable)",
+            "value":950
+        },
+    
+        "slotType" : "etk_finaldrive_R",
+    
+        "variables": [
+            ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+            ["$finaldrive_R", "range", ":1", "Differentials", 3.0, 5.0, 7.0, "Final Drive Gear Ratio", "Torque multiplication ratio", {"subCategory":"Rear", "stepDis":0.01}]
+        ],
+    
+        "differential_R" : {
+            "gearRatio":"$finaldrive_R"
+        }
+    }
+
+}

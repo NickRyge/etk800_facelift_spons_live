@@ -1,0 +1,780 @@
+{
+"etk_engine_3L_petrol_v10": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"3L V10 Racing Engine",
+        "value":35500,
+    },
+    "slotType": "etk_engine",
+    "slots": [
+        ["type", "default", "description"],
+        ["fr04v10_intake","fr04_intake", "Intake", {"coreSlot":true}],
+        ["fr04v10_engine_ecu","fr04v10_engine_ecu", "Engine Management", {"coreSlot":true}],
+        ["fr04v10_oilpan","fr04_oilpan", "Oil Pan", {"coreSlot":true}],
+        ["fr04v10_engine_internals","FR04_v10_internals", "Engine Long Block", {"coreSlot":true}],
+        ["fr04v10_exhaust","fr04_exhaust", "Exhaust"],
+        ["etk_transmission","etk_transmission_8A", "Transmission"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0]
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"],
+        ["rpmspin"  , "fr04_pulley1",  "e2r","e2l","e4r",  {"x":0, "y":0, "z":0}, {"x":0, "y":1, "z":0}    , {"x":0, "y":0, "z":0}, -720, 720, 0, -1],
+        ["rpmspin"  , "fr04_pulley2",  "e2r","e2l","e4r",  {"x":0, "y":0, "z":0}, {"x":0, "y":1, "z":0}    , {"x":0, "y":0, "z":0}, -540, 540, 0, -2],
+        ["rpmspin"  , "fr04_pulley3",  "e2r","e2l","e4r",  {"x":0, "y":0, "z":0}, {"x":0, "y":1, "z":0}    , {"x":0, "y":0, "z":0}, -720, 720, 0,  3],
+        ["rpmspin"  , "fr04_pulley4",  "e2r","e2l","e4r",  {"x":0, "y":0, "z":0}, {"x":0, "y":1, "z":0}    , {"x":0, "y":0, "z":0}, -540, 540, 0,  3],
+    ],
+    "mainEngine": {
+        "torque":[
+            ["rpm", "torque"],
+            [0, 0],
+            [500,   30],
+            [1000,  50],
+            [1500,  55],
+            [2000,  65],
+            [2500,  75],
+            [3000,  90],
+            [3500,  120],
+            [4000,  140],
+            [4500,  195],
+            [5000,  235],
+            [5500,  270],
+            [6000,  290],
+            [6500,  320],
+            [7000,  330],
+            [7500,  340],
+            [8000,  345],
+            [8500,  350],
+            [9000,  355],
+            [10000, 350],
+            [11000, 355],
+            [12000, 353],
+            [13000, 347],
+            [14000, 338],
+            [15000, 325],
+            [16000, 315],
+            [17000, 297],
+            [18000, 291],
+            [19000, 288],
+            [20000, 276],
+            [21000, 271]
+
+
+
+        ],
+        //engine performance
+        "idleRPM":2550,
+        //max rpm physically capable of
+        "maxRPM":22000,
+        "inertia":0.02,
+        "friction":6,
+        "dynamicFriction":0.015,
+        "engineBrakeTorque":40,
+        //"burnEfficiency":0.33,
+        "burnEfficiency":[
+            [0, 0.1],
+            [0.05, 0.27],
+            [0.4, 0.33],
+            [0.7, 0.45],
+            [1, 0.40],
+        ],
+        //fuel system
+        "energyStorage": ["mainTank","auxTank"],
+        "requiredEnergyType":"gasoline",
+
+        //exhaust
+        "instantAfterFireSound": "event:>Vehicle>Afterfire>i5_01>single",
+        "sustainedAfterFireSound": "event:>Vehicle>Afterfire>i5_01>multi",
+        "shiftAfterFireSound": "event:>Vehicle>Afterfire>i5_01>shift",
+        "particulates":0.035,
+        "afterFireAudibleThresholdInstant": 500000,
+        "instantAfterFireCoef": 0.75,
+        "instantAfterFireVolumeCoef": 0.9,
+        "afterFireAudibleThresholdShift": 150000,
+        "shiftAfterFireVolumeCoef": 0.9,
+        "afterFireAudibleThresholdSustained": 40000,
+        "sustainedAfterFireCoef": 0.9,
+        "sustainedAfterFireTime": 0.8,
+        "sustainedAfterFireVolumeCoef": 0.7,
+
+        //cooling and oil system
+        "thermalsEnabled":true,
+        "engineBlockMaterial":"aluminum",
+        "oilVolume":8,
+        "engineBlockAirCoolingEfficiency":39,
+
+        //engine durability
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+        "cylinderWallTemperatureDamageThreshold":150,
+        "headGasketDamageThreshold":1500000,
+        "pistonRingDamageThreshold":1500000,
+        "connectingRodDamageThreshold":2000000,
+        "maxTorqueRating": 600,
+        "maxOverTorqueDamage": 500,
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]},
+        "radiator": {"[engineGroup]:":["radiator"]},
+        "engineBlock": {"[engineGroup]:":["engine_block"]},
+        "breakTriggerBeam":"engine",
+        "uiName":"Engine",
+        "soundConfig": "soundConfig",
+        "soundConfigExhaust": "soundConfigExhaust",
+
+        //starter motor
+        "starterSample":"event:>Engine>Starter>v8_20xy_eng",
+        "starterSampleExhaust":"event:>Engine>Starter>v8_20xy_exh",
+        "shutOffSampleEngine":"event:>Engine>Shutoff>v8_20xy_eng",
+        "shutOffSampleExhaust":"event:>Engine>Shutoff>v8_20xy_exh",
+        "starterVolume":0.76,
+        "starterVolumeExhaust":0.76,
+        "shutOffVolumeEngine":0.76,
+        "shutOffVolumeExhaust":0.76,
+        "idleRPMStartRate":1.25,
+        "idleRPMStartCoef":1,
+        "starterMaxRPM": 4000,
+        "starterTorque": 300,
+        "starterThrottleKillTime":0.5,
+
+        //engine deform groups
+        "deformGroups":["mainEngine", "mainEngine_intake", "mainEngine_accessories"]
+    },
+    "soundConfig": {
+        "sampleName": "3L_F1_V10",
+        "intakeMuffling": 2,
+
+        "eqFundamentalGain":-2,
+        "eqHighFreq":2500,
+        "eqHighGain":4,
+        "eqHighWidth":0.200000003,
+        "eqLowFreq":20,
+        "eqLowGain":14,
+        "eqLowWidth":0.2899999917,
+        "fundamentalFrequencyCylinderCount":10,
+        "highShelfFreq":1320,
+        "highShelfGain":0,
+        "lowShelfFreq":2020,
+        "lowShelfGain":-9,
+        "mainGain":-4,
+        "muffling":1,
+        "offLoadGain":0.1299999952,
+        "onLoadGain":1
+    },
+    "soundConfigExhaust": {
+        "sampleName": "3L_F1_V10",
+
+        "eqFundamentalGain":6,
+        "eqHighFreq":12500,
+        "eqHighGain":3,
+        "eqHighWidth":0.200000003,
+        "eqLowFreq":14600,
+        "eqLowGain":2,
+        "eqLowWidth":0.2099999934,
+        "fundamentalFrequencyCylinderCount":10,
+        "highShelfFreq":3320,
+        "highShelfGain":11,
+        "lowShelfFreq":20000,
+        "lowShelfGain":7,
+        "mainGain":9,
+        "muffling":0.8000000119,
+        "offLoadGain":0.3000000119,
+        "onLoadGain":2
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":7000,
+        "clutchLaunchTargetRPM":9000,
+        "calculateOptimalLoadShiftPoints":true,
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["v10", ["fr04_engine"]],
+        {"deformGroup":""},
+   ],
+   "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"selfCollision":true},
+        {"collision":true},
+        //engine box
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"group":"fr04_engine"},
+        {"engineGroup":"engine_block"},
+        {"nodeWeight":15},
+        {"chemEnergy":500,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.12},
+        ["e1r",-0.15, -0.95, 0.26,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.07}],
+        ["e1l", 0.15, -0.95, 0.26,{"isExhaust":"mainEngine","chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.07}],
+        ["e2r",-0.15, -1.55, 0.35,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.07}],
+        ["e2l", 0.15, -1.55, 0.35,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.07}],
+        {"engineGroup":["engine_block","engine_intake"]},
+        {"selfCollision":true},
+        {"group":["fr04_engine","fr04_airbox"]},
+        ["e3r",-0.26, -0.95, 0.87, {"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.12}],
+        ["e3l", 0.26, -0.95, 0.87],
+        ["e4r",-0.26, -1.55, 0.85],
+        ["e4l", 0.26, -1.55, 0.85],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false},
+        {"engineGroup":""},
+        {"group":""},
+   ],
+   "beams": [
+         ["id1:", "id2:"],
+         {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+         {"beamSpring":11200800,"beamDamp":258},
+         {"beamDeform":1120000,"beamStrength":"FLT_MAX"},
+         //engine
+         {"deformLimitExpansion":1.2},
+         {"deformGroup":"mainEngine", "deformationTriggerRatio":0.001}
+         ["e1r","e1l"],
+         ["e2r","e2l"],
+         ["e3r","e3l"],
+         ["e4r","e4l"],
+         ["e1r","e2r"],
+         ["e1l","e2l"],
+         ["e3r","e4r"],
+         ["e3l","e4l"],
+         ["e1r","e3r"],
+         ["e1l","e3l"],
+         ["e2r","e4r"],
+         ["e2l","e4l"],
+         ["e2r","e3r"],
+         ["e2l","e3l"],
+         ["e2r","e3l"],
+         ["e2l","e3r"],
+         ["e1r","e4r"],
+         ["e1l","e4l"],
+         ["e1r","e4l"],
+         ["e1l","e4r"],
+         ["e1r","e2l"],
+         ["e1l","e2r", {"isExhaust":"mainEngine"}],
+         ["e3r","e4l"],
+         ["e3l","e4r"],
+         ["e1r","e3l"],
+         ["e1l","e3r"],
+         ["e2r","e4l"],
+         ["e2l","e4r"],
+         {"deformGroup":""}
+
+         //radhose
+         //TODO
+         /*
+         {"beamSpring":15000,"beamDamp":300},
+         {"beamDeform":1450,"beamStrength":3600},
+         {"deformGroup":"radhose_damage_R","deformationTriggerRatio":0.1},
+         {"optional":true}
+         ["em1l","e3l"],
+         ["em1l","e3r"],
+         ["em1l","e4l"],
+         ["em1l","e4r"],
+         ["em1l", "e1r"],
+         ["em1l", "e1l"],
+         ["em1l", "e2l"],
+         ["em1l", "e2r"],
+
+         ["e1r", "f3r"],
+         ["e3r", "f3r"],
+         ["e1r", "f3l"],
+         ["e1l", "f3l"],
+         ["e1l", "f3r"],
+         ["e1l", "f9l"],
+         ["e1r", "f9r"],
+         ["e3l", "f3l"],
+         */
+         {"optional":false}
+         {"deformGroup":""},
+
+         {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+   ],
+   "triangles": [
+           ["id1:","id2:","id3:"],
+           {"groundModel":"plastic"},
+           {"group":"fr04_engine"},
+           {"dragCoef":0.5},
+           ["e2r", "e1r", "e4r"],
+           ["e1r", "e3r", "e4r"],
+
+           ["e2l", "e4l", "e1l"],
+           ["e1l", "e4l", "e3l"],
+
+           ["e4l", "e2l", "e2r"],
+           ["e2r", "e4r", "e4l"],
+           ["e3l", "e1r", "e1l"],
+           ["e1r", "e3l", "e3r"],
+
+           ["e4r", "e3r", "e3l"],
+           ["e3l", "e4l", "e4r"],
+           {"optional":true},
+           ["e2l", "oilpan", "e2r"],
+           ["e1r", "oilpan", "e1l"],
+           ["e1l", "oilpan", "e2l"],
+           ["e2r", "oilpan", "e1r"],
+
+           //airbox shape
+           ["airb","e3l","e4l"],
+           ["airb","e4l","e4r"],
+           ["airb","e4r","e3r"],
+           ["airb","e3r","e3l"],
+           {"group":""},
+           {"triangleType":"NORMALTYPE"},
+   ],
+
+},
+
+"FR04_v10_internals": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Forged Racing Block",
+        "value":6400,
+    },
+    "slotType" : "fr04v10_engine_internals",
+    "mainEngine":{
+        //max rpm physically capable of
+        "$+maxRPM":16000,
+        "$*dynamicFriction":1.0,
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":185,
+        "headGasketDamageThreshold":1700000,
+        "pistonRingDamageThreshold":1700000,
+        "connectingRodDamageThreshold":2800000,
+        "$*maxTorqueRating": 2.7,
+        "$*maxOverTorqueDamage": 5,
+    },
+},
+
+"fr04v10_engine_ecu": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Spudd Durability confix (NA)",
+        "value":500
+    },
+    "slotType" : "fr04v10_engine_ecu",
+    "mainEngine":{
+        "revLimiterRPM":14500,
+        "revLimiterType":"timeBased",
+        "revLimiterCutTime":0.005,
+    },
+},
+
+"fr04v10_engine_ecu_max": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Spudd Maximum performance (NA)",
+        "value":500
+    },
+    "slotType" : "fr04v10_engine_ecu",
+    "mainEngine":{
+        "revLimiterRPM":21500,
+        "revLimiterType":"timeBased",
+        "revLimiterCutTime":0.005,
+    },
+},
+
+"etk800_radiator_race_hi": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"V10 Radiator",
+        "value":980,
+    },
+    "slotType" : "fr04_radiator",
+    "mainEngine":{
+        "radiatorArea":0.5,
+        "radiatorEffectiveness":200000,
+        "coolantVolume":11,
+        "radiatorFanType":"electric",
+        "radiatorFanTemperature":100,
+        "radiatorFanMaxAirSpeed":5,
+        "thermostatTemperature":90,
+        "radiatorFanLoopEvent": "event:>Vehicle>Cooling Fan>Electric_05",
+        "radiatorFanVolume": 0.9,
+
+        //damage deformGroups
+        "deformGroups_radiator":["radiator_damage"],
+        },
+    
+        "flexbodies": [
+            ["mesh", "[group]:", "nonFlexMaterials"],
+            ["fr04_radiator_R", ["fr04_radiator_R"]],
+            ["fr04_radiator_L", ["fr04_radiator_L"]],
+            ["fr04_radduct_R", ["fr04_radiator_R","fr04_radduct_R"]],
+            ["fr04_radduct_R_grille", ["fr04_radiator_R","fr04_radduct_R"]],
+            ["fr04_radduct_L", ["fr04_radiator_L","fr04_radduct_L"]],
+            ["fr04_radduct_L_grille", ["fr04_radiator_L","fr04_radduct_L"]],
+            ["fr04_headertank", ["fr04_body"]],
+            {"deformGroup":"radhose_M_damage", "deformMaterialBase":"fr04_engine", "deformMaterialDamaged":"invis"},
+            ["fr04_radhose_M", ["fr04_radiator_R","fr04_radiator_L","fr04_body"]],
+            {"deformGroup":"radhose_R_damage", "deformMaterialBase":"fr04_engine", "deformMaterialDamaged":"invis"},
+            ["fr04_radhose_R", ["fr04_radiator_R","fr04_engine"]],
+            {"deformGroup":"radhose_L_damage", "deformMaterialBase":"fr04_engine", "deformMaterialDamaged":"invis"},
+            ["fr04_radhose_L", ["fr04_radiator_L","fr04_engine"]],
+            {"deformGroup":""},
+       ],
+       "props": [
+           ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"],
+           //["radiatorFanSpin"  , "fr04_radiator_fan_R", "rad1r","rad1l","fx1r",  {"x":9, "y":0, "z":180}, {"x":0, "y":0.25, "z":0}    , {"x":0, "y":0, "z":0}, -360, 360, 0, 1],
+           //["radiatorFanSpin"  , "fr04_radiator_fan_L", "rad1l","rad1r","fx1l",  {"x":9, "y":0, "z":0},   {"x":0, "y":0.25, "z":0}    , {"x":0, "y":0, "z":0}, -360, 360, 0, 1]
+       ],
+       "nodes": [
+            ["id", "posX", "posY", "posZ"],
+            //radiators
+            {"frictionCoef":0.5},
+            {"nodeMaterial":"|NM_METAL"},
+            {"selfCollision":true},
+            {"collision":true},
+            {"engineGroup":"radiator"},
+            {"nodeWeight":2.5},
+            {"chemEnergy":200,"burnRate":0.4,"flashPoint":250,"specHeat":0.8,"smokePoint":150,"selfIgnitionCoef":false},
+   
+            {"group":"fr04_radiator_R"},
+            ["rad1r",-0.62, 0.15, 0.08],
+            ["rad2r",-0.42, 0.56, 0.08],
+            ["rad3r",-0.62, 0.15, 0.41],
+            ["rad4r",-0.42, 0.56, 0.41],
+            ["rad5r",-0.55,-0.23, 0.35], //rigidifier and flexbody help
+   
+            {"group":"fr04_radiator_L"},
+            ["rad1l", 0.62, 0.15, 0.08],
+            ["rad2l", 0.42, 0.56, 0.08],
+            ["rad3l", 0.62, 0.15, 0.41],
+            ["rad4l", 0.42, 0.56, 0.41],
+            ["rad5l", 0.55,-0.23, 0.35], //rigidifier and flexbody help
+            {"chemEnergy":false,"burnRate":false,"flashPoint":false,"specHeat":false,"smokePoint":false,"selfIgnitionCoef":false},
+   
+            {"engineGroup":""},
+            {"group":""},
+       ],
+       "beams": [
+             ["id1:", "id2:"],
+             {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+   
+             //radiator main shape
+             {"beamSpring":401000,"beamDamp":30},
+             {"beamDeform":16500,"beamStrength":"FLT_MAX"},
+             {"deformGroup":"radiator_damage","deformationTriggerRatio":0.005},
+             {"deformLimitExpansion":1.1},
+             ["rad1r", "rad2r"],
+             ["rad1r", "rad3r"],
+             ["rad4r", "rad2r"],
+             ["rad4r", "rad3r"],
+   
+             ["rad1l", "rad2l"],
+             ["rad1l", "rad3l"],
+             ["rad4l", "rad2l"],
+             ["rad4l", "rad3l"],
+   
+             //crossing
+             {"beamDeform":5500,"beamStrength":"FLT_MAX"},
+             {"deformLimitExpansion":""},
+             ["rad1r","rad4r"],
+             ["rad2r","rad3r"],
+             ["rad1l","rad4l"],
+             ["rad2l","rad3l"],
+   
+             //rigidifier
+             {"beamDeform":8500,"beamStrength":"FLT_MAX"},
+             ["rad5r","rad1r"],
+             ["rad5r","rad2r"],
+             ["rad5r","rad3r"],
+             ["rad5r","rad4r"],
+   
+             ["rad5l","rad1l"],
+             ["rad5l","rad2l"],
+             ["rad5l","rad3l"],
+             ["rad5l","rad4l"],
+   
+   
+             //attach
+             {"beamSpring":301000,"beamDamp":10},
+             {"beamDeform":4500,"beamStrength":20100},
+             {"deformGroup":"radiator_damage","deformationTriggerRatio":0.1},
+             {"breakGroup":"radiator_RR"},
+             ["rad4r","rt2r"],
+             ["rad4r","rt2l"],
+             ["rad4r","rt1r"],
+             ["rad4r","rt1l"],
+             ["rad4r","rt4r"],
+             ["rad4r","rt4l"],
+             ["rad2r","rt2r"],
+             ["rad2r","rt2l"],
+             ["rad2r","rt1r"],
+             ["rad2r","rt1l"],
+             ["rad2r","rt4r"],
+             ["rad2r","rt4l"],
+   
+             {"breakGroup":"radiator_RL"},
+             ["rad4l","rt2r"],
+             ["rad4l","rt2l"],
+             ["rad4l","rt1r"],
+             ["rad4l","rt1l"],
+             ["rad4l","rt4r"],
+             ["rad4l","rt4l"],
+             ["rad2l","rt2r"],
+             ["rad2l","rt2l"],
+             ["rad2l","rt1r"],
+             ["rad2l","rt1l"],
+             ["rad2l","rt4r"],
+             ["rad2l","rt4l"],
+             
+             {"breakGroup":"radiator_FR"},
+             {"beamDeform":4500,"beamStrength":20100},
+             ["rad3r","rt2r"],
+             ["rad3r","rt1r"],
+             ["rad3r","rt4r"],
+             ["rad3r","rt3r"],
+             ["rad3r","mt1r"],
+             ["rad3r","mt2r"],
+             {"beamDeform":8500,"beamStrength":18000},
+             ["rad5r","rt4r"],
+             ["rad5r","rt3r"],
+             ["rad5r","mt1r"],
+             ["rad5r","mt2r"],
+   
+             {"breakGroup":"radiator_FL"},
+             {"beamDeform":4500,"beamStrength":118000},
+             ["rad3l","rt2l"],
+             ["rad3l","rt1l"],
+             ["rad3l","rt4l"],
+             ["rad3l","rt3l"],
+             ["rad3l","mt1l"],
+             ["rad3l","mt2l"],
+             {"beamDeform":8500,"beamStrength":18000},
+             ["rad5l","rt4l"],
+             ["rad5l","rt3l"],
+             ["rad5l","mt1l"],
+             ["rad5l","mt2l"],
+   
+             //radhose
+             {"beamSpring":50000,"beamDamp":20},
+             {"beamDeform":1450,"beamStrength":12600},
+             {"deformGroup":"radhose_M_damage","deformationTriggerRatio":0.01},
+             {"breakGroup":"radhose_M"},
+             ["rad2r", "rad2l"],
+             ["rad2r", "rt1r"],
+             ["rad2l", "rt1l"],
+   
+             {"deformGroup":"radhose_R_damage","deformationTriggerRatio":0.01},
+             {"breakGroup":"radhose_R"},
+             ["rad4r", "e1r"],
+             ["rad4r", "e2r"],
+             ["rad4r", "e3r"],
+   
+             {"deformGroup":"radhose_L_damage","deformationTriggerRatio":0.01},
+             {"breakGroup":"radhose_L"},
+             ["rad4l", "e1l"],
+             ["rad4l", "e2l"],
+             ["rad4l", "e3l"],
+   
+             {"deformGroup":""},
+             {"breakGroup":""},
+   
+             //damping
+             {"beamDeform":"FLT_MAX","beamStrength":3000},
+             {"beamSpring":10000,"beamDamp":1500},
+             ["rad1r","rt3r"],
+             ["rad2r","rt1r"],
+             ["rad3r","rt2r"],
+             ["rad4r","mt1r"],
+             ["rad5r","mt1"],
+             
+             ["rad1l","rt3l"],
+             ["rad2l","rt1l"],
+             ["rad3l","rt2l"],
+             ["rad4l","mt1l"],
+             ["rad5l","mt1"],
+   
+   
+             //support beams
+             {"beamType":"|SUPPORT","beamLongBound":10},
+             {"beamSpring":101000,"beamDamp":5},
+             {"beamDeform":8080,"beamStrength":178000},
+             {"optional":false},
+             ["rad1r", "fl2rr"],
+             ["rad3r", "fl2rr"],
+             ["rad1r", "fl3rr"],
+             ["rad3r", "fl3rr"],
+             
+             ["rad2r", "fl3r"],
+             ["rad4r", "fl3r"],
+             ["rad2r", "fl3"],
+             ["rad4r", "fl3"],
+             
+             ["rad1l", "fl2ll"],
+             ["rad3l", "fl2ll"],
+             ["rad1l", "fl3ll"],
+             ["rad3l", "fl3ll"],
+             
+             ["rad2l", "fl3l"],
+             ["rad4l", "fl3l"],
+             ["rad2l", "fl3"],
+             ["rad4l", "fl3"],
+             
+             {"optional":false},
+   
+             {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+             {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+       ],
+   
+       "triangles": [
+            ["id1:","id2:","id3:"],
+            {"triangleType":"NORMALTYPE"},
+   
+            //radiator shape
+            {"dragCoef":5},
+            {"groundModel":"metal"},
+            {"group":"fr04_radiator_R"},
+            ["rad3r","rad4r","rad2r"],
+            ["rad3r","rad2r","rad1r"],
+            ["rad5r","rad3r","rad1r"],
+   
+            {"group":"fr04_radiator_L"},
+            ["rad4l","rad3l","rad2l"],
+            ["rad2l","rad3l","rad1l"],
+            ["rad5l","rad1l","rad3l"],
+   
+            //radiator to monocoque
+            {"dragCoef":2},
+            {"groundModel":"plastic"},
+            {"optional":true},
+            {"triangleType":"NONCOLLIDABLE"},
+            {"group":"radiator_monocoque"},
+            ["mt2r","rad5r","mt1r"],
+            ["mt2r","rt4r","rad5r"],
+            ["rt4r","rad3r","rad5r"],
+            ["rt4r","rt2r","rad4r"],
+            ["rt4r","rad4r","rad3r"],
+            ["rad4r","rt2r","rt1r"],
+            ["rad4r","rt1r","rad2r"],
+            ["mt1r","rad5r","rt3r"],
+            ["rad5r","rad1r","rt3r"],
+            ["rt1r","rt3r","rad1r"],
+            ["rt1r","rad1r","rad2r"],
+            
+            ["rad5l","mt2l","mt1l" ],
+            ["rt4l","mt2l","rad5l"],
+            ["rad3l","rt4l","rad5l"],
+            ["rt2l","rt4l","rad4l"],
+            ["rad4l","rt4l","rad3l"],
+            ["rt2l","rad4l","rt1l" ],
+            ["rt1l","rad4l","rad2l"],
+            ["rad5l","mt1l","rt3l" ],
+            ["rad1l","rad5l","rt3l" ],
+            ["rt3l","rt1l","rad1l"],
+            ["rad1l","rt1l","rad2l"],
+   
+            
+            {"group":""},
+            {"triangleType":"NORMALTYPE"},
+            {"optional":false}
+       ],
+},
+
+"fr04_intake_v10": {
+    "information":{
+        "authors":"LucasBE",
+        "name":"Intake V10",
+        "value":280,
+    },
+    "slotType" : "fr04v10_intake",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["v10_header", ["fr04_engine"]],
+        ["v10_intake", ["fr04_airbox"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"fr04_airbox"},
+         {"nodeWeight":1},
+         {"engineGroup":["engine_intake"]},
+         ["airb", 0.00, 0.55, 0.88],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":20600,"beamDamp":120},
+          {"beamDeform":3000,"beamStrength":2000},
+          {"deformGroup":"mainEngine_intake", "deformationTriggerRatio":0.01},
+          ["airb","e2r"],
+          ["airb","e4r"],
+          ["airb","e1l"],
+          ["airb","e2l"],
+          ["airb","e4l"],
+
+          {"beamDeform":2000,"beamStrength":3000},
+          ["airb","e1r"],
+          ["airb","e3r"],
+          ["airb","e3l"],
+          {"deformGroup":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+
+
+"fr04v10_oilpan": {
+    "information":{
+        "authors":"LucasBE",
+        "name":"Oil Pan",
+        "value":250,
+    },
+    "slotType" : "fr04v10_oilpan",
+    "mainEngine": {
+
+        //engine durability
+        "oilpanMaximumSafeG": 2.5,
+
+        //node beam interface
+        "oilpanNodes:":["oilpan","oilref"],
+
+        //engine deform groups
+        "deformGroups_oilPan":["oilpan_damage"]
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+
+         //oil pan node
+         {"group":""},
+         {"nodeWeight":2},
+         ["oilpan", 0.0, 0.8, 0.19],
+         ["oilref", 0.0, 0.8, 0.59, {"nodeWeight":1, "collision":false}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          //oilpan node
+          {"beamSpring":1501000,"beamDamp":250},
+          {"beamDeform":8000,"beamStrength":"FLT_MAX"},
+          {"deformGroup":"oilpan_damage","deformationTriggerRatio":0.005},
+          ["oilpan", "e1r"],
+          ["oilpan", "e1l"],
+          ["oilpan", "e2r"],
+          ["oilpan", "e2l"],
+          ["oilpan", "e3r"],
+          ["oilpan", "e3l"],
+          ["oilpan", "e4r"],
+          ["oilpan", "e4l"],
+          {"deformGroup":""},
+
+          //oil ref
+          {"beamSpring":1001000,"beamDamp":150},
+          {"beamDeform":25000,"beamStrength":"FLT_MAX"},
+          ["oilref", "e1r"],
+          ["oilref", "e1l"],
+          ["oilref", "e2r"],
+          ["oilref", "e2l"],
+          ["oilref", "e3r"],
+          ["oilref", "e3l"],
+          ["oilref", "e4r"],
+          ["oilref", "e4l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

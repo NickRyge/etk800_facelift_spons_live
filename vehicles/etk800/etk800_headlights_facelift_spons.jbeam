@@ -42,10 +42,10 @@
 		"DRL_R_3":{"simpleFunction":{"DRL4":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
 		"DRL_R_4":{"simpleFunction":{"DRL3":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
 		
-        "DRL_R_5":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
-		"DRL_R_6":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
-		"DRL_R_7":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
-		"DRL_R_8":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
+        "DRL_R_5":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m2"},
+		"DRL_R_6":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m2"},
+		"DRL_R_7":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m2"},
+		"DRL_R_8":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m2"},
     },
     //The light props are not moved from the intelligent headlights to avoid screwing up the tolerances.
     //Instead, I added new props to act as lensflares.
@@ -244,10 +244,10 @@
 		"DRL_L_3":{"simpleFunction":{"DRL1":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
 		"DRL_L_4":{"simpleFunction":{"DRL2":1}, "off":"etk800_headlight_L_facelift_spons", "on":"etk800_headlight_L_facelift_spons_on", "on_intense":"etk800_headlight_L_facelift_spons_on_intense"},
 		
-        "DRL_L_5":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
-		"DRL_L_6":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
-		"DRL_L_7":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"},
-		"DRL_L_8":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m"}
+        "DRL_L_5":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m3"},
+		"DRL_L_6":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m3"},
+		"DRL_L_7":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m3"},
+		"DRL_L_8":{"simpleFunction":{"yellowlights":1}, "off":"invis", "on":"invis", "on_intense":"etk800_headlight_L_facelift_spons_on_m3"}
     },
     "props": [
         ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"],

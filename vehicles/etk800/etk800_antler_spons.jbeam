@@ -1,0 +1,13 @@
+"etk800_antlers_spons_stock": {
+    "information":{
+        "authors":"Spons",
+        "name":"Front Bumper Antlers",
+        "value":500,
+    },
+    "slotType" : "etk800_antlers_spons",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["antler_R", ["etk800_bumper_F"]],
+         ["antler_L", ["etk800_bumper_F"]],
+    ]
+}

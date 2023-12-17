@@ -1,0 +1,61 @@
+//Created by NickRyge
+{
+
+    "etk800_spons_transfer_case_AWD": {
+        "information":{
+            "authors":"BeamNG",
+            "name":"Racing AWD Transfer Case",
+            "value":7100,
+        },
+        "slotType" : "etk_transfer_case",
+        "variables": [
+            ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+            //["$difftorquesplit_C", "range", "%", "Differentials", 0.50, 0.20, 0.80, "Base Torque Split", "Percent of engine torque to front wheels", {"minDis":20, "maxDis":80, "stepDis":1, "subCategory":"Center"}],
+            //["$lsdpreload_C", "range", "N/m", "Differentials", 25, 0, 250, "Pre-load Torque", "Initial locking torque between front and rear axles", {"subCategory":"Center"}],
+            //["$lsdlockcoef_C", "range", "", "Differentials", 0.125, 0, 0.5, "Power Lock Rate", "Additional locking torque proportional to engine torque", {"minDis":0, "maxDis":100, "subCategory":"Center"}],
+            //["$lsdlockcoefrev_C", "range", "", "Differentials", 0.02, 0, 0.5, "Coast Lock Rate", "Additional locking torque proportional to engine braking", {"minDis":0, "maxDis":100, "subCategory":"Center"}],
+        ],
+        "controller": [
+            ["fileName"],
+            ["drivingDynamics/actuators/electronicSplitShaftLock" {"name": "electronicSplitShaftLock", "splitShaftName":"transfercase", "minimumLock":1, "applyMinimumLockOnlyWithThrottle": false}]
+        ],
+        "powertrain" : [
+            ["type", "name", "inputName", "inputIndex"],
+            //["differential", "transfercase", "gearbox", 1, {"diffType":"lsd", "lsdPreload":"$lsdpreload_C", "lsdLockCoef":"$lsdlockcoef_C", "lsdRevLockCoef":"$lsdlockcoefrev_C", "diffTorqueSplit":"$=1-$difftorquesplit_C", "friction":5, "uiName":"Center Differential","defaultVirtualInertia":0.1,"speedLimitCoef":0.1}],
+            ["splitShaft", "transfercase", "gearbox", 1, {"deformGroups":["transfercase"], "splitType":"locked", "primaryOutputID":2, "lockTorque":3000, "friction":0.35, "dynamicFriction":0.00037, "torqueLossCoef": 0.012, "uiName":"Clutched Torque Splitter","defaultVirtualInertia":0.1}],
+        ],
+        "flexbodies": [
+             ["mesh", "[group]:", "nonFlexMaterials"],
+             //["vivace_transfercase", ["vivace_engine","vivace_transmission"]],
+        ],
+        "nodes": [
+             ["id", "posX", "posY", "posZ"],
+             {"selfCollision":false},
+             {"collision":true},
+             {"nodeMaterial":"|NM_METAL"},
+             {"frictionCoef":0.5},
+             ["tra2", 0, -1.3, 0.31, {"nodeWeight":6, "group":""}],
+        ],
+        "beams": [
+              ["id1:", "id2:"],
+              //differential node
+              {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+              {"beamSpring":2501000,"beamDamp":150},
+              {"beamDeform":35000,"beamStrength":"FLT_MAX"},
+              {"deformLimitExpansion":1.2},
+              {"deformGroup":"transfercase", "deformationTriggerRatio":0.001},
+              ["tra2", "tra1l"],
+              ["tra2", "tra1r"],
+              ["tra2", "e1r"],
+              ["tra2", "e2r"],
+              ["tra2", "e3l"],
+              ["tra2", "e4l"],
+              ["tra2", "e1l"],
+              ["tra2", "e2l"],
+              ["tra2", "e3r"],
+              ["tra2", "e4r"],
+              {"deformGroup":""}
+        ]
+    }
+
+}

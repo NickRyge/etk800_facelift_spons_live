@@ -19,6 +19,10 @@
             ["etk800_shock_R_wide","etk800_shock_R_wide_tt", "Rear Shocks"],
             ["etk800_swaybar_R_wide","etk800_swaybar_R_wide_tt", "Rear Sway Bar"],
         ],
+        "controller":[
+            ["fileName"],
+            ["rear_wheel_steering"]
+        ],
         "flexbodies": [
              ["mesh", "[group]:", "nonFlexMaterials"],
              //rear running gear
@@ -122,12 +126,14 @@
             //["rw1rr", "rw1r", "rh1r", "rh2r"],
             //["rw1ll", "rw1l", "rh1l", "rh2l"],
         ],
+
+        //Rear wheel steering magic
         "hydros": [
             ["id1:","id2:"],
             {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-            {"beamSpring":16001000,"beamDamp":1500,"beamDeform":"FLT_MAX","beamStrength":1250000},
-            ["rx3r","rh2r", {"beamPrecompression":"$toe_RR","dampCutoffHz":500, "factor": 0.04,"steeringWheelLock":510,"inRate":1.25,"outRate":1.25}],
-            ["rx3l","rh2l", {"beamPrecompression":"$toe_RR","dampCutoffHz":500, "factor": -0.04,"steeringWheelLock":510,"inRate":1.25,"outRate":1.25}],
+            {"beamSpring":21001000,"beamDamp":1500,"beamDeform":"FLT_MAX","beamStrength":1250000},
+            ["rx3r","rh2r", {"inputSource":"rearWheelSteering_R", "beamPrecompression":"$toe_RR","dampCutoffHz":500, "factor": 0.04,"steeringWheelLock":510,"inRate":1.25,"outRate":1.25}],
+            ["rx3l","rh2l", {"inputSource":"rearWheelSteering_L", "beamPrecompression":"$toe_RR","dampCutoffHz":500, "factor": -0.04,"steeringWheelLock":510,"inRate":1.25,"outRate":1.25}],
             {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
         ],
     

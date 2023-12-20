@@ -111,7 +111,7 @@
     "etk800_strut_F_wide":"etk800_strut_F_wide_adaptive",
     "etk800_strutbrace_F":"etk800_strutbrace_F_tt",
     "etk800_suspension_F":"etk800_suspension_F_wide",
-    "etk800_suspension_R":"etk800_suspension_R_wide",
+    "etk800_suspension_R":"etk800_suspension_R_wide_rws",
     "etk800_swaybar_F_wide":"etk800_swaybar_F_wide_tt",
     "etk800_swaybar_R_wide":"etk800_swaybar_R_wide_tt",
     "etk800_tailgate_facelift":"etk800_tailgate_spons",

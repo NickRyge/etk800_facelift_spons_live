@@ -4,7 +4,7 @@
         "information":{
             "authors":"BeamNG",
             "name":"Wide Independent Rear Suspension (RWS)",
-            "value":1100,
+            "value":3500
         },
         "slotType" : "etk800_suspension_R",
         "slots": [
@@ -21,7 +21,7 @@
         ],
         "controller":[
             ["fileName"],
-            ["rear_wheel_steering"]
+            ["rear_wheel_steering", {"jbeamName":"rearWheelSteering", "maxSteeringInputHighSpeed":0.4, "isIndependent":true, "maxSteeringInputLowSpeed":0.95, "reverseThreshold":15.2778}]
         ],
         "flexbodies": [
              ["mesh", "[group]:", "nonFlexMaterials"],

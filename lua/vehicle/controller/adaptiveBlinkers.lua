@@ -1,3 +1,6 @@
+-- Authored by NickRyge
+-- Guide for usage available at https://docs.google.com/document/d/1X1E5cKDAUxGUC_hapuBVAPWeanesChuSFBmn7mjaHTU/edit?usp=sharing 
+
 local M = {}
 
 -- Local variables

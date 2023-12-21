@@ -4,7 +4,7 @@
         "name":"Front Bumper Antlers",
         "value":500,
     },
-    "slotType" : "etk800_antlers_spons",
+    "slotType" : "spons_etk800_antlers",
     "flexbodies": [
          ["mesh", "[group]:", "nonFlexMaterials"],
          ["antler_R", ["etk800_bumper_F"]],

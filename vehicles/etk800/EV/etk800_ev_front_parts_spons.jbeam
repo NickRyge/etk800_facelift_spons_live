@@ -2,7 +2,7 @@
 "etk800_motor_electric_F_performance": {
     "information":{
         "authors":"BeamNG",
-        "name":"Performance Front Electric Motor",
+        "name":"Front Electric Motor (205KW)",
         "value":15000,
     },
     "slotType" : "etk800_differential_F",

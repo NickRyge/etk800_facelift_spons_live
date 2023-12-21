@@ -11,11 +11,29 @@
     
         "variables": [
             ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-            ["$finaldrive_R", "range", ":1", "Differentials", 3.0, 5.0, 7.0, "Final Drive Gear Ratio", "Torque multiplication ratio", {"subCategory":"Rear", "stepDis":0.01}]
+            ["$finaldrive_R", "range", ":1", "Differentials", 3.0, 5.0, 8.0, "Final Drive Gear Ratio", "Torque multiplication ratio", {"subCategory":"Rear", "stepDis":0.01}]
         ],
     
         "differential_R" : {
             "gearRatio":"$finaldrive_R"
+        }
+    },
+        "etk_sspons_finaldrive_F_race": {
+        "information":{
+            "authors":"BeamNG",
+            "name":"Hyper Front Final drive (Adjustable)",
+            "value":950
+        },
+    
+        "slotType" : "etk_finaldrive_F",
+    
+        "variables": [
+            ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+            ["$finaldrive_F", "range", ":1", "Differentials", 3.0, 5.0, 8.0, "Final Drive Gear Ratio", "Torque multiplication ratio", {"subCategory":"Front", "stepDis":0.01}]
+        ],
+    
+        "differential_F" : {
+            "gearRatio":"$finaldrive_F"
         }
     }
 

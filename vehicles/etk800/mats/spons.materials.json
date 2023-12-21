@@ -1905,21 +1905,21 @@
     "class": "Material",
     "Stages": [
       {
-        "ambientOcclusionMap": "/vehicles/etk800/mats/bulb_on_intense_ao.data.png",
-        "baseColorMap": "/vehicles/etk800/mats/bulb_on_intense_b.color.png",
+        "ambientOcclusionMap": "/vehicles/etk800/mats/bulb_on_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/mats/bulb_on_b.color.png",
         "emissiveFactor": [
           6,
           6,
           6
         ],
-        "emissiveMap": "/vehicles/etk800/mats/bulb_on_intense_g.color.png",
+        "emissiveMap": "/vehicles/etk800/mats/bulb2_on_g.color.png",
         "glow": true,
-        "metallicMap": "/vehicles/etk800/mats/bulb_on_intense_m.data.png",
+        "metallicMap": "/vehicles/etk800/mats/bulb_on_m.data.png",
         "metallicFactor": 1,
-        "normalMap": "/vehicles/etk800/mats/bulb_on_intense_n.normal.png",
+        "normalMap": "/vehicles/etk800/mats/bulb_on_n.normal.png",
         "pixelSpecular": true,
         "roughnessFactor": 1,
-        "roughnessMap": "/vehicles/etk800/mats/bulb_on_intense_r.data.png"
+        "roughnessMap": "/vehicles/etk800/mats/bulb_on_r.data.png"
       },
       {},
       {},
@@ -1973,7 +1973,7 @@
           6,
           6
         ],
-        "emissiveMap": "/vehicles/etk800/mats/bulb_on_g.color.png",
+        "emissiveMap": "/vehicles/etk800/mats/bulb2_on_g.color.png",
         "glow": true,
         "metallicMap": "/vehicles/etk800/mats/bulb_on_m.data.png",
         "metallicFactor": 1,
@@ -2000,21 +2000,21 @@
     "class": "Material",
     "Stages": [
       {
-        "ambientOcclusionMap": "/vehicles/etk800/mats/bulb_on_intense_ao.data.png",
-        "baseColorMap": "/vehicles/etk800/mats/bulb_on_intense_b.color.png",
+        "ambientOcclusionMap": "/vehicles/etk800/mats/bulb_on_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/mats/bulb_on_b.color.png",
         "emissiveFactor": [
           6,
           6,
           6
         ],
-        "emissiveMap": "/vehicles/etk800/mats/bulb_on_intense_g.color.png",
+        "emissiveMap": "/vehicles/etk800/mats/bulb_on_g.color.png",
         "glow": true,
-        "metallicMap": "/vehicles/etk800/mats/bulb_on_intense_m.data.png",
+        "metallicMap": "/vehicles/etk800/mats/bulb_on_m.data.png",
         "metallicFactor": 1,
-        "normalMap": "/vehicles/etk800/mats/bulb_on_intense_n.normal.png",
+        "normalMap": "/vehicles/etk800/mats/bulb_on_n.normal.png",
         "pixelSpecular": true,
         "roughnessFactor": 1,
-        "roughnessMap": "/vehicles/etk800/mats/bulb_on_intense_r.data.png"
+        "roughnessMap": "/vehicles/etk800/mats/bulb_on_r.data.png"
       },
       {},
       {},
@@ -2068,7 +2068,7 @@
           6,
           6
         ],
-        "emissiveMap": "/vehicles/etk800/mats/bulb_on_g.color.png",
+        "emissiveMap": "/vehicles/etk800/mats/bulb3_on_g.color.png",
         "glow": true,
         "metallicMap": "/vehicles/etk800/mats/bulb_on_m.data.png",
         "metallicFactor": 1,
@@ -2095,21 +2095,21 @@
     "class": "Material",
     "Stages": [
       {
-        "ambientOcclusionMap": "/vehicles/etk800/mats/bulb_on_intense_ao.data.png",
-        "baseColorMap": "/vehicles/etk800/mats/bulb_on_intense_b.color.png",
+        "ambientOcclusionMap": "/vehicles/etk800/mats/bulb_on_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/mats/bulb_on_b.color.png",
         "emissiveFactor": [
           6,
           6,
           6
         ],
-        "emissiveMap": "/vehicles/etk800/mats/bulb_on_intense_g.color.png",
+        "emissiveMap": "/vehicles/etk800/mats/bulb4_on_g.color.png",
         "glow": true,
-        "metallicMap": "/vehicles/etk800/mats/bulb_on_intense_m.data.png",
+        "metallicMap": "/vehicles/etk800/mats/bulb_on_m.data.png",
         "metallicFactor": 1,
-        "normalMap": "/vehicles/etk800/mats/bulb_on_intense_n.normal.png",
+        "normalMap": "/vehicles/etk800/mats/bulb_on_n.normal.png",
         "pixelSpecular": true,
         "roughnessFactor": 1,
-        "roughnessMap": "/vehicles/etk800/mats/bulb_on_intense_r.data.png"
+        "roughnessMap": "/vehicles/etk800/mats/bulb_on_r.data.png"
       },
       {},
       {},
@@ -2163,7 +2163,7 @@
           6,
           6
         ],
-        "emissiveMap": "/vehicles/etk800/mats/bulb_on_g.color.png",
+        "emissiveMap": "/vehicles/etk800/mats/bulb4_on_g.color.png",
         "glow": true,
         "metallicMap": "/vehicles/etk800/mats/bulb_on_m.data.png",
         "metallicFactor": 1,
@@ -2190,21 +2190,21 @@
     "class": "Material",
     "Stages": [
       {
-        "ambientOcclusionMap": "/vehicles/etk800/mats/bulb_on_intense_ao.data.png",
-        "baseColorMap": "/vehicles/etk800/mats/bulb_on_intense_b.color.png",
+        "ambientOcclusionMap": "/vehicles/etk800/mats/bulb_on_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/mats/bulb_on_b.color.png",
         "emissiveFactor": [
           6,
           6,
           6
         ],
-        "emissiveMap": "/vehicles/etk800/mats/bulb_on_intense_g.color.png",
+        "emissiveMap": "/vehicles/etk800/mats/bulb3_on_g.color.png",
         "glow": true,
-        "metallicMap": "/vehicles/etk800/mats/bulb_on_intense_m.data.png",
+        "metallicMap": "/vehicles/etk800/mats/bulb_on_m.data.png",
         "metallicFactor": 1,
-        "normalMap": "/vehicles/etk800/mats/bulb_on_intense_n.normal.png",
+        "normalMap": "/vehicles/etk800/mats/bulb_on_n.normal.png",
         "pixelSpecular": true,
         "roughnessFactor": 1,
-        "roughnessMap": "/vehicles/etk800/mats/bulb_on_intense_r.data.png"
+        "roughnessMap": "/vehicles/etk800/mats/bulb_on_r.data.png"
       },
       {},
       {},
@@ -2258,7 +2258,7 @@
           6,
           6
         ],
-        "emissiveMap": "/vehicles/etk800/mats/bulb_on_g.color.png",
+        "emissiveMap": "/vehicles/etk800/mats/bulb5_on_g.color.png",
         "glow": true,
         "metallicMap": "/vehicles/etk800/mats/bulb_on_m.data.png",
         "metallicFactor": 1,
@@ -2285,21 +2285,21 @@
     "class": "Material",
     "Stages": [
       {
-        "ambientOcclusionMap": "/vehicles/etk800/mats/bulb_on_intense_ao.data.png",
-        "baseColorMap": "/vehicles/etk800/mats/bulb_on_intense_b.color.png",
+        "ambientOcclusionMap": "/vehicles/etk800/mats/bulb_on_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/mats/bulb_on_b.color.png",
         "emissiveFactor": [
           6,
           6,
           6
         ],
-        "emissiveMap": "/vehicles/etk800/mats/bulb_on_intense_g.color.png",
+        "emissiveMap": "/vehicles/etk800/mats/bulb6_on_g.color.png",
         "glow": true,
-        "metallicMap": "/vehicles/etk800/mats/bulb_on_intense_m.data.png",
+        "metallicMap": "/vehicles/etk800/mats/bulb_on_m.data.png",
         "metallicFactor": 1,
-        "normalMap": "/vehicles/etk800/mats/bulb_on_intense_n.normal.png",
+        "normalMap": "/vehicles/etk800/mats/bulb_on_n.normal.png",
         "pixelSpecular": true,
         "roughnessFactor": 1,
-        "roughnessMap": "/vehicles/etk800/mats/bulb_on_intense_r.data.png"
+        "roughnessMap": "/vehicles/etk800/mats/bulb_on_r.data.png"
       },
       {},
       {},
@@ -2354,7 +2354,7 @@
           6,
           6
         ],
-        "emissiveMap": "/vehicles/etk800/mats/bulb_on_g.color.png",
+        "emissiveMap": "/vehicles/etk800/mats/bulb6_on_g.color.png",
         "glow": true,
         "metallicMap": "/vehicles/etk800/mats/bulb_on_m.data.png",
         "metallicFactor": 1,
@@ -2381,21 +2381,21 @@
     "class": "Material",
     "Stages": [
       {
-        "ambientOcclusionMap": "/vehicles/etk800/mats/bulb_on_intense_ao.data.png",
-        "baseColorMap": "/vehicles/etk800/mats/bulb_on_intense_b.color.png",
+        "ambientOcclusionMap": "/vehicles/etk800/mats/bulb_on_ao.data.png",
+        "baseColorMap": "/vehicles/etk800/mats/bulb_on_b.color.png",
         "emissiveFactor": [
           6,
           6,
           6
         ],
-        "emissiveMap": "/vehicles/etk800/mats/bulb_on_intense_g.color.png",
+        "emissiveMap": "/vehicles/etk800/mats/bulb5_on_g.color.png",
         "glow": true,
-        "metallicMap": "/vehicles/etk800/mats/bulb_on_intense_m.data.png",
+        "metallicMap": "/vehicles/etk800/mats/bulb_on_m.data.png",
         "metallicFactor": 1,
-        "normalMap": "/vehicles/etk800/mats/bulb_on_intense_n.normal.png",
+        "normalMap": "/vehicles/etk800/mats/bulb_on_n.normal.png",
         "pixelSpecular": true,
         "roughnessFactor": 1,
-        "roughnessMap": "/vehicles/etk800/mats/bulb_on_intense_r.data.png"
+        "roughnessMap": "/vehicles/etk800/mats/bulb_on_r.data.png"
       },
       {},
       {},

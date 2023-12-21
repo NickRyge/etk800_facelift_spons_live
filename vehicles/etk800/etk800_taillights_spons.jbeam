@@ -48,26 +48,26 @@
         {
             "lightInnerAngle":0,
             "lightOuterAngle":170,
-            "lightRange":30,
-            "lightBrightness": 2,
+            "lightRange":20,
+            "lightBrightness": 0.1,
             "lightColor":{"r":255, "g":10, "b":0, "a":255},
-            "lightAttenuation":{"x":0, "y":1, "z":1},
+            "lightAttenuation":{"x":1, "y":1, "z":1},
             "flareScale": 0.01,
             "lightCastShadows":false,
             "flareName":"vehicleBrakeLightFlare"
         },
         //taillights
-        ["brakelights" ,         "SPOTLIGHT"        , "tl4r", "tl3r", "tl2r", {"x":-23.045, "y":94.173, "z":-6.331} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.142, "y":0.195, "z":0.011},"lightBrightness": 6,"flareScale": 0.08,"deformGroup":"taillightglass_R_break"}],
+        ["brakelights" ,         "SPOTLIGHT"        , "tl4r", "tl3r", "tl2r", {"x":-23.045, "y":94.173, "z":-6.331} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.142, "y":0.195, "z":0.011},"lightBrightness": 0.8,"flareScale": 0.08,"deformGroup":"taillightglass_R_break"}],
         ["lowhighbeam" ,         "SPOTLIGHT"        , "tl4r", "tl3r", "tl2r", {"x":-23.045, "y":94.173, "z":-6.331} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.142, "y":0.195, "z":0.011},"deformGroup":"taillightglass_R_break"}],
         ["lowhighbeam" ,         "SPOTLIGHT"        , "t4r", "t4rr", "t3rr", {"x":176.385, "y":86.546, "z":0.171} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.362, "y":0.336, "z":0.005},"lightOuterAngle":120,"deformGroup":"taillightglass_R_break"}],
         
         {"lightColor":{"r":255, "g":200, "b":0, "a":255},"flareScale":0, "lightBrightness":0.3},
-        ["signalR1" ,         "SPOTLIGHT"        , "tl3r", "tl4r", "tl1r", {"x":-179.475, "y":16.438, "z":-29.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break"}],
-        ["signalR2" ,         "SPOTLIGHT"        , "tl3r", "tl4r", "tl1r", {"x":-179.475, "y":16.438, "z":-29.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break"}],
-        ["signalR4" ,         "SPOTLIGHT"        , "tl3r", "tl4r", "tl1r", {"x":-179.475, "y":16.438, "z":-28.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break"}],
-        ["signalR6" ,         "SPOTLIGHT"        , "tl3r", "tl4r", "tl1r", {"x":-179.475, "y":16.438, "z":-26.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break"}],
-        ["signalR8" ,         "SPOTLIGHT"        , "tl3r", "tl4r", "tl1r", {"x":-179.475, "y":16.438, "z":-23.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break"}],
-        ["signalR9" ,         "SPOTLIGHT"        , "tl3r", "tl4r", "tl1r", {"x":-176.900, "y":16.545, "z":-21.365} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break"}]
+        ["signalR1" ,         "SPOTLIGHT"        , "tl3r", "tl4r", "tl1r", {"x":-179.475, "y":16.438, "z":-29.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break","lightBrightness": 0.02}],
+        ["signalR2" ,         "SPOTLIGHT"        , "tl3r", "tl4r", "tl1r", {"x":-179.475, "y":16.438, "z":-29.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break","lightBrightness": 0.02}],
+        ["signalR4" ,         "SPOTLIGHT"        , "tl3r", "tl4r", "tl1r", {"x":-179.475, "y":16.438, "z":-28.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break","lightBrightness": 0.02}],
+        ["signalR6" ,         "SPOTLIGHT"        , "tl3r", "tl4r", "tl1r", {"x":-179.475, "y":16.438, "z":-26.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break","lightBrightness": 0.02}],
+        ["signalR8" ,         "SPOTLIGHT"        , "tl3r", "tl4r", "tl1r", {"x":-179.475, "y":16.438, "z":-23.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break","lightBrightness": 0.02}],
+        ["signalR9" ,         "SPOTLIGHT"        , "tl3r", "tl4r", "tl1r", {"x":-176.900, "y":16.545, "z":-21.365} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break","lightBrightness": 0.02}]
 
     
     ],
@@ -216,8 +216,8 @@
         {
             "lightInnerAngle":0,
             "lightOuterAngle":170,
-            "lightRange":30,
-            "lightBrightness": 2,
+            "lightRange":20,
+            "lightBrightness": 0.1,
             "lightColor":{"r":255, "g":10, "b":0, "a":255},
             "lightAttenuation":{"x":0, "y":1, "z":1},
             "flareScale": 0.01,
@@ -225,18 +225,18 @@
             "flareName":"vehicleBrakeLightFlare"
         },
         //taillights
-        ["brakelights" ,         "SPOTLIGHT"        , "tl4l", "tl3l", "tl2l", {"x":-159.426, "y":93.476, "z":6.672} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.142, "y":0.195, "z":0.011},"lightBrightness": 6,"flareScale": 0.08,"deformGroup":"taillightglass_R_break"}],
+        ["brakelights" ,         "SPOTLIGHT"        , "tl4l", "tl3l", "tl2l", {"x":-159.426, "y":93.476, "z":6.672} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.142, "y":0.195, "z":0.011},"lightBrightness": 0.8,"flareScale": 0.08,"deformGroup":"taillightglass_R_break"}],
         ["lowhighbeam" ,         "SPOTLIGHT"        , "tl4l", "tl3l", "tl2l", {"x":-159.426, "y":93.476, "z":6.672} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.142, "y":0.195, "z":0.011},"deformGroup":"taillightglass_R_break"}],
         ["lowhighbeam" ,         "SPOTLIGHT"        , "t4l", "t4ll", "t3ll", {"x":3.615, "y":86.546, "z":0.171} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.362, "y":0.336, "z":0.005},"lightOuterAngle":120,"deformGroup":"taillightglass_R_break"}],
         
         {"lightColor":{"r":255, "g":200, "b":0, "a":255},"flareScale":0, "lightBrightness":0.3},
                                                                             //Nightmare       
-        ["signalL1" ,         "SPOTLIGHT"        , "tl3l", "tl4l", "tl1l", {"x":0, "y":1, "z":29.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break"}],
-        ["signalL2" ,         "SPOTLIGHT"        , "tl3l", "tl4l", "tl1l", {"x":0, "y":1, "z":29.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break"}],
-        ["signalL4" ,         "SPOTLIGHT"        , "tl3l", "tl4l", "tl1l", {"x":0, "y":1, "z":28.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break"}],
-        ["signalL6" ,         "SPOTLIGHT"        , "tl3l", "tl4l", "tl1l", {"x":0, "y":1, "z":26.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break"}],
-        ["signalL8" ,         "SPOTLIGHT"        , "tl3l", "tl4l", "tl1l", {"x":0, "y":1, "z":23.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break"}],
-        ["signalL9" ,         "SPOTLIGHT"        , "tl3l", "tl4l", "tl1l", {"x":0, "y":1, "z":21.365} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break"}]
+        ["signalL1" ,         "SPOTLIGHT"        , "tl3l", "tl4l", "tl1l", {"x":0, "y":1, "z":29.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break","lightBrightness": 0.02}],
+        ["signalL2" ,         "SPOTLIGHT"        , "tl3l", "tl4l", "tl1l", {"x":0, "y":1, "z":29.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break","lightBrightness": 0.02}],
+        ["signalL4" ,         "SPOTLIGHT"        , "tl3l", "tl4l", "tl1l", {"x":0, "y":1, "z":28.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break","lightBrightness": 0.02}],
+        ["signalL6" ,         "SPOTLIGHT"        , "tl3l", "tl4l", "tl1l", {"x":0, "y":1, "z":26.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break","lightBrightness": 0.02}],
+        ["signalL8" ,         "SPOTLIGHT"        , "tl3l", "tl4l", "tl1l", {"x":0, "y":1, "z":23.235} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break","lightBrightness": 0.02}],
+        ["signalL9" ,         "SPOTLIGHT"        , "tl3l", "tl4l", "tl1l", {"x":0, "y":1, "z":21.365} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 90, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.05, "z":0.02},"deformGroup":"taillightglass_R_break","lightBrightness": 0.02}]
     ],
     "nodes": [
         ["id", "posX", "posY", "posZ"],

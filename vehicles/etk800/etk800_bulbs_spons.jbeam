@@ -1,34 +1,53 @@
 {
+
+"spons_etk800_christmas_accessories": {
+    "information":{
+        "authors":"Spons",
+        "name":"Christmas accessories!",
+        "value":150
+    },
+    "slotType" : "etk800_spons_additionals",
+    "slots": [
+        ["type", "default", "description"],
+        ["spons_etk800_antlers","etk800_antlers_spons_stock", "Christmas antlers"],
+        ["spons_etk800_lightbulbs","etk800_bulbs", "Christmas lights"],
+
+    ]
+},
 "etk800_bulbs": {
     "information":{
         "authors":"Spons",
         "name":"Christmas lights",
-        "value":150,
+        "value":150
     },
-    "slotType" : "etk800_sedan_roof_accessory",
+    "controller": [
+        ["fileName"],
+        ["christmas_glisten", {}]
+    ],
+    "slotType" : "spons_etk800_lightbulbs",
     "flexbodies": [
          ["mesh", "[group]:", "nonFlexMaterials"],
-         ["bulb_door_FL",    ["etk800_body"]],
-         ["bulb_door_FR", ["etk800_body"]],
-         ["bulb_door_RL", ["etk800_body"]],
-         ["bulb_door_RR", ["etk800_body"]],
-         ["bulb_fender_L", ["etk800_body"]],
-         ["bulb_fender_R", ["etk800_body"]],
-         ["bulb_hood", ["etk800_body"]],
+         ["bulb_door_FL",    ["etk800_door_FL"]],
+         ["bulb_door_FR", ["etk800_door_FR"]],
+         ["bulb_door_RL", ["etk800_door_RL"]],
+         ["bulb_door_RR", ["etk800_door_RR"]],
+         ["bulb_fender_L", ["etk800_fender_L"]],
+         ["bulb_fender_R", ["etk800_fender_R"]],
+         ["bulb_hood", ["etk800_hood"]],
          ["bulb_qp", ["etk800_body"]],
-         ["bulb_rear_bumper", ["etk800_body"]],
+         ["bulb_rear_bumper", ["etk800_bumper_R"]],
          ["bulb_roof", ["etk800_body"]],
-         ["bulb_trunk", ["etk800_body"]],
-         ["bulb_front_bumper", ["etk800_body"]]
+         ["bulb_trunk", ["etk800_trunk"]],
+         ["bulb_front_bumper", ["etk800_bumper_F"]]
     ],
         "glowMap":{
         //lights      
-		"bulb":{"simpleFunction":{"hazard":0.5,"ignition":0.5}, "off":"bulb", "on":"bulb_on", "on_intense":"bulb_on_intense"},
-        "bulb2":{"simpleFunction":{"hazard":0.5,"ignition":0.5}, "off":"bulb", "on":"bulb_on", "on_intense":"bulb_on_intense"},
-        "bulb3":{"simpleFunction":{"hazard":0.5,"ignition":0.5}, "off":"bulb", "on":"bulb_on", "on_intense":"bulb_on_intense"},
-        "bulb4":{"simpleFunction":{"hazard":0.5,"ignition":0.5}, "off":"bulb", "on":"bulb_on", "on_intense":"bulb_on_intense"},
-        "bulb5":{"simpleFunction":{"hazard":0.5,"ignition":0.5}, "off":"bulb", "on":"bulb_on", "on_intense":"bulb_on_intense"},
-        "bulb6":{"simpleFunction":{"hazard":0.5,"ignition":0.5}, "off":"bulb", "on":"bulb_on", "on_intense":"bulb_on_intense"},
-    },
-},
+		"bulb":{"simpleFunction":"christmas_0", "off":"bulb", "on":"bulb_on", "on_intense":"bulb_on_intense"},
+        "bulb2":{"simpleFunction":"christmas_1", "off":"bulb2", "on":"bulb2_on", "on_intense":"bulb2_on_intense"},
+        "bulb3":{"simpleFunction":"christmas_2", "off":"bulb3", "on":"bulb3_on", "on_intense":"bulb3_on_intense"},
+        "bulb4":{"simpleFunction":"christmas_3", "off":"bulb4", "on":"bulb4_on", "on_intense":"bulb4_on_intense"},
+        "bulb5":{"simpleFunction":"christmas_4", "off":"bulb5", "on":"bulb5_on", "on_intense":"bulb5_on_intense"},
+        "bulb6":{"simpleFunction":"christmas_5", "off":"bulb6", "on":"bulb6_on", "on_intense":"bulb6_on_intense"}
+    }
+}
 }

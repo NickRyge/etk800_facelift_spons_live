@@ -26,8 +26,7 @@ local function init(jbeamData)
 end
 
 local function determineLighting(target, offset, timer)
-    electrics.values[target] = ((timer + offset)%3)*0.49 
-    print(electrics.values[target])
+    electrics.values[target] = ((timer + offset)%3)*0.49
 end
 
 

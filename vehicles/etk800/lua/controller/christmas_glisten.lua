@@ -11,7 +11,7 @@ local electricsName = ""
 
 local function reset()
     timer = 0
-    realtimer = 0 
+    realtimer = 0
 
     for var=0,numberOfLights do
         electrics.values[electricsName.."_"..tostring(var)] = 0

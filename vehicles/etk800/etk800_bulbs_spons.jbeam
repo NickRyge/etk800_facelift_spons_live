@@ -6,11 +6,11 @@
         "name":"Christmas accessories!",
         "value":150
     },
-    "slotType" : "etk800_sedan_roof_accessory",
+    "slotType" : "etk800_spons_additionals",
     "slots": [
         ["type", "default", "description"],
         ["spons_etk800_antlers","etk800_antlers_spons_stock", "Christmas antlers"],
-        ["spons_etk800_lightbulbs","etk800_bulbs", "Christmas antlers"],
+        ["spons_etk800_lightbulbs","etk800_bulbs", "Christmas lights"],
 
     ]
 },
@@ -22,7 +22,7 @@
     },
     "controller": [
         ["fileName"],
-        ["christmas_glisten", {"name":"rear", "nameString":"rearDLR", "sections":9, "speedMod":22, "override":true, "finalValue": 0}]
+        ["christmas_glisten", {}]
     ],
     "slotType" : "spons_etk800_lightbulbs",
     "flexbodies": [

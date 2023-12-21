@@ -23,12 +23,12 @@
     ],
         "glowMap":{
         //lights      
-		"bulb":{"simpleFunction":{"hazard":0.5,"ignition":0.5}, "off":"bulb", "on":"bulb_on", "on_intense":"bulb_on_intense"},
-        "bulb2":{"simpleFunction":{"hazard":0.5,"ignition":0.5}, "off":"bulb", "on":"bulb_on", "on_intense":"bulb_on_intense"},
-        "bulb3":{"simpleFunction":{"hazard":0.5,"ignition":0.5}, "off":"bulb", "on":"bulb_on", "on_intense":"bulb_on_intense"},
-        "bulb4":{"simpleFunction":{"hazard":0.5,"ignition":0.5}, "off":"bulb", "on":"bulb_on", "on_intense":"bulb_on_intense"},
-        "bulb5":{"simpleFunction":{"hazard":0.5,"ignition":0.5}, "off":"bulb", "on":"bulb_on", "on_intense":"bulb_on_intense"},
-        "bulb6":{"simpleFunction":{"hazard":0.5,"ignition":0.5}, "off":"bulb", "on":"bulb_on", "on_intense":"bulb_on_intense"},
+		"bulb":{"simpleFunction":{"hazard":0.5,"ignition":0.5}, "off":"bulb_on", "on":"bulb_on", "on_intense":"bulb_on_intense"},
+        "bulb2":{"simpleFunction":{"hazard":0.5,"ignition":0.5}, "off":"bulb2_on", "on":"bulb2_on", "on_intense":"bulb2_on_intense"},
+        "bulb3":{"simpleFunction":{"hazard":0.5,"ignition":0.5}, "off":"bulb3_on", "on":"bulb3_on", "on_intense":"bulb3_on_intense"},
+        "bulb4":{"simpleFunction":{"hazard":0.5,"ignition":0.5}, "off":"bulb4_on", "on":"bulb4_on", "on_intense":"bulb4_on_intense"},
+        "bulb5":{"simpleFunction":{"hazard":0.5,"ignition":0.5}, "off":"bulb5_on", "on":"bulb5_on", "on_intense":"bulb5_on_intense"},
+        "bulb6":{"simpleFunction":{"hazard":0.5,"ignition":0.5}, "off":"bulb6_on", "on":"bulb6_on", "on_intense":"bulb6_on_intense"},
     },
 },
 }

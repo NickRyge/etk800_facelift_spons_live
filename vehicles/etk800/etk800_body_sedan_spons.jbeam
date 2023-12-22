@@ -8,6 +8,7 @@
     "slotType" : "etk800_body",
     "slots": [
         ["type", "default", "description"],
+        ["etk800_spons_additionals", "", "Facelift additional slot"],
         ["etk800_dash","etk800_dash", "Interior", {"coreSlot":true}],
         ["etk800_seat_FL","etk800_seat_FL", "Driver Seat"],
         ["etk800_seat_FR","etk800_seat_FR", "Passenger Seat"],

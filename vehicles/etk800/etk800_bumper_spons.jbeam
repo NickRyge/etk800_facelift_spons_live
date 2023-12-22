@@ -9,6 +9,7 @@
         ["type", "default", "description"],
         ["etk800_licenseplate_F_alt2","", "Front License Plate"],
         ["etk800_markerlights_F_wide","", "Front Side Marker Lights"],
+		["etk800_antlers_spons","", "Antlers"],
     ],
     "flexbodies": [
          ["mesh", "[group]:", "nonFlexMaterials"],

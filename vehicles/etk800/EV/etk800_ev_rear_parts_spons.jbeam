@@ -287,8 +287,8 @@
     "etk800_motor_electric_R_sport": {
         "information":{
             "authors":"BeamNG",
-            "name":"Rear EV Motor (235Kw)",
-            "value":7000
+            "name":"Hi-Po Rear EV Motor (425Kw)",
+            "value":20000
         },
         "slotType" : "etk_engine",
         //"slots": [
@@ -324,13 +324,13 @@
                 [16000, 100]
             ],
     
-            "maxRPM":16000,
+            "maxRPM":17000,
             "maxRegenPower":150,
             "maxRegenTorque":100,
             "inertia":0.10,
             "friction":2,
             "dynamicFriction":0.0003,
-            "electricalEfficiency":0.95,
+            "electricalEfficiency":0.92,
             //"torqueReactionNodes:":["e1l","e2l","e4r"],
             "energyStorage": "mainBattery",
             "electricsThrottleFactorName": "throttleFactorRear",

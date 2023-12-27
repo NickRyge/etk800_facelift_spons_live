@@ -10,7 +10,7 @@
         ["type", "default", "description"],
         ["fr04v10_intake","fr04_intake", "Intake", {"coreSlot":true}],
         ["fr04v10_engine_ecu","fr04v10_engine_ecu", "Engine Management", {"coreSlot":true}],
-        ["fr04v10_oilpan","fr04_oilpan", "Oil Pan", {"coreSlot":true}],
+        ["v10_oilpan","v10_oilpan", "Oil Pan", {"coreSlot":true}],
         ["fr04v10_engine_internals","FR04_v10_internals", "Engine Long Block", {"coreSlot":true}],
         ["fr04v10_exhaust","fr04_exhaust", "Exhaust"],
         ["etk_transmission","etk_transmission_8A", "Transmission"],
@@ -959,13 +959,13 @@
 
 
 
-"fr04v10_oilpan": {
+"v10_oilpan": {
     "information":{
-        "authors":"LucasBE",
+        "authors":"NickRyge",
         "name":"Oil Pan",
         "value":250,
     },
-    "slotType" : "fr04v10_oilpan",
+    "slotType" : "v10_oilpan",
     "mainEngine": {
 
         //engine durability

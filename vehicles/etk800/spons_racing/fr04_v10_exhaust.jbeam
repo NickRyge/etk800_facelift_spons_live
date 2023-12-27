@@ -8,7 +8,7 @@
     "slotType" : "fr04v10_exhaust",
     "flexbodies":[
         ["mesh", "[group]:","nonFlexMaterials"],
-        ["v10_exhaust", ["fr04_exhaust","fr04_engine"]],
+        //["etk800_body", ["fr04_exhaust","fr04_engine"]],
     ],
 
     
@@ -21,10 +21,10 @@
 
          {"nodeWeight":0.4},
          {"group":"fr04_exhaust"},
-         ["ex1", -0.24, 1.23, 0.24],
-         ["ex2",-0.3, 1.325, 0.37, {"afterFireAudioCoef":1.0,"afterFireVisualCoef":0.7, "afterFireVolumeCoef":1.0, "afterFireMufflingCoef": 1.0, "exhaustAudioMufflingCoef": 0.2, "exhaustAudioGainChange":6}],
-         ["ex3", 0.24, 1.23, 0.24],
-		 ["ex4", 0.3, 1.325, 0.37, {"afterFireAudioCoef":1.0,"afterFireVisualCoef":0.7, "afterFireVolumeCoef":1.0, "afterFireMufflingCoef": 1.0, "exhaustAudioMufflingCoef": 0.2, "exhaustAudioGainChange":6}],
+         ["ex1", -0.24, -0.9, 0.24],
+         ["ex2",-0.9, -0.9, 0.31, {"afterFireAudioCoef":1.0,"afterFireVisualCoef":0.7, "afterFireVolumeCoef":1.0, "afterFireMufflingCoef": 1.0, "exhaustAudioMufflingCoef": 0.2, "exhaustAudioGainChange":6}],
+         ["ex3", 0.24, -0.9, 0.24],
+		 ["ex4", 0.9, -0.9, 0.31, {"afterFireAudioCoef":1.0,"afterFireVisualCoef":0.7, "afterFireVolumeCoef":1.0, "afterFireMufflingCoef": 1.0, "exhaustAudioMufflingCoef": 0.2, "exhaustAudioGainChange":6}],
 		 {"group":"none"},
         ],
     "beams":[

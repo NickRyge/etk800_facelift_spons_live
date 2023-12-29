@@ -2,7 +2,7 @@
 
 This is the repo for the ETK800 facelift.
 
-Currently contains BMW inspired body panels and lights, as well as my intelligent headlights. The car furthermore features adaptive blinkers, a new exhaust and a fun welcome-lights feature. 
+Currently contains BMW inspired body panels and lights, ~~as well as my intelligent headlights~~ The intelligent headlights have been removed and are stagnant in their own project. Recent updates ruined a lot of the headlight placement, and I wanted to add a different way of moving props around. The car furthermore features adaptive blinkers, a new exhaust and a fun welcome-lights feature. 
 
 Both mods are required to be installed for this one to work.
 

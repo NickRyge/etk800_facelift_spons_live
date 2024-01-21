@@ -189,7 +189,7 @@
     },
     "flexbodies": [
         ["mesh", "[group]:", "nonFlexMaterials"],
-        ["v10", ["fr04_engine"]],
+        ["v10", ["fr04_engine"], [], {"pos":{"x":0, "y":-2.157, "z":0.250}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.9, "y":1, "z":0.7}}],
         {"deformGroup":""},
    ],
    "nodes": [
@@ -201,7 +201,7 @@
         {"nodeMaterial":"|NM_METAL"},
         {"group":"fr04_engine"},
         {"engineGroup":"engine_block"},
-        {"nodeWeight":15},
+        {"nodeWeight":13},
         {"chemEnergy":500,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.12},
         ["e1r",-0.15, -0.95, 0.26,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.07}],
         ["e1l", 0.15, -0.95, 0.26,{"isExhaust":"mainEngine","chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.07}],
@@ -210,10 +210,10 @@
         {"engineGroup":["engine_block","engine_intake"]},
         {"selfCollision":true},
         {"group":["fr04_engine","fr04_airbox"]},
-        ["e3r",-0.26, -0.95, 0.87, {"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.12}],
-        ["e3l", 0.26, -0.95, 0.87],
-        ["e4r",-0.26, -1.55, 0.85],
-        ["e4l", 0.26, -1.55, 0.85],
+        ["e3r",-0.26, -0.95, 0.75, {"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.12}],
+        ["e3l", 0.26, -0.95, 0.75],
+        ["e4r",-0.23, -1.48, 0.65],
+        ["e4l", 0.23, -1.48, 0.65],
         {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false},
         {"engineGroup":""},
         {"group":""},
@@ -677,8 +677,8 @@
     "slotType" : "fr04v10_intake",
     "flexbodies": [
         ["mesh", "[group]:", "nonFlexMaterials"],
-        ["v10_header", ["fr04_engine"]],
-        ["v10_intake", ["fr04_airbox"]],
+        ["v10_header", ["fr04_engine"], [], {"pos":{"x":0, "y":-2.157, "z":0.250}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.9, "y":1, "z":0.7}}],
+        ["v10_intake", ["fr04_airbox"], [], {"pos":{"x":0, "y":-2.157, "z":0.250}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.9, "y":1, "z":0.7}}],
     ],
     "mainEngine":{
         //turbo needs exhaust manifold to work, so I put the turbo name in exhaust
@@ -694,7 +694,7 @@
          {"group":"fr04_airbox"},
          {"nodeWeight":1},
          {"engineGroup":["engine_intake"]},
-         ["airb", 0.00, 0.55, 0.88],
+         ["airb", 0.00, -1.55, 0.68],
          {"group":""},
     ],
     "beams": [

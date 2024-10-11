@@ -21,7 +21,7 @@
         ],
         "controller":[
             ["fileName"],
-            ["rear_wheel_steering", {"jbeamName":"rearWheelSteering", "maxSteeringInputHighSpeed":0.4, "isIndependent":true, "maxSteeringInputLowSpeed":0.95, "reverseThreshold":15.2778}]
+            ["rear_wheel_steering", {"jbeamName":"rearWheelSteering", "maxSteeringInputHighSpeed":0.3, "isIndependent":true, "maxSteeringInputLowSpeed":0.75, "reverseThreshold":15.2778}]
         ],
         "flexbodies": [
              ["mesh", "[group]:", "nonFlexMaterials"],

@@ -1,0 +1,73 @@
+{
+  "etk_gauges.skin_gauges.spons_test": {
+    "name": "etk_gauges.skin_gauges.spons_test",
+    "mapTo": "etk_gauges.skin_gauges.spons_test",
+    "class": "Material",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/etk800/spons_gauge/gauges_black_shaped.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/etk800/spons_gauge/gauges_black_total.png",
+        "normalMap": "/vehicles/etk800/spons_gauge/gauges_black.png",
+        "roughnessMap": "/vehicles/etk800/spons_gauge/gauges_black_total.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "etk_gauges_on.skin_gauges.spons_test": {
+    "name": "etk_gauges_on.skin_gauges.spons_test",
+    "mapTo": "etk_gauges_on.skin_gauges.spons_test",
+    "class": "Material",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/etk800/spons_gauge/gauges_black_shaped.png",
+        "emissiveMap": "/vehicles/etk800/spons_gauge/gauges_black_shaped.png",
+        "metallicFactor": 1,
+        "emissiveFactor": [
+          2,
+          2,
+          2
+        ],
+        "metallicMap": "/vehicles/etk800/spons_gauge/gauges_black_total.png",
+        "normalMap": "/vehicles/etk800/spons_gauge/gauges_black_shaped.png",
+        "roughnessMap": "/vehicles/etk800/spons_gauge/gauges_black_total.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "etk800_gauges_screen_digi": {
+    "name": "etk800_gauges_screen_digi",
+    "mapTo": "etk800_gauges_screen_digi",
+    "class": "Material",
+    "Stages": [
+      {
+        "colorMap": "@etk800_gauges_screen_digi",
+        "emissive": true,
+        "specularMap": "vehicles/common/null.dds",
+        "specularPower": 32,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "castShadows": false,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true
+  }
+}

@@ -1,0 +1,34 @@
+{
+    //Be aware that this OVERWRITES existing default gauging in the etk800, it doesn't create anything new.
+    //Removing this will literally default the gauges back to the usual ones with the exception of the needles.
+    "etk800_gauges_ttsport_spons": {
+        "information":{
+            "authors":"BeamNG",
+            "name":"TEST - spons digital guages",
+            "value":600,
+        },
+        "slotType" : "skin_gauges",
+        "flexbodies": [
+            ["mesh", "[group]:", "nonFlexMaterials"],
+            //{"deformGroup":"display_break", "deformMaterialBase":"etk800_screen", "deformMaterialDamaged":"invis"},
+            ["etk800_gauges_screen_digi", ["etk800_dash"]], //Place digi screen on top of the existing dash
+            {"deformGroup":""}
+        ],
+        "glowMap":{
+            "etk800_gauges_screen_digi":{"simpleFunction":{"ignitionLevel":0.5}, "off":"screen_off", "on":"etk800_gauges_screen_digi", "on_intense":"etk800_gauges_screen_digi"},
+        },
+        "gauge": {
+            "configuration": {
+                "materialName": "@etk800_gauges_screen_digi"
+                "htmlPath": "local://local/vehicles/etk800/spons_gauge/gauges_screen_digi.html"
+                "displayWidth":1024
+                "displayHeight":512
+            }
+            "configuration_units": {
+                "unit": "metric",
+                
+            }
+        },
+        "skinName" : "spons_test",
+    },
+}

@@ -1,0 +1,101 @@
+@font-face {
+  font-family: Prompt;
+  src: url(/ui/common/Play-Bold.ttf);
+}
+
+body {
+  margin: 0;
+  padding-top: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: Prompt;
+  font-size: 35px;
+  overflow: hidden;
+}
+
+.gauge {
+  width: 100%;
+}
+
+.center-screen {
+  /*width: 50%;*/
+  margin-top: 150px;
+  margin-left: 0px;
+  color: #E6E6E6;
+  font-size: 20px;
+  font-variant: narrow;
+  text-align: center;
+}
+
+.speed {
+  font-size: 30px;
+  padding-bottom: 50px;
+  display: inline-block;
+}
+
+.speedUnit {
+  font-size: 20px;
+}
+
+.odo {
+  font-size: 16px;
+}
+
+.consumption {
+  width: 100%;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.consumptionVal {
+  width: 60%;
+  font-size: 30px;
+  float: left;
+}
+
+.consumptionUnit {
+  width: 0%;
+  font-size: 15px;
+  line-height: 30px;
+  float: left;
+  margin-left: 5px;
+}
+
+.right-screen {
+  width: 50%;
+  margin-top: -60px;
+}
+
+.gear-screen {
+  position: absolute;
+  right: 152px;
+  bottom: 65px;
+  border:2px solid #E6E6E6;
+  width: 40px;
+  height: 25px;
+  color: #E6E6E6;
+  font-weight:bold;
+  font-size:20px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.efficiencyGauge {
+  position: relative;
+  margin-left: 53px;
+  margin-top: -325px;
+  transform: rotate(109deg);
+  transform-origin: 50%, 50%;
+}
+
+.efficiencyBar {
+  transform-origin: 50%, 50%;
+}
+
+.efficiency {
+  stroke-dasharray: 339.292;
+  stroke-dashoffset: -271;
+}

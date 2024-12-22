@@ -6,7 +6,7 @@
         "name":"Christmas accessories!",
         "value":150
     },
-    "slotType" : "etk800_spons_additionals",
+    "slotType" : "etk800_mod",
     "slots": [
         ["type", "default", "description"],
         ["spons_etk800_antlers","etk800_antlers_spons_stock", "Christmas antlers"],

@@ -10,10 +10,18 @@
          ["mesh", "[group]:", "nonFlexMaterials"],
          {"deformGroup":""}
     ],
-	"controller": [
-	["fileName"],
-    ["interior_lighting"]
-	],
+    "components": {
+        "electrics": {
+            "customValues": [
+                ["electricsName", "electricsFunction","electricsDefault"],
+                ["InteriorLight", "clamp(electrics.door_FL_coupler_notAttached + electrics.door_FR_coupler_notAttached + electrics.door_RL_coupler_notAttached + electrics.door_RR_coupler_notAttached, 0, 1)", 0],
+            ]
+            "smoothers": [
+                ["electricsName", "smootherType", "params"],
+                ["InteriorLight","temporalNonLinear", [1]]
+            ],
+        }
+    },
     //Temporarily unused
 	"glowMap":{
 
@@ -41,46 +49,18 @@
             "shadowSoftness":0.4
         },
         //Overhead driver pointlights
-        ["open1", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":0.08}],
-        ["open2", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":0.2}],
-        ["open3", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":0.4}],
-        ["open4", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":0.5}],
-        ["open5", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":0.6}],
-        ["open6", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":0.7}],
-        ["open7", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":0.8}],
-        ["open8", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":0.95}],
-        ["open9", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":1.2}],
-        ["open10", "POINTLIGHT", "rf1", "dsh1", "rf2",  {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":1.3}],
+        ["InteriorLight", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":1.3, "lightScaling":{}}],
 
         //rear seats overhead
-        ["open1", "POINTLIGHT", "rf4", "tb2", "rf3",    {"x":-87.109, "y":-51.780, "z":-17.375},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.177, "y":0.375, "z":0.0},"deformGroup":"","lightBrightness":0.08}],
-        ["open2", "POINTLIGHT", "rf4", "tb2", "rf3",    {"x":-87.109, "y":-51.780, "z":-17.375},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.177, "y":0.375, "z":0.0},"deformGroup":"","lightBrightness":0.2}],
-        ["open3", "POINTLIGHT", "rf4", "tb2", "rf3",    {"x":-87.109, "y":-51.780, "z":-17.375},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.177, "y":0.375, "z":0.0},"deformGroup":"","lightBrightness":0.4}],
-        ["open4", "POINTLIGHT", "rf4", "tb2", "rf3",    {"x":-87.109, "y":-51.780, "z":-17.375},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.177, "y":0.375, "z":0.0},"deformGroup":"","lightBrightness":0.5}],
-        ["open5", "POINTLIGHT", "rf4", "tb2", "rf3",    {"x":-87.109, "y":-51.780, "z":-17.375},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.177, "y":0.375, "z":0.0},"deformGroup":"","lightBrightness":0.6}],
-        ["open6", "POINTLIGHT", "rf4", "tb2", "rf3",    {"x":-87.109, "y":-51.780, "z":-17.375},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.177, "y":0.375, "z":0.0},"deformGroup":"","lightBrightness":0.7}],
-        ["open7", "POINTLIGHT", "rf4", "tb2", "rf3",    {"x":-87.109, "y":-51.780, "z":-17.375},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.177, "y":0.375, "z":0.0},"deformGroup":"","lightBrightness":0.8}],
-        ["open8", "POINTLIGHT", "rf4", "tb2", "rf3",    {"x":-87.109, "y":-51.780, "z":-17.375},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.177, "y":0.375, "z":0.0},"deformGroup":"","lightBrightness":0.9}],
-        ["open9", "POINTLIGHT", "rf4", "tb2", "rf3",    {"x":-87.109, "y":-51.780, "z":-17.375},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.177, "y":0.375, "z":0.0},"deformGroup":"","lightBrightness":1.0}],
-        ["open10", "POINTLIGHT", "rf4", "tb2", "rf3",   {"x":-87.109, "y":-51.780, "z":-17.375},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.177, "y":0.375, "z":0.0},"deformGroup":"","lightBrightness":1.1}],
-
-        //Footwell driver
+        ["InteriorLight", "POINTLIGHT", "rf4", "tb2", "rf3",    {"x":-87.109, "y":-51.780, "z":-17.375},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.177, "y":0.375, "z":0.0},"deformGroup":"","lightBrightness":1.1, "lightScaling":{}}],
         {
             "lightInnerAngle":10,
             "lightOuterAngle":60,
             "lightRange":0.58,
             "lightBrightness":1.5
         },
-        ["open1", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":0.08}],
-        ["open2", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":0.2}],
-        ["open3", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":0.4}],
-        ["open4", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":0.5}],
-        ["open5", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":0.6}],
-        ["open6", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":0.7}],
-        ["open7", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":0.8}],
-        ["open8", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":0.9}],
-        ["open9", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":1.0}],
-        ["open10", "POINTLIGHT", "dsh3", "dsh2", "dsh1",    {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":1.1}],
+        //Footwell driver
+        ["InteriorLight", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":1.1, "lightScaling":{}}],
 
 
         //trunk
@@ -104,10 +84,18 @@
          ["mesh", "[group]:", "nonFlexMaterials"],
          {"deformGroup":""}
     ],
-	"controller": [
-	["fileName"],
-    ["interior_lighting"]
-	],
+    "components": {
+        "electrics": {
+            "customValues": [
+                ["electricsName", "electricsFunction","electricsDefault"],
+                ["InteriorLight", "clamp(electrics.door_FL_coupler_notAttached + electrics.door_FR_coupler_notAttached + electrics.door_RL_coupler_notAttached + electrics.door_RR_coupler_notAttached, 0, 1)", 0],
+            ]
+            "smoothers": [
+                ["electricsName", "smootherType", "params"],
+                ["InteriorLight","temporalNonLinear", [1]]
+            ],
+        }
+    },
     //Temporarily unused
 	"glowMap":{
 
@@ -135,28 +123,10 @@
             "shadowSoftness":0.4
         },
         //Overhead driver pointlights
-        ["open1", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":0.08}],
-        ["open2", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":0.2}],
-        ["open3", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":0.4}],
-        ["open4", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":0.5}],
-        ["open5", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":0.6}],
-        ["open6", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":0.7}],
-        ["open7", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":0.8}],
-        ["open8", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":0.95}],
-        ["open9", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":1.2}],
-        ["open10", "POINTLIGHT", "rf1", "dsh1", "rf2",  {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":1.3}],
+        ["InteriorLight", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":1.3}],
 
         //rear seats overhead
-        ["open1", "POINTLIGHT", "rf4", "rf5", "rf3",    {"x":89.873, "y":-168.523, "z":53.235},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":15.634, "y":16.898, "z":0.0},"deformGroup":"","lightBrightness":0.08}],
-        ["open2", "POINTLIGHT", "rf4", "rf5", "rf3",    {"x":89.873, "y":-168.523, "z":53.235},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":15.634, "y":16.898, "z":0.0},"deformGroup":"","lightBrightness":0.2}],
-        ["open3", "POINTLIGHT", "rf4", "rf5", "rf3",    {"x":89.873, "y":-168.523, "z":53.235},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":15.634, "y":16.898, "z":0.0},"deformGroup":"","lightBrightness":0.4}],
-        ["open4", "POINTLIGHT", "rf4", "rf5", "rf3",    {"x":89.873, "y":-168.523, "z":53.235},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":15.634, "y":16.898, "z":0.0},"deformGroup":"","lightBrightness":0.5}],
-        ["open5", "POINTLIGHT", "rf4", "rf5", "rf3",    {"x":89.873, "y":-168.523, "z":53.235},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":15.634, "y":16.898, "z":0.0},"deformGroup":"","lightBrightness":0.6}],
-        ["open6", "POINTLIGHT", "rf4", "rf5", "rf3",    {"x":89.873, "y":-168.523, "z":53.235},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":15.634, "y":16.898, "z":0.0},"deformGroup":"","lightBrightness":0.7}],
-        ["open7", "POINTLIGHT", "rf4", "rf5", "rf3",    {"x":89.873, "y":-168.523, "z":53.235},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":15.634, "y":16.898, "z":0.0},"deformGroup":"","lightBrightness":0.8}],
-        ["open8", "POINTLIGHT", "rf4", "rf5", "rf3",    {"x":89.873, "y":-168.523, "z":53.235},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":15.634, "y":16.898, "z":0.0},"deformGroup":"","lightBrightness":0.9}],
-        ["open9", "POINTLIGHT", "rf4", "rf5", "rf3",    {"x":89.873, "y":-168.523, "z":53.235},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":15.634, "y":16.898, "z":0.0},"deformGroup":"","lightBrightness":1.0}],
-        ["open10", "POINTLIGHT", "rf4", "rf5", "rf3",   {"x":89.873, "y":-168.523, "z":53.235},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":15.634, "y":16.898, "z":0.0},"deformGroup":"","lightBrightness":1.1}],
+        ["InteriorLight", "POINTLIGHT", "rf4", "rf5", "rf3",    {"x":89.873, "y":-168.523, "z":53.235},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":15.634, "y":16.898, "z":0.0},"deformGroup":"","lightBrightness":1.1}],
 
         //Footwell driver
         {
@@ -165,16 +135,7 @@
             "lightRange":0.58,
             "lightBrightness":1.5
         },
-        ["open1", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":0.08}],
-        ["open2", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":0.2}],
-        ["open3", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":0.4}],
-        ["open4", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":0.5}],
-        ["open5", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":0.6}],
-        ["open6", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":0.7}],
-        ["open7", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":0.8}],
-        ["open8", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":0.9}],
-        ["open9", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":1.0}],
-        ["open10", "POINTLIGHT", "dsh3", "dsh2", "dsh1",    {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":1.1}],
+        ["InteriorLight", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":1.1}],
 
 
         //trunk

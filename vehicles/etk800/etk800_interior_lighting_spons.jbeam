@@ -123,10 +123,10 @@
             "shadowSoftness":0.4
         },
         //Overhead driver pointlights
-        ["InteriorLight", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":1.3}],
+        ["InteriorLight", "POINTLIGHT", "rf1", "dsh1", "rf2",   {"x":110.827, "y":-156.751, "z":80.917},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.145, "y":0.115, "z":0.0},"deformGroup":"","lightBrightness":1.3, "lightScaling":{}}],
 
         //rear seats overhead
-        ["InteriorLight", "POINTLIGHT", "rf4", "rf5", "rf3",    {"x":89.873, "y":-168.523, "z":53.235},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":15.634, "y":16.898, "z":0.0},"deformGroup":"","lightBrightness":1.1}],
+        ["InteriorLight", "POINTLIGHT", "rf4", "rf5", "rf3",    {"x":89.873, "y":-168.523, "z":53.235},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":15.634, "y":16.898, "z":0.0},"deformGroup":"","lightBrightness":1.1, "lightScaling":{}}],
 
         //Footwell driver
         {
@@ -135,7 +135,7 @@
             "lightRange":0.58,
             "lightBrightness":1.5
         },
-        ["InteriorLight", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":1.1}],
+        ["InteriorLight", "POINTLIGHT", "dsh3", "dsh2", "dsh1",     {"x":-113.261, "y":152.040, "z":-8.047},{"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":7.045, "y":-3.155, "z":0.440},"deformGroup":"","lightBrightness":1.1, "lightScaling":{}}],
 
 
         //trunk

@@ -65,20 +65,20 @@
 
         ],
         //engine performance
-        "idleRPM":2550,
+        "idleRPM":2750,
         //max rpm physically capable of
         "maxRPM":22000,
-        "inertia":0.02,
-        "friction":6,
-        "dynamicFriction":0.015,
-        "engineBrakeTorque":40,
+        "inertia":0.002,
+        "friction":3,
+        "dynamicFriction":0.010,
+        "engineBrakeTorque":25,
         //"burnEfficiency":0.33,
         "burnEfficiency":[
             [0, 0.1],
-            [0.05, 0.27],
-            [0.4, 0.35],
-            [0.7, 0.45],
-            [1, 0.40],
+            [0.05, 0.28],
+            [0.4, 0.38],
+            [0.7, 0.47],
+            [1, 0.51],
         ],
         //fuel system
         "energyStorage": ["mainTank","auxTank"],
@@ -102,8 +102,8 @@
         //cooling and oil system
         "thermalsEnabled":true,
         "engineBlockMaterial":"aluminum",
-        "oilVolume":8,
-        "engineBlockAirCoolingEfficiency":39,
+        "oilVolume":3,
+        "engineBlockAirCoolingEfficiency":45,
 
         //engine durability
         "torqueReactionNodes:":["e1l","e2l","e4r"],
@@ -111,8 +111,8 @@
         "headGasketDamageThreshold":1500000,
         "pistonRingDamageThreshold":1500000,
         "connectingRodDamageThreshold":2000000,
-        "maxTorqueRating": 600,
-        "maxOverTorqueDamage": 500,
+        "maxTorqueRating": 400,
+        "maxOverTorqueDamage": 410,
 
         //node beam interface
         "waterDamage": {"[engineGroup]:":["engine_intake"]},
@@ -157,14 +157,14 @@
         "highShelfGain":0,
         "lowShelfFreq":2020,
         "lowShelfGain":-9,
-        "mainGain":-4,
+        "mainGain":-20,
         "muffling":1,
         "offLoadGain":0.1299999952,
-        "onLoadGain":1
+        "onLoadGain":2
     },
     "soundConfigExhaust": {
-        "sampleName": "3L_F1_V10",
-        "mainGain":-13,
+        "sampleName": "3L_F1_V10_exhaust",
+        "mainGain":-23,
 
         "eqFundamentalGain":3,
         "eqHighFreq":12500,

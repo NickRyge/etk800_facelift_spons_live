@@ -544,7 +544,7 @@
             ["fb0rr","fb1r","fb0r" ],
 
 
-            {"dragCoef":90},
+            {"dragCoef":20},
             ["fbSr","fbSl", "fb2"    {"liftCoef":500, "stallAngle":0.7}],
 
             ["fbSr","fb2r", "fb3rr" {"liftCoef":200, "stallAngle":0.7}],

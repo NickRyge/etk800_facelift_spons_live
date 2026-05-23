@@ -31,9 +31,9 @@
          "gearbox": {
             "uiName":"Gearbox",
             "gearRatios":["$=-$gear_R", 0, "$gear_1", "$gear_2", "$gear_3", "$gear_4", "$gear_5", "$gear_6", "$gear_7", "$gear_8"],
-            "friction":1.5,
+            "friction":0.8,
             "dynamicFriction":0.00162,
-            "torqueLossCoef": 0.014,
+            "torqueLossCoef": 0.011,
             "gearboxNode:":["tra1"],
     
             "gearWhineCoefsInput":  [0.66, 0.00, 0.33, 0.33, 0.33, 0.33, 0.33, 0.33, 0.33, 0.33],
@@ -44,8 +44,8 @@
             "visualPositionRelativeParent":[0,0.4,0]
         },
         "clutch": {
-            "clutchFreePlay":0.75,
-            "lockSpringCoef":0.3,
+            "clutchFreePlay":0.20,
+            "lockSpringCoef":0.4,
         },
         "vehicleController": {
             "calculateOptimalLoadShiftPoints": true,
@@ -55,7 +55,7 @@
             "lowShiftUpRPM":[0,0,2800,2600,2500,2350,2200],
             "clutchLaunchStartRPM": 2000,
             "clutchLaunchTargetRPM": 2500,
-            "ignitionCutTime": 0.09
+            "ignitionCutTime": 0.03
         },
         "flexbodies": [
             ["mesh", "[group]:", "nonFlexMaterials"],

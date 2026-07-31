@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: #f4f6fa;
+  font-family: "Segoe UI", Arial, sans-serif;
+  /* single flat colour everywhere: the map vignette fades into exactly this,
+     so the page, the navigator ground and the fade must all agree */
+  background: #04060b;
+}
+
+/* ---- safe area ----
+   The dash screen mesh shows a flatter oval than the full texture; everything
+   is drawn inside this box. Tune these four insets to fit the visible screen. */
+#screenFit {
+  position: absolute;
+  left: 9%;
+  right: 9%;
+  top: 28%;
+  bottom: 6%;
+}
+
+/* ---- navigator map band (centre, edges fade out) ----
+   Percentages of the safe area: matches the 1280x512 design x 340..940, y 60..400. */
+.map-band {
+  position: absolute;
+  left: 26.5%;
+  top: 11.7%;
+  width: 47%;
+  height: 66.4%;
+  z-index: 5;
+}
+
+.map-band-y {
+  width: 100%;
+  height: 100%;
+}
+
+/* edge fade: gradient overlays (more reliable in CEF than CSS masks) —
+   fades the map into the panel background colour on all four sides */
+.map-vignette {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 6;
+  pointer-events: none;
+  background-image:
+    linear-gradient(90deg, #04060b 0%, rgba(4, 6, 11, 0) 30%, rgba(4, 6, 11, 0) 70%, #04060b 100%),
+    linear-gradient(180deg, #04060b 0%, rgba(4, 6, 11, 0) 28%, rgba(4, 6, 11, 0) 74%, #04060b 100%);
+}
+
+/* ---- navigator internals (bngNavigator lives in here) ---- */
+fake-gps,
+.fake-gps-root {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.fake-gps-root {
+  position: relative;
+  overflow: hidden;
+  background: #04060b;
+}
+
+.fake-gps-root #bootscreen {
+  width: 100%;
+  height: 100%;
+  background-color: #04060b;
+}
+
+.fake-gps-root #mapContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-style: preserve-3d;
+}
+
+.fake-gps-root #mapContainer > svg {
+  display: block;
+  overflow: visible;
+}
+
+.fake-gps-vehicle-marker {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  transform: translate(-50%, -50%) rotateX(50deg);
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* ---- cluster overlay ---- */
+#clusterHost {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+#clusterHost svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* svg text roles used by bmw-cluster.js */
+.lbl { fill: #c7cfda; font-size: 21px; font-variant-numeric: tabular-nums; }
+.lbl-u { fill: #79828e; font-size: 13px; }
+.digits { fill: #f4f6fa; font-size: 64px; font-weight: 400; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.digits-unit { fill: #79828e; font-size: 20px; font-weight: 400; letter-spacing: 0; }
+.gear { fill: #f4f6fa; font-size: 62px; font-weight: 400; }
+.info { fill: #c7cfda; font-size: 19px; font-variant-numeric: tabular-nums; }
+.micro { fill: #79828e; font-size: 12px; font-variant-numeric: tabular-nums; }

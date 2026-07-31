@@ -15,18 +15,64 @@
             {"deformGroup":""}
         ],
         "glowMap":{
-            "etk800_gauges_screen_digi":{"simpleFunction":{"ignitionLevel":0.5}, "off":"screen_off", "on":"etk800_gauges_screen_digi", "on_intense":"etk800_gauges_screen_digi"},
+            //"etk800_gauges_screen_digi":{"simpleFunction":{"ignitionLevel":0.5}, "off":"screen_off", "on":"etk800_gauges_screen_digi", "on_intense":"etk800_gauges_screen_digi"},
         },
+        "controller": [
+            ["fileName"],
+            ["SponsNavigator", {"screenMaterialName": "@etk800_gauges_screen_digi"}],
+        ],
         "gauge": {
             "configuration": {
                 "materialName": "@etk800_gauges_screen_digi"
                 "htmlPath": "local://local/vehicles/etk800/spons_gauge/gauges_screen_digi.html"
-                "displayWidth":1024
+                "displayWidth":1280
                 "displayHeight":512
             }
             "configuration_units": {
                 "unit": "metric",
                 
+            }
+            "displayData": {
+                "electrics": [
+                    "signal_L",
+                    "signal_R",
+                    "lights",
+                    "highbeam",
+                    "lowbeam",
+                    "fog",
+                    "lowpressure",
+                    "lowfuel",
+                    "parkingbrake",
+                    "checkengine",
+                    "abs",
+                    "hasABS",
+                    "hasESC",
+                    "hasTCS",
+                    "gear",
+                    "fuel",
+                    "wheelspeed",
+                    "esc",
+                    "escActive",
+                    "tcs",
+                    "tcsActive",
+                    "odometer",
+                    "trip",
+                    "rpmTacho",
+                    "maxrpm",
+                    "watertemp"
+                ]
+                "powertrain": [
+                    ["deviceName", "property"]
+                    //["mainEngine", "outputTorque1"]
+                    //["mainEngine", "outputAV1"]
+                    //["gearbox", "outputAV1"]
+                ]
+                "customModules": [
+                    ["moduleName", "property"]
+                    ["combustionEngineData", "remainingRange"]
+                    ["environmentData", "temperatureEnv"]
+                    ["environmentData", "time"]
+                ]
             }
         },
         "skinName" : "spons_test",

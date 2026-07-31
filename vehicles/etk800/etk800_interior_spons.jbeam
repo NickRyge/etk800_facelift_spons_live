@@ -30,7 +30,7 @@
     ],
 
     "glowMap":{
-        "etk800_gauges_screen":{"simpleFunction":{"ignitionLevel":0.5}, "off":"screen_off", "on":"etk800_gauges_screen_accessory", "on_intense":"etk800_gauges_screen_digi"},
+        //"etk800_gauges_screen":{"simpleFunction":{"ignitionLevel":0.5}, "off":"screen_off", "on":"etk800_gauges_screen_accessory", "on_intense":"etk800_gauges_screen_digi"},
     },
 
     "controller": [
@@ -41,50 +41,50 @@
         ["gauges/customModules/combustionEngineData"],
     ],
 
-    "gauge": {
-        "configuration": {
-            "materialName": "@etk800_gauges_screen_digi",
-            "htmlPath": "local://local/vehicles/etk800/gauges_screen/gauges_screen.html"
-            "displayWidth":512,
-            "displayHeight":256
-        },
-        "displayData": {
-            "electrics": [
-                "signal_L",
-                "signal_R",
-                "lights",
-                "highbeam",
-                "fog",
-                "lowpressure",
-                "lowfuel",
-                "parkingbrake",
-                "checkengine",
-                "gear",//
-                "fuel",
-                "wheelspeed",//
-                "esc",
-                "escActive",
-                "tcs",
-                "tcsActive",
-                "odometer",
-                "trip",
-                "rpm"
-            ],
-            "powertrain": [
-                ["deviceName", "property"]
-                //["mainEngine", "outputTorque1"]
-                //["mainEngine", "outputAV1"]
-                //["gearbox", "outputAV1"]
-            ],
-            "customModules": [
-                ["moduleName", "property"],
-                ["combustionEngineData", "fuelDisplay"],
-                ["combustionEngineData", "fuelConsumption"],
-                ["environmentData", "temperatureEnv"],
-                ["environmentData", "time"]
-            ]
-        }
-    },
+    // "gauge": {
+    //     "configuration": {
+    //         "materialName": "@etk800_gauges_screen_digi",
+    //         "htmlPath": "local://local/vehicles/etk800/gauges_screen/gauges_screen.html"
+    //         "displayWidth":512,
+    //         "displayHeight":256
+    //     },
+    //     "displayData": {
+    //         "electrics": [
+    //             "signal_L",
+    //             "signal_R",
+    //             "lights",
+    //             "highbeam",
+    //             "fog",
+    //             "lowpressure",
+    //             "lowfuel",
+    //             "parkingbrake",
+    //             "checkengine",
+    //             "gear",//
+    //             "fuel",
+    //             "wheelspeed",//
+    //             "esc",
+    //             "escActive",
+    //             "tcs",
+    //             "tcsActive",
+    //             "odometer",
+    //             "trip",
+    //             "rpm"
+    //         ],
+    //         "powertrain": [
+    //             ["deviceName", "property"]
+    //             //["mainEngine", "outputTorque1"]
+    //             //["mainEngine", "outputAV1"]
+    //             //["gearbox", "outputAV1"]
+    //         ],
+    //         "customModules": [
+    //             ["moduleName", "property"],
+    //             ["combustionEngineData", "fuelDisplay"],
+    //             ["combustionEngineData", "fuelConsumption"],
+    //             ["environmentData", "temperatureEnv"],
+    //             ["environmentData", "time"]
+    //         ]
+    //     }
+    // },
     "props": [
         ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"],
 
